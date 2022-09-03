@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block body %}
+                
+
+				<div class="pd-20 bg-white border-radius-4 box-shadow mb-30">
+                    
+                        <form action="">
+                        
+                        <div class="row clearfix">
+                            <!-- card start -->
+                            
+                     {% if post.published %}{% for post in posts %}
+                        <div class="col-lg-3 col-md-6 col-sm-12 mb-30">
+                         <div class="da-card">
+                            <div class="da-card-photo">
+                             <img src="{{post.imagelink}}" alt="">
+                            </div>
+                            <div class="da-card-content">
+                                <h5 class="h5 mb-10">{{post.Category}}</h5>
+                                <p class="mb-15">{{ post.message }}</p>
+                                <div class="">
+                                    <div class="mb-5 center">
+                                       <div class="custom-control custom-checkbox">
+                                            <input class="custom-control-input" type="checkbox" id="customCheck1" checked="checked" value="{{post.id}}" name="boxes">
+                                            <label class="custom-control-label" for="customCheck1">Select</label>
+                                        </div>
+                                        </div>
+                                        <a class="btn btn-primary" href="{{post.imagelink}}">AD LINK</a>
+                                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                            {% endfor %}
+                                            {% else %}
+                                            <div class="custom-control custom-checkbox">
+                                            <input class="custom-control-input" type="checkbox" id="customCheck1" value="{{post.id}}" name="boxes">
+                                            <label class="custom-control-label" for="customCheck1">Select</label>
+                                            </div>
+                                            {% endif %}
+                                        
+                            <!-- card end -->
+                        
+                        </div>                                    
+				</div>                  
+                        
+                        <button class="btn btn-outline-primary col-md-12">Publish</button>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+		{% endblock body %}

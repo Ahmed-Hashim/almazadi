@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="main-container">
+    <div class="pd-ltr-20 xs-pd-20-10">
+        <div class="min-height-200px">
+            <div class="page-header">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="title">
+                            <h4>Publish Posts</h4>
+                        </div>
+                        <nav aria-label="breadcrumb" role="navigation">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="{% url 'dashboard'  %}">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Publish Posts</li>
+                            </ol>
+                        </nav>
+                    </div>
+                    
+                </div>
+            </div>                
+
+				<div class="pd-20 bg-white border-radius-4 box-shadow mb-2">
+                    
+                   
+                        <div class="row clearfix mb-15">
+                            <!-- card start -->
+                            {% for post in posts %}
+                            
+                            
+                            <div class="col-lg-3 col-md-6 col-sm-12 mb-1">
+                                <div class="da-card">
+                                    <div class="da-card-photo">
+                                        {% if post.imagelink %}
+                                        <img name="{{post.imagelink}}" src="{{post.imagelink.url}}" alt="">
+                                        {% else %}
+                                        <img name="{{post.imagelink}}" src="{{post.link}}" alt="">
+                                        {% endif %}
+        
+                                    </div>
+                                    <div class="da-card-content">
+                                        <h5 class="h5 mb-10"><a href="{% url 'post_details' post.id %}"> {{post.category}}</a></h5>
+                                        <p class="limited-text mb-15" name="{{ post.message }}">{{ post.message }}</p>
+                                        <div class="container ">
+                                            <div class="row">
+                                            <span  class="badge badge-secondary ">{{ post.published_date }}</span>
+                                            <a  href="#"  class="badge badge-info ">{{ post.scheduled_by }}</a>
+                                            <a  href="{{post.fblink}}" class="badge badge-primary "><i class="fa-brands fa-square-facebook"></i></a>
+                                        </div></div>
+                                    </div>
+                                 </div>              
+                            </div>
+                                    
+                            
+                            {% endfor %}
+                            <!-- card end -->
+                            
+                        </div>
+                        <div class="blog-pagination mt-30 mb-30">
+                            <div class="btn-toolbar justify-content-center mb-15">
+                                <div class="btn-group">
+                                    {% if posts.has_previous%}
+                                    <a href="?page=1" class="btn btn-sm btn-primary">First</a>
+                                    <a href="?page={{ posts.previous_page_number }}" class="btn btn-sm btn-primary">Previous</a>
+                                    <a href="?page={{ posts.number|add:'-1' }}" class="btn btn-sm btn-primary">{{ posts.number|add:"-1" }}</a>
+                                    {% else %}
+                                    <button type="button" class="btn btn-sm btn-primary" disabled>Previous</button>
+                                    {% endif %}
+                                    <button type="button" class="btn btn-sm btn-dark" disabled>{{ posts.number }}</button>                                 
+                                    {% if posts.has_next %}
+                                    <a href="?page={{ posts.number|add:1 }}" class="btn btn-sm btn-primary">{{ posts.number|add:1 }}</a>
+                                    <a href="?page={{ posts.next_page_number }}" class="btn btn-sm btn-primary">Next</a>
+                                    <a href="?page={{ posts.paginator.num_pages }}" class="btn btn-sm btn-primary">Last</i></a>
+                                    {% else %}
+                                    <button type="button" class="btn btn-sm btn-primary" disabled>Next</button>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>                                
+
+                </div>
+
+		{% endblock body %}

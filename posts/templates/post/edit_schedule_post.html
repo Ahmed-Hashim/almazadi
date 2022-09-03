@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'styles/emojionearea.min.css' %}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="{% static 'styles/emojionearea.min.js' %}"></script>
+{% endblock css %}
+{% block body %}
+<div class="main-container">
+    <div class="pd-ltr-20 xs-pd-20-10">
+        <div class="min-height-200px">
+            <div class="page-header">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="title">
+                            <h4>Update Post</h4>
+                        </div>
+                        <nav aria-label="breadcrumb" role="navigation">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Update Post</li>
+                            </ol>
+                        </nav>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="pd-20 bg-white border-radius-4 box-shadow mb-30">
+                <form action="" method="POST" enctype="multipart/form-data">
+                    <div class="container">
+                        <div class="col-7">
+                        {% if post_details.design_link %}
+                        
+                        <img name="{{post_details.design_link}}" src="{{post_details.design_link.url}}" alt=""></div>
+                             
+                        {% else %}
+                        <img name="{{post_details.imagelink}}" src="{{post_details.imagelink}}" alt="">
+                        <a href="{% url 'schedule_design' post_details.id %}" class="btn btn-success">Create Design</a>
+                        {% endif %}
+                    </div>
+                {% csrf_token %}    
+                {{ form.as_p }}
+                <input type="submit" value="Update" class="btn btn-secondary">
+            </form>    
+            </div>
+            <script>
+                var timezone="{{ user.profile.timezone }}";
+                document.getElementById("timezone").value
+                    =timezone;
+                    var username="{{ user.id }}";
+                document.getElementById("username").value
+                    =username;    
+                    var access_token="{{ user.profile.access_token }}";
+                document.getElementById("access-token").value
+                    =access_token;   
+                $("#emojionearea2").emojioneArea({
+                    pickerPosition: "bottom",
+                    tonesStyle: "radio"
+                });
+            </script>
+{% endblock body %}

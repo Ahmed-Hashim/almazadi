@@ -1,0 +1,164 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="main-container">
+    <div class="pd-ltr-20 xs-pd-20-10">
+        <div class="min-height-200px">
+            <div class="page-header">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="title">
+                            <h4>UnPublish Posts</h4>
+                        </div>
+                        <nav aria-label="breadcrumb" role="navigation">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">UnPublish Posts</li>
+                            </ol>
+                        </nav>
+                    </div>
+                    
+                </div>
+            </div>                
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li{% if message.tags %} class="alert alert-{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+				<div class="pd-20 bg-white border-radius-4 box-shadow mb-30">
+                    
+                        <form action="" method="POST">
+                        {% csrf_token %}
+                        <div class="row clearfix">
+                            <!-- card start -->
+                            {% for post in posts %}
+                            
+                            <div class="col-lg-3 col-md-6 col-sm-12 mb-30">
+                                <div class="da-card">
+                                    <div class="da-card-photo">
+                                        {% if post.design %}
+                                        <img name="{{post.imagelink}}" src="{{post.design_link.url}}" alt="">
+                                        <span style="position:absolute;"class="badge badge-danger">Design</span>
+                                        {% else %}
+                                        <img name="{{post.imagelink}}" src="{{post.imagelink}}" alt="">
+                                        {% endif %}
+        
+                                    </div>
+                                    <div class="da-card-content">
+                                        <h5 class="h6 mb-15"><a href="{% url 'post_details' post.id %}"> {{post.category}}</a></h5>
+                                        <p class="limited-text mb-15" name="{{ post.message }}">{{ post.message }}</p>
+                                        <div class="">
+                                        <div class="mb-5 center">
+                                            <div >
+                                                
+                                            <input type="checkbox"  value="{{post.id}}" name="boxes">
+                                            <label >Select</label>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="btn-group ">
+                                            <a type="button" class="btn btn-success btn-sm " data-toggle="modal" data-target="#publish{{post.id}}"><i class="fa-brands fa-usps"></i></a>
+                                            <a class="btn btn-primary btn-sm " href="make_design/p={{post.id}}"><i class="fa-solid fa-wand-magic-sparkles"></i></a>
+                                            <a type="button" class="btn btn-info  btn-sm " href="edit_details/p={{post.id}}"><i class="fa-solid fa-pen-to-square"></i></a>
+                                            <a type="button" class="btn btn-danger btn-sm " data-toggle="modal" data-target="#delete{{post.id}}"><i class="fa-solid fa-trash-arrow-up"></i></a>
+                                            <a class="btn btn-warning  btn-sm "  data-toggle="modal" data-target="#schedule{{post.id}}"><i class="fa-regular fa-calendar-plus"></i></a>
+                                            
+                                        </div>                                      
+                                        <div class="modal" id="delete{{post.id}}" tabindex="-1" role="dialog">
+                                            <div class="modal-dialog" role="document">
+                                              <div class="modal-content">
+                                                <div class="modal-header">
+                                                  <h5 class="modal-title">Delete Post</h5>
+                                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                  </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                  <p>Are you sure you want to delete the post?</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <a class="btn btn-danger  btn-sm " href="delete/p={{post.id}}">Delete</a>
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="modal" id="publish{{post.id}}" tabindex="-1" role="dialog">
+                                            <div class="modal-dialog" role="document">
+                                              <div class="modal-content">
+                                                <div class="modal-header">
+                                                  <h5 class="modal-title">Publish Post</h5>
+                                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                  </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                  <p>Are you sure you want to publish the post?</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <a class="btn btn-success btn-sm " href="publish_now/p={{post.id}}">Publish</a>
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="modal" id="schedule{{post.id}}" tabindex="-1" role="dialog">
+                                            <div class="modal-dialog" role="document">
+                                              <div class="modal-content">
+                                                <div class="modal-header">
+                                                  <h5 class="modal-title">Schedule Post</h5>
+                                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                  </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                  <p>Are you sure you want to schedule the post?</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <a class="btn btn-warning  btn-sm " href="add_to_schedule/p={{post.id}}">Schedule</a>
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            {% endfor %}
+                            <!-- card end -->
+                        </div>
+                        <button type="submit" name="publish" class="btn btn-success center">Publish</button>
+                        <button type="submit" name="delete" class="btn btn-danger center">Delete</button>
+                        <button type="submit" name="schedule" class="btn btn-warning center">Schedule</button>
+                    </form>
+  
+                
+                <div class="blog-pagination mt-30 mb-10">
+                    <div class="btn-toolbar justify-content-center mb-15">
+                        <div class="btn-group">
+                            {% if posts.has_previous%}
+                            <a href="?page=1" class="btn btn-sm btn-primary">First</a>
+                            <a href="?page={{ posts.previous_page_number }}" class="btn btn-sm btn-primary">Previous</a>
+                            <a href="?page={{ posts.number|add:'-1' }}" class="btn btn-sm btn-primary">{{ posts.number|add:"-1" }}</a>
+                            {% else %}
+                                    <button type="button" class="btn btn-sm btn-primary" disabled>Previous</button>
+                            {% endif %}
+                            <button type="button" class="btn btn-sm btn-primary" disabled>{{ posts.number }}</button>                                 
+                            {% if posts.has_next %}
+                            <a href="?page={{ posts.number|add:1 }}" class="btn btn-sm btn-primary">{{ posts.number|add:1 }}</a>
+                            <a href="?page={{ posts.next_page_number }}" class="btn btn-sm btn-primary">Next</a>
+                            <a href="?page={{ posts.paginator.num_pages }}" class="btn btn-sm btn-primary">Last</i></a>
+                            {% else %}
+                                    <button type="button" class="btn btn-sm btn-primary" disabled>Next</button>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+		{% endblock body %}

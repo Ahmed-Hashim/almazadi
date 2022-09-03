@@ -1,0 +1,1 @@
+profile.user.last_login == profile.user.date_joined

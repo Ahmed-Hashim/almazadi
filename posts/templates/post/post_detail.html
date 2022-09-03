@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block css %}
+
+
+{% endblock css %}
+{% block body %}
+<div class="main-container">
+    <div class="pd-ltr-20 xs-pd-20-10">
+        <div class="min-height-200px">
+            <div class="page-header">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="title">
+                            <h4>Post Details</h4>
+                        </div>
+                        <nav aria-label="breadcrumb" role="navigation">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item"><a href="posts">Posts</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Post Details</li>
+                            </ol>
+                        </nav>
+                    </div>
+                    
+                </div>
+            </div>
+        <div class="row">
+            <div class="col-md-8 col-sm-12">
+                <div class="blog-detail card-box overflow-hidden mb-30">
+                    <div class="">
+                        
+                        {% if post_details.design %}
+                        <div style="width:100%"  id="image-compare shadow-md rounded mb-16 icv icv__icv--horizontal standard">
+
+                            <img src="{{post_details.design_link.url}}" alt="" />
+                            <a href="{% url 'make_design' post_details.id %}" class="btn btn-success">New Design</a>
+                          </div>
+
+                        {% else %}
+                        <img style="width:100%" src="{{post_details.imagelink}}" alt="">
+                        <a href="{% url 'make_design' post_details.id %}" class="btn btn-success">Create Design</a>
+                        {% endif %}
+                        
+                    </div>
+                    <div class="blog-caption">
+                        <h4 class="mb-10" >Post {{post_details.id}}</h4>
+                        <span> <b style="color:gray;">Created: </b>{{post_details.date}} </span>
+                        <span> <b  style="color:gray;">Category: </b>{{post_details.category}}   </span>
+                        {% if not post_details.published %}
+                        <span style="color:rgb(176, 3, 3);"><b style="color:gray;">Status: </b>UnPublished</span>
+                        {% else %}
+                        <span style="color:rgb(4, 152, 38);"><b  style="color:gray;">Status: </b>Published</span>
+                        {% endif %}
+                        <h5 class="mb-10">Message</h5>
+                        <p>{{post_details.message}}</p>
+                        {% if not post_details.published %}
+                        
+                            
+                        <div class="btn-group ">   
+                        <a href="{% url 'edit_details' post_details.id %}" class="btn btn-primary">Edit Message</a>
+                        <a href="{% url 'delete_post' post_details.id %}" class="btn btn-danger">Delete</a>
+                        <a href="{% url 'add_to_schedule' post_details.id %}" class="btn btn-warning">Schedule</a>
+                        <a href="{% url 'publish_now' post_details.id %}" class="btn btn-success">Publish Now</a>
+                        </div>
+
+                        {% endif %}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+{% endblock body %}

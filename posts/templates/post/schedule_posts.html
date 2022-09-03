@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="main-container">
+    
+            <div class="pd-20 bg-white border-radius-4 box-shadow mb-30">
+
+                <div class="pd-20 card-box mb-30">
+					<div class="clearfix mb-20">
+						<div class="pull-left">
+							<h4 class="text-blue h4">Schedule Posts</h4>
+							<p></p>
+						</div>
+
+					</div>
+					<div class="table-responsive">
+						<table class="table table-striped fixed-table">
+							<thead>
+								<tr >
+									<th style="font-size: 11px;" style="font-size: 15px;" scope="col">Post ID</th>
+									<th style="font-size: 11px;" scope="col">Image</th>
+									<th style="font-size: 11px;" scope="col">Message</th>
+									<th style="font-size: 11px;" scope="col">Category</th>
+									<th style="font-size: 11px;" scope="col">Publish Date</th>
+									<th style="font-size: 11px;" scope="col"> Settings</th>
+								</tr>
+							</thead>
+							<tbody >
+                                {% for post in posts%}
+								{% if not post.published %}
+								<tr>
+									<th scope="row">{{post.id}}</th>
+									<td><img style=" border-radius:3px; display: block;" width="70" height="70" name="{{post.imagelink}}" src="{% if post.design_link %} {{post.design_link.url}}{% else %}{{post.imagelink}}{% endif %}" alt=""></td>
+									<td class="limited-text-table" style="font-size: 11px;" maxlength="15" >{{post.message}}</td>
+									<td style="font-size: 11px;" >{{post.category}}</td>
+                                   
+									<td style="font-size: 11px;" >
+										{% if post.schedule %}
+										Scheduled at :
+										<br/>{{post.date_to_publish}}
+										{% endif %}
+										</td>
+									<td>
+										<div class="btn-group ">
+                                        <a class="btn btn-outline-primary btn-sm " href="{{post.imagelink}}"><i class="fa-solid fa-link"></i></a>
+                                        <a id="sa-success" class="btn btn-outline-info  btn-sm " href="edit_schedule_post/p={{post.id}}"><i class="fa-solid fa-pen-to-square"></i></a>
+                                        <a class="btn btn-outline-danger  btn-sm " href="delete_schedule/p={{post.id}}"><i class="fa-solid fa-trash-arrow-up"></i></a>
+                                        </div>
+                                    </td>
+
+								</tr>
+								{% endif %}
+								{%endfor%}
+							</tbody>
+						</table>
+					</div>
+					<div class="blog-pagination mt-30 mb-10">
+						<div class="btn-toolbar justify-content-center mb-15">
+							<div class="btn-group">
+								{% if posts.has_previous%}
+								<a href="?page=1" class="btn btn-sm btn-primary">First</a>
+								<a href="?page={{ posts.previous_page_number }}" class="btn btn-sm btn-primary">Previous</a>
+								<a href="?page={{ posts.number|add:'-1' }}" class="btn btn-sm btn-primary">{{ posts.number|add:"-1" }}</a>
+								{% else %}
+										<button type="button" class="btn btn-sm btn-primary" disabled>Previous</button>
+								{% endif %}
+								<button type="button" class="btn btn-sm btn-primary" disabled>{{ posts.number }}</button>                                 
+								{% if posts.has_next %}
+								<a href="?page={{ posts.number|add:1 }}" class="btn btn-sm btn-primary">{{ posts.number|add:1 }}</a>
+								<a href="?page={{ posts.next_page_number }}" class="btn btn-sm btn-primary">Next</a>
+								<a href="?page={{ posts.paginator.num_pages }}" class="btn btn-sm btn-primary">Last</i></a>
+								{% else %}
+										<button type="button" class="btn btn-sm btn-primary" disabled>Next</button>
+								{% endif %}
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+              
+					
+							
+
+{% endblock body %}

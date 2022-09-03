@@ -1,0 +1,350 @@
+{% extends 'based.html' %}
+{% load static %}
+{% block css %}
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="{% static 'styles/core.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'styles/icon-font.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'plugins/datatables/css/dataTables.bootstrap4.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'plugins/datatables/css/responsive.bootstrap4.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'styles/style.css' %}">
+
+{% endblock css %}
+
+{% block body %}
+
+    <div class="main-container">
+		{% if messages %}
+		<ul class="messages">
+			{% for message in messages %}
+			<li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+			{% endfor %}
+		</ul>
+		{% endif %}
+		<div class="pd-ltr-20">
+			<div class="card-box pd-20 height-100-p mb-30">
+				<div class="row align-items-center">
+					<div class="col-md-4">
+						<img src="{% static 'images/banner-img.png' %}" alt="">
+					</div>
+					<div class="col-md-8">
+
+						<h4 class="font-20 weight-500 mb-10 text-capitalize">
+							Welcome <div class="weight-600 font-30 text-blue">{{user}}!</div>
+						</h4>	
+
+
+						<p class="font-18 max-width-600">We are delighted to have you among us. On behalf of all the members and the management, we would like to extend our warmest welcome and good wishes!
+
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-3 mb-30">
+					<div class="card-box height-100-p widget-style1">
+						<div class="d-flex flex-wrap align-items-center">
+							<div class="progress-data">
+								<div id="chart"></div>
+							</div>
+							<div class="widget-data">
+								<div class="h4 mb-0">{{post_count}}</div>
+								<div class="weight-600 font-14">Posts Count</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 mb-30">
+					<div class="card-box height-100-p widget-style1">
+						<div class="d-flex flex-wrap align-items-center">
+							<div class="progress-data">
+								<div id="chart2"></div>
+							</div>
+							<div class="widget-data">
+								<div class="h4 mb-0">400</div>
+								<div class="weight-600 font-14">Deals</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 mb-30">
+					<div class="card-box height-100-p widget-style1">
+						<div class="d-flex flex-wrap align-items-center">
+							<div class="progress-data">
+								<div id="chart3"></div>
+							</div>
+							<div class="widget-data">
+								<div class="h4 mb-0">350</div>
+								<div class="weight-600 font-14">Campaign</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 mb-30">
+					<div class="card-box height-100-p widget-style1">
+						<div class="d-flex flex-wrap align-items-center">
+							<div class="progress-data">
+								<div id="chart4"></div>
+							</div>
+							<div class="widget-data">
+								<div class="h4 mb-0"></div>
+								<div class="weight-600 font-14">Worth</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-8 mb-30">
+					<div class="card-box height-100-p pd-20">
+						<h2 class="h4 mb-20">Activity</h2>
+						<div id="chart5"></div>
+					</div>
+				</div>
+				<div class="col-xl-4 mb-30">
+					<div class="card-box height-100-p pd-20">
+						<h2 class="h4 mb-20">Lead Target</h2>
+						<div id="chart6"></div>
+					</div>
+				</div>
+			</div>
+			<div class="card-box mb-30">
+				<h2 class="h4 pd-20">Recent Published Posts</h2>
+				<table class="data-table table nowrap">
+					<thead>
+						<tr>
+							<th class="table-plus datatable-nosort">Post</th>
+							<th>Category</th>
+							<th>Likes</th>
+							<th>Comments</th>
+							<th>Shares</th>
+							<th>Reach</th>
+							<th class="datatable-nosort">Action</th>
+						</tr>
+					</thead>
+					<tbody>
+                        {% for post in posts %}
+                            {% if post.published %}
+						<tr>
+							<td class="table-plus">
+								<img src="{{post.imagelink}}" width="70" height="70" alt="">
+							</td>
+							<td>
+								<h5 class="font-16">{{post.category}}</h5>
+								by John Doe
+							</td>
+							<td>50 Likes</td>
+							<td>25 Comments</td>
+							<td>10 Shares</td>
+							<td>100k Reach</td>
+							<td>
+								<div class="dropdown">
+									<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+										<i class="dw dw-more"></i>
+									</a>
+									<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+										<a class="dropdown-item" href="show/p={{post.id}}"><i class="dw dw-eye"></i> View</a>
+										<a class="dropdown-item" href="edit_details/p={{post.id}}"><i class="dw dw-edit2"></i> Edit</a>
+										<a class="dropdown-item" href="{% url 'delete_post' post.id %}"><i class="dw dw-delete-3"></i> Delete</a>
+									</div>
+								</div>
+							</td>
+						</tr>
+						{% endif %}
+                        {% endfor %}
+					</tbody>
+				</table>
+			</div>
+
+
+{% endblock body %}
+{% block js %}
+
+<script src="{% static 'scripts/core.js'%}"></script>
+<script src="{% static 'scripts/script.min.js'%}"></script>
+<script src="{% static 'scripts/process.js'%}"></script>
+<script src="{% static 'scripts/layout-settings.js'%}"></script>
+<script src="{% static 'plugins/apexcharts/apexcharts.min.js'%}"></script>
+<script src="{% static 'plugins/datatables/js/jquery.dataTables.min.js'%}"></script>
+<script src="{% static 'plugins/datatables/js/dataTables.bootstrap4.min.js'%}"></script>
+<script src="{% static 'plugins/datatables/js/dataTables.responsive.min.js'%}"></script>
+<script src="{% static 'plugins/datatables/js/responsive.bootstrap4.min.js'%}"></script>
+<script> 
+	var options = {
+		series: [{{precent|safe}}],
+		grid: {
+			padding: {
+				top: 0,
+				right: 0,
+				bottom: 0,
+				left: 0
+			},
+		},
+		chart: {
+			height: 100,
+			width: 70,
+			type: 'radialBar',
+		},	
+		plotOptions: {
+			radialBar: {
+				hollow: {
+					size: '50%',
+				},
+				dataLabels: {
+					name: {
+						show: false,
+						color: '#fff'
+					},
+					value: {
+						show: true,
+						color: '#333',
+						offsetY: 5,
+						fontSize: '15px'
+					}
+				}
+			}
+		},
+		colors: ['#ecf0f4'],
+		fill: {
+			type: 'gradient',
+			gradient: {
+				shade: 'dark',
+				type: 'diagonal1',
+				shadeIntensity: 0.8,
+				gradientToColors: ['#1b00ff'],
+				inverseColors: false,
+				opacityFrom: [1, 0.2],
+				opacityTo: 1,
+				stops: [0, 100],
+			}
+		},
+		states: {
+			normal: {
+				filter: {
+					type: 'none',
+					value: 0,
+				}
+			},
+			hover: {
+				filter: {
+					type: 'none',
+					value: 0,
+				}
+			},
+			active: {
+				filter: {
+					type: 'none',
+					value: 0,
+				}
+			},
+		}
+	};
+	
+	var options5 = {
+		chart: {
+			height: 350,
+			type: 'bar',
+			parentHeightOffset: 0,
+			fontFamily: 'Poppins, sans-serif',
+			toolbar: {
+				show: false,
+			},
+		},
+		colors: ['#1b00ff', '#f56767'],
+		grid: {
+			borderColor: '#c7d2dd',
+			strokeDashArray: 5,
+		},
+		plotOptions: {
+			bar: {
+				horizontal: false,
+				columnWidth: '25%',
+				endingShape: 'rounded'
+			},
+		},
+		dataLabels: {
+			enabled: false
+		},
+		stroke: {
+			show: true,
+			width: 2,
+			colors: ['transparent']
+		},
+		series: [{
+			name: 'Post Count',
+			data: [{{post_car|safe}},{{post_house|safe}}, {{post_job|safe}}, {{post_food|safe}}, {{post_phone|safe}}, {{post_school|safe}}, {{post_computer|safe}},{{post_garden|safe}}]
+		}, {
+			name: 'Published',
+			data: [{{pub_car|safe}},{{pub_house|safe}}, {{pub_job|safe}}, {{pub_food|safe}}, {{pub_phone|safe}}, {{pub_school|safe}}, {{pub_computer|safe}},{{pub_garden|safe}}]
+		}],
+
+		xaxis: {
+			
+			categories: ['Car','House','Job','Food','Phone','School','Computer','Garden'],
+			labels: {
+				style: {
+					colors: ['#353535'],
+					fontSize: '10px',
+				},
+			},
+			axisBorder: {
+				color: '#8fa6bc',
+			}
+		},
+		yaxis: {
+			title: {
+				text: ''
+			},
+			labels: {
+				style: {
+					colors: '#353535',
+					fontSize: '16px',
+				},
+			},
+			axisBorder: {
+				color: '#f00',
+			}
+		},
+		legend: {
+			horizontalAlign: 'right',
+			position: 'top',
+			fontSize: '16px',
+			offsetY: 0,
+			labels: {
+				colors: '#353535',
+			},
+			markers: {
+				width: 10,
+				height: 10,
+				radius: 15,
+			},
+			itemMargin: {
+				vertical: 0
+			},
+		},
+		fill: {
+			opacity: 1
+	
+		},
+		tooltip: {
+			style: {
+				fontSize: '10px',
+				fontFamily: 'Poppins, sans-serif',
+			},
+			y: {
+				formatter: function (val) {
+					return val
+				}
+			}
+		}
+	}
+var chart5 = new ApexCharts(document.querySelector("#chart5"), options5);
+chart5.render();
+</script>
+<script src="{% static 'scripts/dashboard.js'%}"></script>
+{% endblock js %}
+

@@ -1,0 +1,155 @@
+{% extends 'based.html' %}
+{% load static %}
+{% block css %}
+<!-- Mobile Specific Metas -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="{% static 'styles/core.css'%}">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/icon-font.min.css'%}">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/style.css'%}">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119386393-1"></script>
+<script>
+   window.dataLayer = window.dataLayer || [];
+   function gtag(){dataLayer.push(arguments);}
+   gtag('js', new Date());
+   
+   gtag('config', 'UA-119386393-1');
+</script>
+{% endblock css %}
+{% block body %}
+<div class="main-container">
+<div class="pd-ltr-20 xs-pd-20-10">
+<div class="min-height-200px">
+   <div class="page-header">
+      <div class="row">
+         <div class="col-md-6 col-sm-12">
+            <div class="title">
+               <h4>Profile</h4>
+            </div>
+            <nav aria-label="breadcrumb" role="navigation">
+               <ol class="breadcrumb">
+                  <li class="breadcrumb-item active" aria-current="page">Edit Post</li>
+               </ol>
+            </nav>
+         </div>
+      </div>
+   </div>
+   <div class="row">
+      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 mb-30">
+         <div class="pd-20 card-box height-100-p">
+            <div class="profile-photo">
+               {% if not profile.profile_pic.url  %}
+               <img src="{% static 'images/profile/default-profile.jpg'%}" alt="" class="avatar-photo">
+               {% else %}
+               <img src="{{ profile.profile_pic.url }}" alt="" class="avatar-photo">
+               {% endif %}
+            </div>
+            <h5 class="text-center h5 mb-0">{{ profile.fullname }}</h5>
+            <p class="text-center text-muted font-14">{{ profile.bio }}</p>
+            <div class="profile-info">
+               <h5 class="mb-20 h5 text-blue">Contact Information</h5>
+               <ul>
+                  <li>
+                     <span>Email Address:</span>
+                     {{ user.email }}
+                  </li>
+                  <li>
+                     <span>Phone Number:</span>
+                     {{ profile.phone_number }}
+                  </li>
+                  <li>
+                     <span>Country - TimeZone:</span>
+                     {{ profile.country }} | {{ profile.timezone }} 
+                  </li>
+                  <li>
+                     <span>Address:</span>
+                     {{ profile.address }}
+                  </li>
+               </ul>
+            </div>
+            <div class="profile-social">
+               <h5 class="mb-20 h5 text-blue">Social Links</h5>
+               <ul class="clearfix">
+                  {% if profile.facebook_url %}
+                  <li><a href="{{ profile.facebook_url }}" class="btn" data-bgcolor="#3b5998" data-color="#ffffff"><i class="fa fa-facebook"></i></a></li>
+                  {% endif %}
+                  {% if profile.twitter_url %}
+                  <li><a href="{{ profile.twitter_url }}" class="btn" data-bgcolor="#1da1f2" data-color="#ffffff"><i class="fa fa-twitter"></i></a></li>
+                  {% endif %}
+                  {% if profile.linkedin_url %}
+                  <li><a href="{{ profile.linkedin_url }}" class="btn" data-bgcolor="#007bb5" data-color="#ffffff"><i class="fa fa-linkedin"></i></a></li>
+                  {% endif %}
+                  {% if profile.instagram_url %}
+                  <li><a href="{{ profile.instagram_url }}" class="btn" data-bgcolor="#f46f30" data-color="#ffffff"><i class="fa fa-instagram"></i></a></li>
+                  {% endif %}
+                  {% if profile.skype_url %}
+                  <li><a href="{{ profile.skype_url }}" class="btn" data-bgcolor="#00aff0" data-color="#ffffff"><i class="fa fa-skype"></i></a></li>
+                  {% endif %}
+               </ul>
+            </div>
+            <div class="profile-skills">
+               <h5 class="mb-20 h5 text-blue">Key Skills</h5>
+               <h6 class="mb-5 font-14">HTML</h6>
+               <div class="progress mb-20" style="height: 6px;">
+                  <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+               </div>
+               <h6 class="mb-5 font-14">Css</h6>
+               <div class="progress mb-20" style="height: 6px;">
+                  <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+               </div>
+               <h6 class="mb-5 font-14">jQuery</h6>
+               <div class="progress mb-20" style="height: 6px;">
+                  <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+               </div>
+               <h6 class="mb-5 font-14">Bootstrap</h6>
+               <div class="progress mb-20" style="height: 6px;">
+                  <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 mb-30">
+         <div class="card-box height-100-p overflow-hidden">
+            <div class="profile-tab height-100-p">
+               <div class="tab height-100-p">
+                  <ul class="nav nav-tabs customtab" role="tablist">
+                     
+                     <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#setting" role="tab">Settings</a>
+                     </li>
+                  </ul>
+                  <div class="tab-content">
+                     <div class="profile-setting">
+                        <ul class="profile-edit-list row">
+                           <li class="weight-500 col-md-6">
+                              <h4 class="text-blue h5 mb-20">Edit Your Personal Setting</h4>
+
+                              <form action="" method="POST" enctype="multipart/form-data">
+                                 {% csrf_token %}    
+                                 {{ form.as_p }}
+                                 <input type="submit" value="Update" class="btn btn-secondary">
+                             </form>  
+                     
+                           </li>
+                           
+                        </ul>
+                  </div>
+                    
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+{% endblock body %}
+{% block js %}
+<!-- js -->
+<script src="{% static 'scripts/core.js'%}"></script>
+<script src="{% static 'scripts/script.min.js'%}"></script>
+<script src="{% static 'scripts/process.js'%}"></script>
+<script src="{% static 'scripts/layout-settings.js'%}"></script>
+{% endblock js %}
