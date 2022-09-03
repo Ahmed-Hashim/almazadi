@@ -98,16 +98,17 @@ CRONJOBS = [
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-"""DATABASES = {
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'railway',
         'USER': 'postgres',
-        'PASSWORD': 'OJW59Weesd38wnrv9miF',
-        'HOST': 'containers-us-west-85.railway.app',
-        'PORT': '7981',
+        'PASSWORD': 'aj1F0eq4DnvxMCkOOAB7',
+        'HOST': 'containers-us-west-57.railway.app',
+        'PORT': '6785',
     }
-}"""
+}
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -115,7 +116,7 @@ DATABASES = {
     }
 }
 
-
+"""
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
