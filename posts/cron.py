@@ -15,13 +15,16 @@ def mada():
         pub_date=i.date_to_publish.strftime('%Y-%m-%d %H:%M:%S')
         if not i.published:
             if pub_date < datetime.now(tz(i.timezone)).strftime('%Y-%m-%d %H:%M:%S'):
-                post=Schedule.objects.filter(pk=int(i.id)).values('design_link','message','access_token')
-                link=post[0]['design_link']           
-                uimagelink=uploadimg(link)
+                post=Schedule.objects.filter(pk=int(i.id)).values('design_link','imagelink','message','access_token')
+                if post[0]['design_link'] :
+                    link=post[0]['design_link']           
+                    link=uploadimg(link)[0]
+                else:
+                    link=post[0]['imagelink']     
                 message=post[0]['message']
                 access_token=post[0]['access_token']
                 #print(x[1],x[0])
-                x= uptofb(uimagelink[0],message,access_token)
+                x= uptofb(link,message,access_token)
                 fb='https://facebook.com/'
                 post_id=x['post_id']
                 #message=str(x)
