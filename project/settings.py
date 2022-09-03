@@ -30,12 +30,12 @@ if 'SECRET_KEY' in os.environ:
     SECRET_KEY = os.environ['SECRET_KEY']
     DEBUG = False
 
-ALLOWED_HOSTS = ["*","mazadi-tool-production.up.railway.app"]
+ALLOWED_HOSTS = ["*","almazadi.up.railway.app"]
 CORS_ALLOWED_ORIGINS = [
-    "https://mazadi-tool-production.up.railway.app",
+    "https://almazadi.up.railway.app",
 ]
 CSRF_TRUSTED_ORIGINS = [
-    "https://mazadi-tool-production.up.railway.app",
+    "https://almazadi.up.railway.app",
     ]
 
 MESSAGE_TAGS = {
