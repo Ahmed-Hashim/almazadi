@@ -100,7 +100,7 @@
                 if (dismiss === 'cancel') {
                     swal(
                         'Cancelled',
-                        'Your imaginary file is safe :)',
+                        'Your Post file is safe :)',
                         'error'
                     )
                 }
