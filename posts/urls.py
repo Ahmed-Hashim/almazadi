@@ -20,6 +20,10 @@ urlpatterns = [
     path('make_design/p=<int:id>', views.make_design,name='make_design'),
     path('new_design/p=<int:id>',views.new_design,name="new_design"),
     path('schedule_design/p=<int:id>',views.schedule_design,name="schedule_design"),
-    
+
+    ##################################################################################################
+                                   ###### Ajax_URLS ######
+                                   #######################
+    path('delete_post_ajax/p=<int:id>', views.delete_post_ajax,name='delete_post_ajax'),
 
 ]

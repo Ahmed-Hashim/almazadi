@@ -99,7 +99,7 @@ def dashboard(request):
    return render (request,'post/dashboard.html',context)
 
 @login_required
-def get_posts():
+def get_posts(request):
    cat=['car','house','job','food','phone','school','computer','garden']
    f=1
    for z in cat:
@@ -114,7 +114,7 @@ def get_posts():
 @login_required
 def upload(request):
     if request.method == 'POST':
-        get_posts()
+        get_posts(request)
         return redirect("unpublished")
     return render (request,'post/upload.html')
 
@@ -267,11 +267,11 @@ def delete_schedule(request,id):
 @login_required
 def schedule_posts(request):
 
-   published_list=Schedule.objects.all()
-   paginator = Paginator(published_list,20) # Show 25 contacts per page.
-   page_number = request.GET.get('page')
-   page_obj = paginator.get_page(page_number)
-   context={'posts':page_obj,       
+   scheduled_list=Schedule.objects.all()
+   #paginator = Paginator(published_list,20) # Show 25 contacts per page.
+   #page_number = request.GET.get('page')
+   #page_obj = paginator.get_page(page_number)
+   context={'posts':scheduled_list,       
    }
    return render (request,'post/schedule_posts.html',context)
 
@@ -322,3 +322,9 @@ def schedule_design(request,id):
    design(link)
    Schedule.objects.filter(pk=int(id)).update(design_link=location)
    return redirect(request.META.get('HTTP_REFERER'))
+
+def delete_post_ajax(request,id):
+   post=Schedule.objects.get(pk=id)
+   post.delete()
+   return JsonResponse({})
+
