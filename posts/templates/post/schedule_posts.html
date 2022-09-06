@@ -23,11 +23,7 @@
 							{% endfor %}
 						</ul>
 					{% endif %}
-					
-					<div id="spinner-box" class="text-center mb-2 visible">
-						<div class="spinner-border text-danger " role="status">
-						</div>
-					</div>
+
 
 					<div class="table-responsive">
 
@@ -62,7 +58,7 @@
 										<div class="btn-group ">
                                         <a class="btn btn-outline-primary btn-sm " href="{{post.imagelink}}"><i class="fa-solid fa-link"></i></a>
                                         <a class="btn btn-outline-info  btn-sm " href="edit_schedule_post/p={{post.id}}"><i class="fa-solid fa-pen-to-square"></i></a>
-                                        <type="button" class="btn btn-danger btn-sm " data-toggle="modal" data-target="#delete{{post.id}}"><i class="fa-solid fa-trash-arrow-up"></i></button>
+                                        <button class="btn btn-danger btn-sm " name="target" id ="target-{{post.id}}" data-toggle="modal" data-target="#delete{{post.id}}"><i class="fa-solid fa-trash-arrow-up"></i></button>
                                         </div>
                                     </td>
 
