@@ -8,7 +8,6 @@ htmx.on("type", (e) => {
   toastElement.classList.add(e.detail.value);
 })
 htmx.on("showMessage", (e) => {
-  console.log(e.detail.value)
   toastBody.innerText = e.detail.value
   toast.show()
 })
@@ -25,11 +24,10 @@ htmx.on("showMessage", (e) => {
       modal.show()
     }
   })
-  htmx.on("htmx:beforeSwap", (e) => {
+  htmx.on("close", (e) => {
     // Empty response targeting #dialog => hide the modal
-    if (e.detail.target.id == "dialog" && !e.detail.xhr.response) {
-
-      modal.hide()
+    if (e.detail.value=="close") {
+        modal.hide()
       e.detail.shouldSwap = false
     }
 

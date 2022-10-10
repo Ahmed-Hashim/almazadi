@@ -150,6 +150,8 @@ def view_edit_customer(request,id):
     contacts=customer.contact_set.all()
     contactform=Addcontanct
     context={"customer":customer,"edit_form":form,"customers":customers,"contacts":contacts,"contactform":contactform,}
+    if request.htmx:
+        return render(request,'crm/customer_modal_info.html',context)
     if request.method == 'GET':
         return render(request,'crm/show_modal.html',context)
     elif request.method == "PUT":
@@ -195,6 +197,7 @@ def emails(request,id):
                             headers={
                                 'HX-Trigger': json.dumps({
                                 "crmChange": None,
+                                "close": "close",
                                 "showMessage": f"Email Sent To {customer.company} .",
                                 "type":"bg-success"
         })
@@ -228,6 +231,7 @@ def emails(request,id):
                             headers={
                                 'HX-Trigger': json.dumps({
                                 "showMessage": f"Email Sent To {customer.company} .",
+                                "close": "close",
                                 "type":"bg-success"
         })
     })
@@ -263,6 +267,7 @@ def add_customer(request):
                     'HX-Trigger': json.dumps({
                         "crmChange": None,
                         "showMessage": f"{customer.company} added.",
+                        "close": "close",
                         "type":"bg-success"
                     })
                 })
@@ -347,12 +352,6 @@ def show_note(request,id):
     }
     return render(request,"crm/show_note.html",context)
 def add_note(request,id):
-    form=Addnote
-    customer=get_object_or_404(Customer,pk=id)
-    context={
-        "customer":customer,
-        "form":form,
-    }
     if request.method=="POST":
         form=Addnote(request.POST)
         if form.is_valid():
@@ -362,7 +361,16 @@ def add_note(request,id):
                             'HX-Trigger': json.dumps({
                                 "noteChange": None,
                                 "showMessage": f"Note as been added successfully.",
+                                "close": "close",
                                 "type":"bg-info"
                             })
                         })
-    return render(request,"crm/add_note.html",context)
+    else:
+        form=Addnote
+        customer=get_object_or_404(Customer,pk=id)
+        context={
+            "customer":customer,
+            "form":form,
+        }
+        
+        return render(request,"crm/add_note.html",context)
