@@ -1,0 +1,268 @@
+{% load crispy_forms_tags %}
+{% load static %}
+
+
+  <div class="modal-content email-modal-content">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item nav-dark">
+        <a
+          class="nav-link active"
+          id="details-tab"
+          data-toggle="tab"
+          href="#send-email"
+          role="tab"
+          aria-controls="send-email"
+          aria-selected="true"
+          >Send Email</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          id="templates-tab"
+          data-toggle="tab"
+          href="#templates"
+          role="tab"
+          aria-controls="templates"
+          aria-selected="true"
+          >Offers</a
+        >
+      </li>
+    </ul>
+    <div class="tab-content">
+      <div
+        class="tab-pane fade show active"
+        id="send-email"
+        role="tabpanel"
+        aria-labelledby="send-email"
+      >
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+            email@{{customer.company}}
+          </h5>
+        </div>
+        <div class="modal-body">
+          <form
+            autocomplete="off"
+            method="POST"
+            hx-post="emails/p={{customer.id}}"
+          >
+            {% csrf_token %}
+            <div class="form-group m-2">
+                {% if customer %}
+              
+              {{email_form.subject |as_crispy_field}}
+              
+            </div>
+            <div class="form-group m-2">
+              
+              {{email_form.message |as_crispy_field}}
+            </div>
+            <div class="form-group m-2">
+              
+              {{email_form.file_upload |as_crispy_field}}
+              <span class="color-secondary"
+                >you can attach 2M files (pdf,doc)</span
+              >
+            </div>
+
+            {{email_form.company |as_crispy_field}} {{email_form.sender |as_crispy_field}}
+            <button
+              class="btn btn-primary btn-lg mt-5"
+              type="submit"
+              name="simple-mail"
+            >
+              Send Email <i class="bx bx-mail-send bx-xl"></i>
+            </button>
+            
+          </form>
+          {% endif %}
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            name=""
+            class="btn btn-secondary"
+            data-dismiss="modal"
+          >
+            Close
+          </button>
+        </div>
+        {% if form.errors %}
+        <script src="{% static 'plugins/sweetalert2/sweetalert2.all.js' %}"></script>
+	    <script src="{% static 'plugins/sweetalert2/sweet-alert.init.js' %}"></script>
+        <script>
+            swal("Denied !","Fill the form corectly","")
+        </script>
+        {% endif %}
+        <script>
+          var sender = "{{ user.id }}";
+          document.getElementById("sender").value = sender;
+          var company = "{{ customer.id }}";
+          document.getElementById("company").value = company;
+        </script>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="templates"
+        role="tabpanel"
+        aria-labelledby="profile-tab"
+      >
+        <style>
+          #email-type {
+            width: 120px;
+            border-radius: 4px;
+          }
+          email-template {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 0 0 10px;
+            display: block;
+          }
+
+          email-template :hover {
+            background: #eee;
+            cursor: pointer;
+          }
+        </style>
+
+        <div class="card">
+          <div class="text-center card-header">
+            <h3>Choose the email template !!</h3>
+          </div>
+          <div class="card-body">
+            <form
+              hx-post="emails/p={{customer.id}}"
+              class="m-4"
+              autocomplete="off"
+
+            >
+              <div class="d-flex justify-content-between p-4" role="group">
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="emailtype"
+                  id="btnradio1"
+                  autocomplete="off"
+                  value="Prices"
+                />
+                <label
+                  class="btn btn-outline-primary text-dark btn-lg mb-3 p-4 email-template"
+                  id="email-type"
+                  for="btnradio1"
+                  ><i class="fa-solid fa-money-check-dollar fa-2xl"></i
+                ></label>
+
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="emailtype"
+                  id="btnradio2"
+                  autocomplete="off"
+                  value="Shops"
+                />
+                <label
+                  class="btn btn-outline-info text-dark btn-lg mb-3 p-4 email-template"
+                  id="email-type"
+                  for="btnradio2"
+                  ><i class="fa-solid fa-store fa-2xl"></i
+                ></label>
+
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="emailtype"
+                  id="btnradio3"
+                  autocomplete="off"
+                  value="Adds"
+                />
+                <label
+                  class="btn btn-outline-success text-dark btn-lg mb-3 p-4 email-template"
+                  id="email-type"
+                  for="btnradio3"
+                  ><i class="fa-solid fa-bullhorn fa-2xl"></i
+                ></label>
+
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="emailtype"
+                  id="btnradio4"
+                  autocomplete="off"
+                  value="Auction"
+                />
+                <label
+                  class="btn btn-outline-warning text-dark btn-lg mb-3 p-4 email-template"
+                  id="email-type"
+                  for="btnradio4"
+                  ><i class="fa-solid fa-gavel fa-2xl"></i
+                ></label>
+              </div>
+              <div class="card p-2 border-dark mt-1">
+                <h5 class="text-center text-dark">Fill out this form</h5>
+                <div class="input-group mb-1 mt-3">
+                  <span style="background-color: #ccc" class="input-group-text"
+                    ><i class="fas fa-user-alt"></i
+                  ></span>
+                  <input
+                    type="text"
+                    name="company"
+                    id="companyname"
+                    class="form-control"
+                    required
+                    placeholder="Your Name"
+                  />
+                </div>
+                <div class="input-group mb-1">
+                  <span style="background-color: #ccc" class="input-group-text"
+                    ><i class="fas fa-envelope"></i
+                  ></span>
+                  <input
+                    type="text"
+                    name="email"
+                    class="form-control"
+                    id="email"
+                    required
+                    placeholder="Your Email"
+                  />
+                </div>
+                <div class="btn-group mt-3">
+                  <button
+                    type="submit"
+                    class="btn btn-outline-dark mb-2"
+                    style="border-radius: 4px"
+                    name="template"
+                  >
+                    <i class="fa-regular fa-paper-plane fa-xl"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              name=""
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+
+        <script>
+          document.body.addEventListener("htmx:configRequest", (event) => {
+            event.detail.headers["X-CSRFToken"] = "{{ csrf_token }}";
+          });
+          var company = "{{ customer.company }}";
+          document.getElementById("companyname").value = company;
+          var email = "{{ customer.email }}";
+          document.getElementById("email").value = email;
+          
+        </script>
+      </div>
+    </div>
+  </div>
+</div>
+

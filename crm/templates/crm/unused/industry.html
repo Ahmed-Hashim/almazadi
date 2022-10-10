@@ -1,0 +1,18 @@
+{% extends 'crm/parts/dropdownform.html' %} 
+{% block url %}
+{% url 'search_industry' %}
+{% endblock url %}
+{% block name %}industry{% endblock name %}
+{% block id %}industry{% endblock id %} 
+{% block droplist %} 
+    {% if industrys %} 
+    <option>------</option>
+        {% for industry in industrys %}
+        <option>
+            {{industry.name}}</option>
+        {% endfor %}
+    {% else %}
+        <option>------</option>
+    {% endif %} 
+{% endblock droplist %}
+{% block namem %}&nbsp;Industry{% endblock namem %}

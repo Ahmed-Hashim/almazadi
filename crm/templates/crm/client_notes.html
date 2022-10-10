@@ -1,0 +1,44 @@
+<div class="pd-20 profile-task-wrap">
+  <div class="container pd-0">
+    <!-- Open Task start -->
+    <div class="task-title row align-items-center">
+      <div class="col-md-8 col-sm-12">
+        <h5>Notes ({{notes.count}})</h5>
+      </div>
+      <div class="col-md-4 col-sm-12 text-right">
+        <a
+          href="task-add"
+          data-toggle="modal"
+          data-target="#modal"
+          class="btn btn-dark btn-sm"
+          hx-get="{% url 'add_note' customer.id %}" 
+          hx-target="#dialog"
+          id="addnote"
+          > Add</a
+        >
+      </div>
+    </div>
+    <div class="row clearfix">
+    {% for note in notes %}
+    <div class="col-lg-3 col-md-6 col-sm-12 mb-30">
+        <div class="card">
+            <div class="card-header bg-light p-1 text-center"  >
+              <i class="fa-solid fa-note-sticky"></i>&nbsp;&nbsp;<span class=" badge badge-sm bg-info" >by@{{note.writer}}</span>
+            </div>
+            <div class="card-body text-center">
+              <span class="badge bg-secondary" style="font-size:9px;">{{note.date}}</span>
+                <hr style="width: 80%" />
+                <p>Note ID: {{note.id}}</p>
+                <hr style="width: 80%" />
+                
+                <button class="btn btn-dark btn-sm mt-1 pb-1 justify-content-center" data-toggle="modal" data-target="#modal" hx-get="{% url 'show_note' note.id %}" hx-target="#dialog">Show</button>
+            </div>
+            <div class="card-footer bg-dark p-1">
+                
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+  </div>
+</div>

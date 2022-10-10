@@ -157,6 +157,7 @@ def unpublished_list(request):
       return redirect('schedule_posts')
 
    context={'posts':page_obj,
+   "title":"Unpublished Posts"
               
    }
    return render (request,'post/posts_unpublished.html',context)
@@ -169,6 +170,7 @@ def published_list(request):
    page_number = request.GET.get('page')
    page_obj = paginator.get_page(page_number)
    context={'posts':page_obj,
+            'title':'Published Posts'
               
    }
    
@@ -218,7 +220,9 @@ def post_details(request,id):
       post.update(published=True)
       return redirect(unpublished_list)
 
-   context={'post_details':post_details}
+   context={'post_details':post_details,
+            'title':'Post Details' 
+   }
    return render (request,'post/post_detail.html',context)
 
 @login_required
@@ -236,7 +240,8 @@ def createpost(request):
          submitted=True
 
    context={'form':form,
-            'submitted':submitted,  
+            'submitted':submitted,
+            'title':'Create Post'  
    }
    return render (request,'post/create_post.html',context)
 
@@ -248,6 +253,7 @@ def edit_details(request,id):
       form.save()
       return redirect("post_details",id)
    context={'post_details':post_details,'form':form,
+            'title':'Edit Post' 
               
    }
    return render (request,'post/edit_post.html',context)
@@ -271,7 +277,8 @@ def schedule_posts(request):
    #paginator = Paginator(published_list,20) # Show 25 contacts per page.
    #page_number = request.GET.get('page')
    #page_obj = paginator.get_page(page_number)
-   context={'posts':scheduled_list,       
+   context={'posts':scheduled_list,
+            'title':'Scheduled Post'        
    }
    return render (request,'post/schedule_posts.html',context)
 
@@ -328,3 +335,5 @@ def delete_post_ajax(request,id):
    post.delete()
    return JsonResponse({})
 
+def test(request):
+   return render(request,'post/test.html')

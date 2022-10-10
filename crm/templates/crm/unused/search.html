@@ -1,0 +1,11 @@
+{% load static %}
+
+<!-- Search Content-->
+
+<ul class="list-group">
+  {% for item in items %}
+  <li class="list-group-item">{{item.company}}
+    <span class="badge badge-success badge-pill" style="cursor:pointer;">Show<span>
+  </li>
+  {% endfor %}
+</ul>

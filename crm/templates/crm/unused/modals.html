@@ -1,0 +1,29 @@
+<!-- Show-Modals -->
+<div class="modal fade " id="show" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="details-tab" data-toggle="tab" href="#details" role="tab" aria-controls="details" aria-selected="true">Details</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="true">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="edit-tab" data-toggle="tab" href="#edit" hx-get="" hx-target=".edit-form" hx-swapper=".swapper" role="tab" aria-controls="edit" aria-selected="true">Edit</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="details" role="tabpanel" aria-labelledby="home-tab">
+            {% include "crm/details.html"%}
+          </div>
+          <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="profile-tab">
+            {% include "crm/details.html"%}
+          </div>
+          <div class="tab-pane fade" id="edit" role="tabpanel" aria-labelledby="contact-tab">
+            {% include "crm/edit_crm.html"%}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

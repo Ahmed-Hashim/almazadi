@@ -1,0 +1,2268 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:v="urn:schemas-microsoft-com:vml"
+>
+  <head>
+    <title></title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <!--[if mso]>
+      <xml>
+        <o:OfficeDocumentSettings>
+          <o:PixelsPerInch>96</o:PixelsPerInch>
+          <o:AllowPNG />
+        </o:OfficeDocumentSettings>
+      </xml>
+    <![endif]-->
+    <!--[if !mso]><!-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!--<![endif]-->
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      a[x-apple-data-detectors] {
+        color: inherit !important;
+        text-decoration: inherit !important;
+      }
+      #MessageViewBody a {
+        color: inherit;
+        text-decoration: none;
+      }
+      p {
+        line-height: inherit;
+      }
+      .desktop_hide,
+      .desktop_hide table {
+        mso-hide: all;
+        display: none;
+        max-height: 0px;
+        overflow: hidden;
+      }
+      @media (max-width: 690px) {
+        .desktop_hide table.icons-inner,
+        .social_block.desktop_hide .social-table {
+          display: inline-block !important;
+        }
+        .icons-inner {
+          text-align: center;
+        }
+        .icons-inner td {
+          margin: 0 auto;
+        }
+        .image_block img.big,
+        .row-content {
+          width: 100% !important;
+        }
+        .mobile_hide {
+          display: none;
+        }
+        .stack .column {
+          width: 100%;
+          display: block;
+        }
+        .mobile_hide {
+          min-height: 0;
+          max-height: 0;
+          max-width: 0;
+          overflow: hidden;
+          font-size: 0px;
+        }
+        .desktop_hide,
+        .desktop_hide table {
+          display: table !important;
+          max-height: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body
+    style="
+      background-color: #fffdfd;
+      margin: 0;
+      padding: 0;
+      -webkit-text-size-adjust: none;
+      text-size-adjust: none;
+    "
+  >
+    <table
+      border="0"
+      cellpadding="0"
+      cellspacing="0"
+      class="nl-container"
+      role="presentation"
+      style="
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+        background-color: #fffdfd;
+      "
+      width="100%"
+    >
+      <tbody>
+        <tr>
+          <td>
+            <table
+              align="center"
+              border="0"
+              cellpadding="0"
+              cellspacing="0"
+              class="row row-1"
+              role="presentation"
+              style="
+                mso-table-lspace: 0pt;
+                mso-table-rspace: 0pt;
+                background-color: #f9f9f9;
+              "
+              width="100%"
+            >
+              <tbody>
+                <tr>
+                  <td>
+                    <table
+                      align="center"
+                      border="0"
+                      cellpadding="0"
+                      cellspacing="0"
+                      class="row-content stack"
+                      role="presentation"
+                      style="
+                        mso-table-lspace: 0pt;
+                        mso-table-rspace: 0pt;
+                        background-color: #f9f9f9;
+                        color: #000000;
+                        width: 670px;
+                      "
+                      width="670"
+                    >
+                      <tbody>
+                        <tr>
+                          <td
+                            class="column column-1"
+                            style="
+                              mso-table-lspace: 0pt;
+                              mso-table-rspace: 0pt;
+                              font-weight: 400;
+                              text-align: left;
+                              vertical-align: top;
+                              padding-top: 5px;
+                              padding-bottom: 0px;
+                              border-top: 0px;
+                              border-right: 0px;
+                              border-bottom: 0px;
+                              border-left: 0px;
+                            "
+                            width="100%"
+                          >
+                            <table
+                              border="0"
+                              cellpadding="0"
+                              cellspacing="0"
+                              class="html_block block-1"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                              "
+                              width="100%"
+                            >
+                              <tr>
+                                <td class="pad">
+                                  <div
+                                    align="center"
+                                    style="
+                                      font-family: Roboto, Tahoma, Verdana,
+                                        Segoe, sans-serif;
+                                      text-align: center;
+                                    "
+                                  >
+                                    <div
+                                      style="
+                                        height: 16px;
+                                        background-color: #f9f9f9;
+                                      "
+                                    ></div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                            <table
+                              border="0"
+                              cellpadding="0"
+                              cellspacing="0"
+                              class="image_block block-2"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                              "
+                              width="100%"
+                            >
+                              <tr>
+                                <td
+                                  class="pad"
+                                  style="
+                                    width: 100%;
+                                    padding-right: 0px;
+                                    padding-left: 0px;
+                                  "
+                                >
+                                  <div
+                                    align="center"
+                                    class="alignment"
+                                    style="line-height: 10px"
+                                  >
+                                    <img
+                                      alt="Image"
+                                      class="big"
+                                      src="https://i.ibb.co/LYvkgrN/96fe72ed-8031-4a77-8ce9-559aa4748183.png"
+                                      style="
+                                        display: block;
+                                        height: auto;
+                                        border: 0;
+                                        width: 670px;
+                                        max-width: 100%;
+                                      "
+                                      title="Image"
+                                      width="670"
+                                    />
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table
+              align="center"
+              border="0"
+              cellpadding="0"
+              cellspacing="0"
+              class="row row-2"
+              role="presentation"
+              style="
+                mso-table-lspace: 0pt;
+                mso-table-rspace: 0pt;
+                background-color: #f9f9f9;
+              "
+              width="100%"
+            >
+              <tbody>
+                <tr>
+                  <td>
+                    <table
+                      align="center"
+                      border="0"
+                      cellpadding="0"
+                      cellspacing="0"
+                      class="row-content stack"
+                      role="presentation"
+                      style="
+                        mso-table-lspace: 0pt;
+                        mso-table-rspace: 0pt;
+                        background-color: #1d3b7e;
+                        color: #000000;
+                        width: 670px;
+                      "
+                      width="670"
+                    >
+                      <tbody>
+                        <tr>
+                          <td
+                            class="column column-1"
+                            style="
+                              mso-table-lspace: 0pt;
+                              mso-table-rspace: 0pt;
+                              font-weight: 400;
+                              text-align: left;
+                              vertical-align: top;
+                              padding-top: 0px;
+                              padding-bottom: 0px;
+                              border-top: 0px;
+                              border-right: 0px;
+                              border-bottom: 0px;
+                              border-left: 0px;
+                            "
+                            width="100%"
+                          >
+                            <table
+                              border="0"
+                              cellpadding="10"
+                              cellspacing="0"
+                              class="text_block block-1"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                                word-break: break-word;
+                              "
+                              width="100%"
+                            >
+                              <tr>
+                                <td class="pad">
+                                  <div
+                                    style="
+                                      font-family: Tahoma, Verdana, sans-serif;
+                                    "
+                                  >
+                                    <div
+                                      class=""
+                                      style="
+                                        font-size: 14px;
+                                        font-family: 'Roboto', Tahoma, Verdana,
+                                          Segoe, sans-serif;
+                                        mso-line-height-alt: 21px;
+                                        color: #ffffff;
+                                        line-height: 1.5;
+                                      "
+                                    >
+                                      <p
+                                        style="
+                                          margin: 0;
+                                          font-size: 14px;
+                                          text-align: center;
+                                          mso-line-height-alt: 33px;
+                                        "
+                                      >
+                                        <span style="font-size: 22px"
+                                          >Hello, {{company}}</span
+                                        >
+                                      </p>
+                                      <p
+                                        style="
+                                          margin: 0;
+                                          font-size: 14px;
+                                          text-align: center;
+                                          mso-line-height-alt: 33px;
+                                        "
+                                      >
+                                        <span style="font-size: 22px"
+                                          >Extra 70% off on buying service
+                                        </span>
+                                      </p>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                            <table
+                              border="0"
+                              cellpadding="10"
+                              cellspacing="0"
+                              class="text_block block-2"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                                word-break: break-word;
+                              "
+                              width="100%"
+                            >
+                              <tr>
+                                <td class="pad">
+                                  <div
+                                    style="
+                                      font-family: Tahoma, Verdana, sans-serif;
+                                    "
+                                  >
+                                    <div
+                                      class=""
+                                      style="
+                                        font-size: 14px;
+                                        font-family: 'Roboto', Tahoma, Verdana,
+                                          Segoe, sans-serif;
+                                        mso-line-height-alt: 21px;
+                                        color: #ffffff;
+                                        line-height: 1.5;
+                                      "
+                                    >
+                                      <p
+                                        style="
+                                          margin: 0;
+                                          font-size: 14px;
+                                          text-align: center;
+                                          mso-line-height-alt: 33px;
+                                        "
+                                      >
+                                        <span style="font-size: 22px"
+                                          >Use code: ALMAZADI<strong
+                                            >EXTRA70</strong
+                                          ></span
+                                        >
+                                      </p>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                            <table
+                              border="0"
+                              cellpadding="0"
+                              cellspacing="0"
+                              class="html_block block-3"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                              "
+                              width="100%"
+                            >
+                              <tr>
+                                <td class="pad">
+                                  <div
+                                    align="center"
+                                    style="
+                                      font-family: Roboto, Tahoma, Verdana,
+                                        Segoe, sans-serif;
+                                      text-align: center;
+                                    "
+                                  >
+                                    <div style="height: 16px"></div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                            <table
+                              border="0"
+                              cellpadding="10"
+                              cellspacing="0"
+                              class="button_block block-4"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                              "
+                              width="100%"
+                            >
+                              <tr>
+                                <td class="pad">
+                                  <div align="center" class="alignment">
+                                    <!--[if mso]>
+                                                      <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{downloadlink}}" style="height:42px;width:189px;v-text-anchor:middle;" arcsize="10%" stroke="false" fillcolor="#ffffff">
+                                                         <w:anchorlock/>
+                                                         <v:textbox inset="0px,0px,0px,0px">
+                                                            <center style="color:#0e3d89; font-family:Tahoma, Verdana, sans-serif; font-size:16px">
+                                                               <!
+                                    [endif]--><a
+                                      href="{{downloadlink}}"
+                                      style="
+                                        text-decoration: none;
+                                        display: inline-block;
+                                        color: #0e3d89;
+                                        background-color: #ffffff;
+                                        border-radius: 4px;
+                                        width: auto;
+                                        border-top: 0px solid transparent;
+                                        font-weight: 400;
+                                        border-right: 0px solid transparent;
+                                        border-bottom: 0px solid transparent;
+                                        border-left: 0px solid transparent;
+                                        padding-top: 5px;
+                                        padding-bottom: 5px;
+                                        font-family: Roboto, Tahoma, Verdana,
+                                          Segoe, sans-serif;
+                                        text-align: center;
+                                        mso-border-alt: none;
+                                        word-break: keep-all;
+                                      "
+                                      target="_blank"
+                                      ><span
+                                        style="
+                                          padding-left: 60px;
+                                          padding-right: 60px;
+                                          font-size: 16px;
+                                          display: inline-block;
+                                          letter-spacing: normal;
+                                        "
+                                        ><span
+                                          dir="ltr"
+                                          style="
+                                            word-break: break-word;
+                                            line-height: 32px;
+                                          "
+                                          >Join Now!</span
+                                        ></span
+                                      ></a
+                                    >
+                                    <!--[if mso]>
+                                                            </center>
+                                                         </v:textbox>
+                                                      </v:roundrect>
+                                                      <![endif]-->
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                            <table
+                              border="0"
+                              cellpadding="0"
+                              cellspacing="0"
+                              class="image_block block-5"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                              "
+                              width="100%"
+                            >
+                              <tr>
+                                <td
+                                  class="pad"
+                                  style="
+                                    width: 100%;
+                                    padding-right: 0px;
+                                    padding-left: 0px;
+                                  "
+                                >
+                                  <div
+                                    align="center"
+                                    class="alignment"
+                                    style="line-height: 10px"
+                                  >
+                                    <img
+                                      alt="Image"
+                                      class="big"
+                                      src="https://i.ibb.co/PQfYbK7/Cloud.png"
+                                      style="
+                                        display: block;
+                                        height: auto;
+                                        border: 0;
+                                        width: 670px;
+                                        max-width: 100%;
+                                      "
+                                      title="Image"
+                                      width="670"
+                                    />
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table
+              align="center"
+              border="0"
+              cellpadding="0"
+              cellspacing="0"
+              class="row row-3"
+              role="presentation"
+              style="
+                mso-table-lspace: 0pt;
+                mso-table-rspace: 0pt;
+                background-color: #f9f9f9;
+              "
+              width="100%"
+            >
+              <tbody>
+                <tr>
+                  <td>
+                    <table
+                      align="center"
+                      border="0"
+                      cellpadding="0"
+                      cellspacing="0"
+                      class="row-content stack"
+                      role="presentation"
+                      style="
+                        mso-table-lspace: 0pt;
+                        mso-table-rspace: 0pt;
+                        background-color: #ffffff;
+                        color: #000000;
+                        width: 670px;
+                      "
+                      width="670"
+                    >
+                      <tbody>
+                        <tr>
+                          <td
+                            class="column column-1"
+                            style="
+                              mso-table-lspace: 0pt;
+                              mso-table-rspace: 0pt;
+                              font-weight: 400;
+                              text-align: left;
+                              vertical-align: top;
+                              padding-top: 5px;
+                              padding-bottom: 5px;
+                              border-top: 0px;
+                              border-right: 0px;
+                              border-bottom: 0px;
+                              border-left: 0px;
+                            "
+                            width="100%"
+                          >
+                            <table
+                              border="0"
+                              cellpadding="0"
+                              cellspacing="0"
+                              class="html_block block-1"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                              "
+                              width="100%"
+                            >
+                              <tr>
+                                <td class="pad">
+                                  <div
+                                    align="center"
+                                    style="
+                                      font-family: Roboto, Tahoma, Verdana,
+                                        Segoe, sans-serif;
+                                      text-align: center;
+                                    "
+                                  >
+                                    <div style="height: 48px"></div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                            <table
+                              border="0"
+                              cellpadding="10"
+                              cellspacing="0"
+                              class="text_block block-2"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                                word-break: break-word;
+                              "
+                              width="100%"
+                            >
+                              <tr>
+                                <td class="pad">
+                                  <div
+                                    style="
+                                      font-family: Tahoma, Verdana, sans-serif;
+                                    "
+                                  >
+                                    <div
+                                      class=""
+                                      style="
+                                        font-size: 12px;
+                                        font-family: 'Roboto', Tahoma, Verdana,
+                                          Segoe, sans-serif;
+                                        mso-line-height-alt: 14.399999999999999px;
+                                        color: #555555;
+                                        line-height: 1.2;
+                                      "
+                                    >
+                                      <p
+                                        style="
+                                          margin: 0;
+                                          font-size: 16px;
+                                          text-align: center;
+                                          mso-line-height-alt: 19.2px;
+                                        "
+                                      >
+                                        <span style="font-size: 28px"
+                                          ><strong
+                                            >Best In Algeria 🇩🇿</strong
+                                          ></span
+                                        >
+                                      </p>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                            <table
+                              border="0"
+                              cellpadding="0"
+                              cellspacing="0"
+                              class="text_block block-3"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                                word-break: break-word;
+                              "
+                              width="100%"
+                            >
+                              <tr>
+                                <td
+                                  class="pad"
+                                  style="
+                                    padding-bottom: 15px;
+                                    padding-left: 60px;
+                                    padding-right: 60px;
+                                    padding-top: 15px;
+                                  "
+                                >
+                                  <div
+                                    style="
+                                      font-family: Tahoma, Verdana, sans-serif;
+                                    "
+                                  >
+                                    <div
+                                      class=""
+                                      style="
+                                        font-size: 12px;
+                                        font-family: 'Roboto', Tahoma, Verdana,
+                                          Segoe, sans-serif;
+                                        mso-line-height-alt: 21.6px;
+                                        color: #7d8fa2;
+                                        line-height: 1.8;
+                                      "
+                                    >
+                                      <p
+                                        style="
+                                          margin: 0;
+                                          font-size: 14px;
+                                          text-align: center;
+                                          mso-line-height-alt: 28.8px;
+                                        "
+                                      >
+                                        <span style="font-size: 16px"
+                                          >Get hundreds of new customers for
+                                          your brand with our sale. With savings
+                                          of up to 50%, what’s not to
+                                          love?</span
+                                        >
+                                      </p>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                            <table
+                              border="0"
+                              cellpadding="0"
+                              cellspacing="0"
+                              class="html_block block-4"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                              "
+                              width="100%"
+                            >
+                              <tr>
+                                <td class="pad">
+                                  <div
+                                    align="center"
+                                    style="
+                                      font-family: Roboto, Tahoma, Verdana,
+                                        Segoe, sans-serif;
+                                      text-align: center;
+                                    "
+                                  >
+                                    <div style="height: 24px"></div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table
+              align="center"
+              border="0"
+              cellpadding="0"
+              cellspacing="0"
+              class="row row-4"
+              role="presentation"
+              style="
+                mso-table-lspace: 0pt;
+                mso-table-rspace: 0pt;
+                background-color: #f9f9f9;
+              "
+              width="100%"
+            >
+              <tbody>
+                <tr>
+                  <td>
+                    <table
+                      align="center"
+                      border="0"
+                      cellpadding="0"
+                      cellspacing="0"
+                      class="row-content stack"
+                      role="presentation"
+                      style="
+                        mso-table-lspace: 0pt;
+                        mso-table-rspace: 0pt;
+                        background-color: #ffffff;
+                        color: #000000;
+                        width: 670px;
+                      "
+                      width="670"
+                    >
+                      <tbody>
+                        <tr>
+                          <td
+                            class="column column-1"
+                            style="
+                              mso-table-lspace: 0pt;
+                              mso-table-rspace: 0pt;
+                              font-weight: 400;
+                              text-align: left;
+                              padding-left: 20px;
+                              vertical-align: top;
+                              border-top: 0px;
+                              border-right: 0px;
+                              border-bottom: 0px;
+                              border-left: 0px;
+                            "
+                            width="33.333333333333336%"
+                          >
+                            <div
+                              class="spacer_block"
+                              style="
+                                height: 5px;
+                                line-height: 5px;
+                                font-size: 1px;
+                              "
+                            >
+                               
+                            </div>
+                            <table
+                              border="0"
+                              cellpadding="0"
+                              cellspacing="0"
+                              class="html_block block-2 mobile_hide"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                              "
+                              width="100%"
+                            >
+                              <tr>
+                                <td class="pad">
+                                  <div
+                                    align="center"
+                                    style="
+                                      font-family: Roboto, Tahoma, Verdana,
+                                        Segoe, sans-serif;
+                                      text-align: center;
+                                    "
+                                  >
+                                    <div style="height: 100px"></div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                            <table
+                              border="0"
+                              cellpadding="10"
+                              cellspacing="0"
+                              class="text_block block-3"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                                word-break: break-word;
+                              "
+                              width="100%"
+                            >
+                              <tr>
+                                <td class="pad">
+                                  <div
+                                    style="
+                                      font-family: Tahoma, Verdana, sans-serif;
+                                    "
+                                  >
+                                    <div
+                                      class=""
+                                      style="
+                                        font-size: 12px;
+                                        font-family: 'Roboto', Tahoma, Verdana,
+                                          Segoe, sans-serif;
+                                        mso-line-height-alt: 18px;
+                                        color: #34495e;
+                                        line-height: 1.5;
+                                      "
+                                    >
+                                      <p
+                                        style="
+                                          margin: 0;
+                                          font-size: 14px;
+                                          text-align: left;
+                                          mso-line-height-alt: 45px;
+                                        "
+                                      >
+                                        <span style="font-size: 30px"
+                                          >Let's get ads on maps!!!</span
+                                        >
+                                      </p>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                            <table
+                              border="0"
+                              cellpadding="10"
+                              cellspacing="0"
+                              class="divider_block block-4"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                              "
+                              width="100%"
+                            >
+                              <tr>
+                                <td class="pad">
+                                  <div align="left" class="alignment">
+                                    <table
+                                      border="0"
+                                      cellpadding="0"
+                                      cellspacing="0"
+                                      role="presentation"
+                                      style="
+                                        mso-table-lspace: 0pt;
+                                        mso-table-rspace: 0pt;
+                                      "
+                                      width="25%"
+                                    >
+                                      <tr>
+                                        <td
+                                          class="divider_inner"
+                                          style="
+                                            font-size: 1px;
+                                            line-height: 1px;
+                                            border-top: 1px solid #fc6ed0;
+                                          "
+                                        >
+                                          <span> </span>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                            <table
+                              border="0"
+                              cellpadding="10"
+                              cellspacing="0"
+                              class="text_block block-5"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                                word-break: break-word;
+                              "
+                              width="100%"
+                            >
+                              <tr>
+                                <td class="pad">
+                                  <div style="font-family: sans-serif">
+                                    <div
+                                      class=""
+                                      style="
+                                        font-size: 12px;
+                                        mso-line-height-alt: 21.6px;
+                                        color: #7d8fa2;
+                                        line-height: 1.8;
+                                        font-family: Roboto, Tahoma, Verdana,
+                                          Segoe, sans-serif;
+                                      "
+                                    >
+                                      <p
+                                        style="
+                                          margin: 0;
+                                          font-size: 14px;
+                                          text-align: left;
+                                          mso-line-height-alt: 25.2px;
+                                        "
+                                      >
+                                        Gaining Ads on maps pack ranks on top of
+                                        your competitors is a method to take
+                                        away customers for your benefit.
+                                      </p>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                            <table
+                              border="0"
+                              cellpadding="0"
+                              cellspacing="0"
+                              class="button_block block-6"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                              "
+                              width="100%"
+                            >
+                              <tr>
+                                <td
+                                  class="pad"
+                                  style="
+                                    padding-bottom: 15px;
+                                    padding-left: 10px;
+                                    padding-right: 10px;
+                                    padding-top: 10px;
+                                    text-align: left;
+                                  "
+                                >
+                                  <div align="left" class="alignment">
+                                    <!--[if mso]>
+                                                      <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{downloadlink}}" style="height:42px;width:163px;v-text-anchor:middle;" arcsize="10%" stroke="false" fillcolor="#0e3d89">
+                                                         <w:anchorlock/>
+                                                         <v:textbox inset="0px,0px,0px,0px">
+                                                            <center style="color:#ffffff; font-family:Tahoma, Verdana, sans-serif; font-size:16px">
+                                                               <!
+                                    [endif]--><a
+                                      href="{{downloadlink}}"
+                                      style="
+                                        text-decoration: none;
+                                        display: inline-block;
+                                        color: #ffffff;
+                                        background-color: #0e3d89;
+                                        border-radius: 4px;
+                                        width: auto;
+                                        border-top: 0px solid transparent;
+                                        font-weight: 400;
+                                        border-right: 0px solid transparent;
+                                        border-bottom: 0px solid transparent;
+                                        border-left: 0px solid transparent;
+                                        padding-top: 5px;
+                                        padding-bottom: 5px;
+                                        font-family: 'Roboto', Tahoma, Verdana,
+                                          Segoe, sans-serif;
+                                        text-align: center;
+                                        mso-border-alt: none;
+                                        word-break: keep-all;
+                                      "
+                                      target="_blank"
+                                      ><span
+                                        style="
+                                          padding-left: 50px;
+                                          padding-right: 50px;
+                                          font-size: 16px;
+                                          display: inline-block;
+                                          letter-spacing: normal;
+                                        "
+                                        ><span
+                                          dir="ltr"
+                                          style="
+                                            margin: 0;
+                                            word-break: break-word;
+                                            line-height: 32px;
+                                          "
+                                          >Try Now!</span
+                                        ></span
+                                      ></a
+                                    >
+                                    <!--[if mso]>
+                                                            </center>
+                                                         </v:textbox>
+                                                      </v:roundrect>
+                                                      <![endif]-->
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td
+                            class="column column-2"
+                            style="
+                              mso-table-lspace: 0pt;
+                              mso-table-rspace: 0pt;
+                              font-weight: 400;
+                              text-align: left;
+                              vertical-align: top;
+                              border-top: 0px;
+                              border-right: 0px;
+                              border-bottom: 0px;
+                              border-left: 0px;
+                            "
+                            width="66.66666666666667%"
+                          >
+                            <table
+                              border="0"
+                              cellpadding="0"
+                              cellspacing="0"
+                              class="image_block block-2"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                              "
+                              width="100%"
+                            >
+                              <tr>
+                                <td
+                                  class="pad"
+                                  style="
+                                    width: 100%;
+                                    padding-right: 0px;
+                                    padding-left: 0px;
+                                    padding-top: 5px;
+                                  "
+                                >
+                                  <div
+                                    align="center"
+                                    class="alignment"
+                                    style="line-height: 10px"
+                                  >
+                                    <img
+                                      alt="Image"
+                                      class="big"
+                                      src="https://i.ibb.co/4FWJ0XK/maps.png"
+                                      style="
+                                        display: block;
+                                        height: auto;
+                                        border: 0;
+                                        width: 380px;
+                                        max-width: 100%;
+                                      "
+                                      title="Image"
+                                      width="380"
+                                    />
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                            <table
+                              border="0"
+                              cellpadding="0"
+                              cellspacing="0"
+                              class="html_block block-3"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                              "
+                              width="100%"
+                            >
+                              <tr>
+                                <td class="pad" style="padding-bottom: 5px">
+                                  <div
+                                    align="center"
+                                    style="
+                                      font-family: Roboto, Tahoma, Verdana,
+                                        Segoe, sans-serif;
+                                      text-align: center;
+                                    "
+                                  >
+                                    <div style="height: 24px"></div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table
+              align="center"
+              border="0"
+              cellpadding="0"
+              cellspacing="0"
+              class="row row-5"
+              role="presentation"
+              style="
+                mso-table-lspace: 0pt;
+                mso-table-rspace: 0pt;
+                background-color: #f9f9f9;
+              "
+              width="100%"
+            >
+              <tbody>
+                <tr>
+                  <td>
+                    <table
+                      align="center"
+                      border="0"
+                      cellpadding="0"
+                      cellspacing="0"
+                      class="row-content stack"
+                      role="presentation"
+                      style="
+                        mso-table-lspace: 0pt;
+                        mso-table-rspace: 0pt;
+                        background-color: #ffffff;
+                        color: #000000;
+                        width: 670px;
+                      "
+                      width="670"
+                    >
+                      <tbody>
+                        <tr>
+                          <td
+                            class="column column-1"
+                            style="
+                              mso-table-lspace: 0pt;
+                              mso-table-rspace: 0pt;
+                              font-weight: 400;
+                              text-align: left;
+                              vertical-align: top;
+                              border-top: 0px;
+                              border-right: 0px;
+                              border-bottom: 0px;
+                              border-left: 0px;
+                            "
+                            width="66.66666666666667%"
+                          >
+                            <table
+                              border="0"
+                              cellpadding="0"
+                              cellspacing="0"
+                              class="image_block block-2"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                              "
+                              width="100%"
+                            >
+                              <tr>
+                                <td
+                                  class="pad"
+                                  style="
+                                    width: 100%;
+                                    padding-right: 0px;
+                                    padding-left: 0px;
+                                    padding-top: 5px;
+                                    padding-bottom: 5px;
+                                  "
+                                >
+                                  <div
+                                    align="center"
+                                    class="alignment"
+                                    style="line-height: 10px"
+                                  >
+                                    <img
+                                      alt="I'm an image"
+                                      class="big"
+                                      src="https://i.ibb.co/xzZpN5n/shop.png"
+                                      style="
+                                        display: block;
+                                        height: auto;
+                                        border: 0;
+                                        width: 380px;
+                                        max-width: 100%;
+                                      "
+                                      title="I'm an image"
+                                      width="380"
+                                    />
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td
+                            class="column column-2"
+                            style="
+                              mso-table-lspace: 0pt;
+                              mso-table-rspace: 0pt;
+                              font-weight: 400;
+                              text-align: left;
+                              vertical-align: top;
+                              border-top: 0px;
+                              border-right: 0px;
+                              border-bottom: 0px;
+                              border-left: 0px;
+                            "
+                            width="33.333333333333336%"
+                          >
+                            <div
+                              class="spacer_block"
+                              style="
+                                height: 5px;
+                                line-height: 5px;
+                                font-size: 1px;
+                              "
+                            >
+                               
+                            </div>
+                            <table
+                              border="0"
+                              cellpadding="0"
+                              cellspacing="0"
+                              class="html_block block-2 mobile_hide"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                              "
+                              width="100%"
+                            >
+                              <tr>
+                                <td class="pad">
+                                  <div
+                                    align="center"
+                                    style="
+                                      font-family: Roboto, Tahoma, Verdana,
+                                        Segoe, sans-serif;
+                                      text-align: center;
+                                    "
+                                  >
+                                    <div style="height: 100px"></div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                            <table
+                              border="0"
+                              cellpadding="10"
+                              cellspacing="0"
+                              class="text_block block-3"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                                word-break: break-word;
+                              "
+                              width="100%"
+                            >
+                              <tr>
+                                <td class="pad">
+                                  <div
+                                    style="
+                                      font-family: Tahoma, Verdana, sans-serif;
+                                    "
+                                  >
+                                    <div
+                                      class=""
+                                      style="
+                                        font-size: 12px;
+                                        font-family: 'Roboto', Tahoma, Verdana,
+                                          Segoe, sans-serif;
+                                        mso-line-height-alt: 18px;
+                                        color: #555555;
+                                        line-height: 1.5;
+                                      "
+                                    >
+                                      <p
+                                        style="
+                                          margin: 0;
+                                          font-size: 14px;
+                                          text-align: left;
+                                          mso-line-height-alt: 51px;
+                                        "
+                                      >
+                                        <span style="font-size: 34px"
+                                          >Get Your</span
+                                        >
+                                      </p>
+                                      <p
+                                        style="
+                                          margin: 0;
+                                          font-size: 14px;
+                                          text-align: left;
+                                          mso-line-height-alt: 51px;
+                                        "
+                                      >
+                                        <span style="font-size: 34px"
+                                          >Online Shop</span
+                                        >
+                                      </p>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                            <table
+                              border="0"
+                              cellpadding="10"
+                              cellspacing="0"
+                              class="divider_block block-4"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                              "
+                              width="100%"
+                            >
+                              <tr>
+                                <td class="pad">
+                                  <div align="left" class="alignment">
+                                    <table
+                                      border="0"
+                                      cellpadding="0"
+                                      cellspacing="0"
+                                      role="presentation"
+                                      style="
+                                        mso-table-lspace: 0pt;
+                                        mso-table-rspace: 0pt;
+                                      "
+                                      width="25%"
+                                    >
+                                      <tr>
+                                        <td
+                                          class="divider_inner"
+                                          style="
+                                            font-size: 1px;
+                                            line-height: 1px;
+                                            border-top: 1px solid #f23e2e;
+                                          "
+                                        >
+                                          <span> </span>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                            <table
+                              border="0"
+                              cellpadding="10"
+                              cellspacing="0"
+                              class="text_block block-5"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                                word-break: break-word;
+                              "
+                              width="100%"
+                            >
+                              <tr>
+                                <td class="pad">
+                                  <div
+                                    style="
+                                      font-family: Tahoma, Verdana, sans-serif;
+                                    "
+                                  >
+                                    <div
+                                      class=""
+                                      style="
+                                        font-size: 12px;
+                                        font-family: 'Roboto', Tahoma, Verdana,
+                                          Segoe, sans-serif;
+                                        mso-line-height-alt: 21.6px;
+                                        color: #7d8fa2;
+                                        line-height: 1.8;
+                                      "
+                                    >
+                                      <p
+                                        style="
+                                          margin: 0;
+                                          font-size: 14px;
+                                          text-align: left;
+                                          mso-line-height-alt: 25.2px;
+                                        "
+                                      >
+                                        The choices online are amazing. You can
+                                        find almost any brand or item you're
+                                        looking for be one of this sellers.
+                                      </p>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                            <table
+                              border="0"
+                              cellpadding="10"
+                              cellspacing="0"
+                              class="button_block block-6"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                              "
+                              width="100%"
+                            >
+                              <tr>
+                                <td class="pad">
+                                  <div align="left" class="alignment">
+                                    <!--[if mso]>
+                                                      <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{downloadlink}}" style="height:42px;width:181px;v-text-anchor:middle;" arcsize="10%" stroke="false" fillcolor="#0e3d89">
+                                                         <w:anchorlock/>
+                                                         <v:textbox inset="0px,0px,0px,0px">
+                                                            <center style="color:#ffffff; font-family:Tahoma, Verdana, sans-serif; font-size:16px">
+                                                               <!
+                                    [endif]--><a
+                                      href="{{downloadlink}}"
+                                      style="
+                                        text-decoration: none;
+                                        display: inline-block;
+                                        color: #ffffff;
+                                        background-color: #0e3d89;
+                                        border-radius: 4px;
+                                        width: auto;
+                                        border-top: 0px solid transparent;
+                                        font-weight: 400;
+                                        border-right: 0px solid transparent;
+                                        border-bottom: 0px solid transparent;
+                                        border-left: 0px solid transparent;
+                                        padding-top: 5px;
+                                        padding-bottom: 5px;
+                                        font-family: 'Roboto', Tahoma, Verdana,
+                                          Segoe, sans-serif;
+                                        text-align: center;
+                                        mso-border-alt: none;
+                                        word-break: keep-all;
+                                      "
+                                      target="_blank"
+                                      ><span
+                                        style="
+                                          padding-left: 50px;
+                                          padding-right: 50px;
+                                          font-size: 16px;
+                                          display: inline-block;
+                                          letter-spacing: normal;
+                                        "
+                                        ><span
+                                          dir="ltr"
+                                          style="
+                                            margin: 0;
+                                            word-break: break-word;
+                                            line-height: 32px;
+                                          "
+                                          ><strong>Shop Now</strong></span
+                                        ></span
+                                      ></a
+                                    >
+                                    <!--[if mso]>
+                                                            </center>
+                                                         </v:textbox>
+                                                      </v:roundrect>
+                                                      <![endif]-->
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                            <table
+                              border="0"
+                              cellpadding="0"
+                              cellspacing="0"
+                              class="html_block block-7"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                              "
+                              width="100%"
+                            >
+                              <tr>
+                                <td class="pad" style="padding-bottom: 5px">
+                                  <div
+                                    align="center"
+                                    style="
+                                      font-family: Roboto, Tahoma, Verdana,
+                                        Segoe, sans-serif;
+                                      text-align: center;
+                                    "
+                                  >
+                                    <div style="height: 24px"></div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table
+              align="center"
+              border="0"
+              cellpadding="0"
+              cellspacing="0"
+              class="row row-6"
+              role="presentation"
+              style="
+                mso-table-lspace: 0pt;
+                mso-table-rspace: 0pt;
+                background-color: #f9f9f9;
+              "
+              width="100%"
+            >
+              <tbody>
+                <tr>
+                  <td>
+                    <table
+                      align="center"
+                      border="0"
+                      cellpadding="0"
+                      cellspacing="0"
+                      class="row-content stack"
+                      role="presentation"
+                      style="
+                        mso-table-lspace: 0pt;
+                        mso-table-rspace: 0pt;
+                        background-color: #1d3b7e;
+                        color: #000000;
+                        width: 670px;
+                      "
+                      width="670"
+                    >
+                      <tbody>
+                        <tr>
+                          <td
+                            class="column column-1"
+                            style="
+                              mso-table-lspace: 0pt;
+                              mso-table-rspace: 0pt;
+                              font-weight: 400;
+                              text-align: left;
+                              vertical-align: top;
+                              padding-top: 0px;
+                              padding-bottom: 0px;
+                              border-top: 0px;
+                              border-right: 0px;
+                              border-bottom: 0px;
+                              border-left: 0px;
+                            "
+                            width="100%"
+                          >
+                            <table
+                              border="0"
+                              cellpadding="0"
+                              cellspacing="0"
+                              class="image_block block-1"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                              "
+                              width="100%"
+                            >
+                              <tr>
+                                <td
+                                  class="pad"
+                                  style="
+                                    width: 100%;
+                                    padding-right: 0px;
+                                    padding-left: 0px;
+                                  "
+                                >
+                                  <div
+                                    align="center"
+                                    class="alignment"
+                                    style="line-height: 10px"
+                                  >
+                                    <img
+                                      alt="Image"
+                                      class="big"
+                                      src="https://i.ibb.co/tBjT2C5/Footer-25-off.png"
+                                      style="
+                                        display: block;
+                                        height: auto;
+                                        border: 0;
+                                        width: 670px;
+                                        max-width: 100%;
+                                      "
+                                      title="Image"
+                                      width="670"
+                                    />
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                            <table
+                              border="0"
+                              cellpadding="10"
+                              cellspacing="0"
+                              class="divider_block block-2"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                              "
+                              width="100%"
+                            >
+                              <tr>
+                                <td class="pad">
+                                  <div align="center" class="alignment">
+                                    <table
+                                      border="0"
+                                      cellpadding="0"
+                                      cellspacing="0"
+                                      role="presentation"
+                                      style="
+                                        mso-table-lspace: 0pt;
+                                        mso-table-rspace: 0pt;
+                                      "
+                                      width="100%"
+                                    >
+                                      <tr>
+                                        <td
+                                          class="divider_inner"
+                                          style="
+                                            font-size: 1px;
+                                            line-height: 1px;
+                                            border-top: 0px dotted #1d3b7e;
+                                          "
+                                        >
+                                          <span> </span>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                            <table
+                              border="0"
+                              cellpadding="0"
+                              cellspacing="0"
+                              class="divider_block block-3"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                              "
+                              width="100%"
+                            >
+                              <tr>
+                                <td
+                                  class="pad"
+                                  style="
+                                    padding-bottom: 20px;
+                                    padding-left: 25px;
+                                    padding-right: 25px;
+                                    padding-top: 10px;
+                                  "
+                                >
+                                  <div align="center" class="alignment">
+                                    <table
+                                      border="0"
+                                      cellpadding="0"
+                                      cellspacing="0"
+                                      role="presentation"
+                                      style="
+                                        mso-table-lspace: 0pt;
+                                        mso-table-rspace: 0pt;
+                                      "
+                                      width="100%"
+                                    >
+                                      <tr>
+                                        <td
+                                          class="divider_inner"
+                                          style="
+                                            font-size: 1px;
+                                            line-height: 1px;
+                                            border-top: 1px dotted #f9f9f9f9;
+                                          "
+                                        >
+                                          <span> </span>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table
+              align="center"
+              border="0"
+              cellpadding="0"
+              cellspacing="0"
+              class="row row-7"
+              role="presentation"
+              style="
+                mso-table-lspace: 0pt;
+                mso-table-rspace: 0pt;
+                background-color: #f9f9f9;
+              "
+              width="100%"
+            >
+              <tbody>
+                <tr>
+                  <td>
+                    <table
+                      align="center"
+                      border="0"
+                      cellpadding="0"
+                      cellspacing="0"
+                      class="row-content stack"
+                      role="presentation"
+                      style="
+                        mso-table-lspace: 0pt;
+                        mso-table-rspace: 0pt;
+                        background-color: #1d3b7e;
+                        background-image: url('images/Footer_2.png');
+                        background-position: top center;
+                        background-repeat: repeat;
+                        border-radius: 0;
+                        color: #000000;
+                        width: 670px;
+                      "
+                      width="670"
+                    >
+                      <tbody>
+                        <tr>
+                          <td
+                            class="column column-1"
+                            style="
+                              mso-table-lspace: 0pt;
+                              mso-table-rspace: 0pt;
+                              font-weight: 400;
+                              text-align: left;
+                              vertical-align: top;
+                              padding-top: 5px;
+                              padding-bottom: 0px;
+                              border-top: 0px;
+                              border-right: 0px;
+                              border-bottom: 0px;
+                              border-left: 0px;
+                            "
+                            width="100%"
+                          >
+                            <table
+                              border="0"
+                              cellpadding="5"
+                              cellspacing="0"
+                              class="image_block block-1"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                              "
+                              width="100%"
+                            >
+                              <tr>
+                                <td class="pad">
+                                  <div
+                                    align="center"
+                                    class="alignment"
+                                    style="line-height: 10px"
+                                  >
+                                    <a
+                                      href="{{googleplay}}"
+                                      style="outline: none"
+                                      tabindex="-1"
+                                      target="_blank"
+                                      ><img
+                                        src="https://i.ibb.co/wK1gZVH/0492a4bb-fb9c-416d-b793-46dc9252a011.png"
+                                        style="
+                                          display: block;
+                                          height: auto;
+                                          border: 0;
+                                          width: 201px;
+                                          max-width: 100%;
+                                        "
+                                        width="201"
+                                    /></a>
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                            <table
+                              border="0"
+                              cellpadding="0"
+                              cellspacing="0"
+                              class="image_block block-2"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                              "
+                              width="100%"
+                            >
+                              <tr>
+                                <td
+                                  class="pad"
+                                  style="
+                                    width: 100%;
+                                    padding-right: 0px;
+                                    padding-left: 0px;
+                                  "
+                                >
+                                  <div
+                                    align="center"
+                                    class="alignment"
+                                    style="line-height: 10px"
+                                  >
+                                    <a
+                                      href="{{appstore}}"
+                                      style="outline: none"
+                                      tabindex="-1"
+                                      target="_blank"
+                                      ><img
+                                        src="https://i.ibb.co/HhRsDFd/2a2ebfeb-0570-41a8-8c8d-1a62510bc765.png"
+                                        style="
+                                          display: block;
+                                          height: auto;
+                                          border: 0;
+                                          width: 201px;
+                                          max-width: 100%;
+                                        "
+                                        width="201"
+                                    /></a>
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                            <table
+                              border="0"
+                              cellpadding="0"
+                              cellspacing="0"
+                              class="divider_block block-3"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                              "
+                              width="100%"
+                            >
+                              <tr>
+                                <td
+                                  class="pad"
+                                  style="
+                                    padding-left: 25px;
+                                    padding-right: 25px;
+                                    padding-top: 10px;
+                                  "
+                                >
+                                  <div align="center" class="alignment">
+                                    <table
+                                      border="0"
+                                      cellpadding="0"
+                                      cellspacing="0"
+                                      role="presentation"
+                                      style="
+                                        mso-table-lspace: 0pt;
+                                        mso-table-rspace: 0pt;
+                                      "
+                                      width="100%"
+                                    >
+                                      <tr>
+                                        <td
+                                          class="divider_inner"
+                                          style="
+                                            font-size: 1px;
+                                            line-height: 1px;
+                                            border-top: 1px dotted #f9f9f9f9;
+                                          "
+                                        >
+                                          <span> </span>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                            <table
+                              border="0"
+                              cellpadding="10"
+                              cellspacing="0"
+                              class="text_block block-4"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                                word-break: break-word;
+                              "
+                              width="100%"
+                            >
+                              <tr>
+                                <td class="pad">
+                                  <div style="font-family: sans-serif">
+                                    <div
+                                      class=""
+                                      style="
+                                        font-size: 12px;
+                                        font-family: Roboto, Tahoma, Verdana,
+                                          Segoe, sans-serif;
+                                        mso-line-height-alt: 14.399999999999999px;
+                                        color: #ffffff;
+                                        line-height: 1.2;
+                                      "
+                                    >
+                                      <p
+                                        style="
+                                          margin: 0;
+                                          font-size: 12px;
+                                          text-align: center;
+                                          mso-line-height-alt: 14.399999999999999px;
+                                        "
+                                      >
+                                        <span style="font-size: 18px"
+                                          >Follow us</span
+                                        >
+                                      </p>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                            <table
+                              border="0"
+                              cellpadding="0"
+                              cellspacing="0"
+                              class="social_block block-5"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                              "
+                              width="100%"
+                            >
+                              <tr>
+                                <td
+                                  class="pad"
+                                  style="
+                                    text-align: center;
+                                    padding-right: 0px;
+                                    padding-left: 0px;
+                                  "
+                                >
+                                  <div
+                                    class="alignment"
+                                    style="text-align: center"
+                                  >
+                                    <table
+                                      border="0"
+                                      cellpadding="0"
+                                      cellspacing="0"
+                                      class="social-table"
+                                      role="presentation"
+                                      style="
+                                        mso-table-lspace: 0pt;
+                                        mso-table-rspace: 0pt;
+                                        display: inline-block;
+                                      "
+                                      width="126px"
+                                    >
+                                      <tr>
+                                        <td style="padding: 0 5px 0 5px">
+                                          <a
+                                            href="{{instgramlink}}"
+                                            target="_blank"
+                                            ><img
+                                              alt="Custom"
+                                              height="32"
+                                              src="https://i.ibb.co/TTLbqFR/Instagram.png"
+                                              style="
+                                                display: block;
+                                                height: auto;
+                                                border: 0;
+                                              "
+                                              title="Custom"
+                                              width="32"
+                                          /></a>
+                                        </td>
+                                        <td style="padding: 0 5px 0 5px">
+                                          <a
+                                            href="{{facebooklink}}"
+                                            target="_blank"
+                                            ><img
+                                              alt="Custom"
+                                              height="32"
+                                              src="https://i.ibb.co/PtKNWd2/Facebook.png"
+                                              style="
+                                                display: block;
+                                                height: auto;
+                                                border: 0;
+                                              "
+                                              title="Custom"
+                                              width="32"
+                                          /></a>
+                                        </td>
+                                        <td style="padding: 0 5px 0 5px">
+                                          <a
+                                            href="{{twitterlink}}"
+                                            target="_blank"
+                                            ><img
+                                              alt="Custom"
+                                              height="32"
+                                              src="https://i.ibb.co/bLS94KM/Twitter.png"
+                                              style="
+                                                display: block;
+                                                height: auto;
+                                                border: 0;
+                                              "
+                                              title="Custom"
+                                              width="32"
+                                          /></a>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                            <table
+                              border="0"
+                              cellpadding="0"
+                              cellspacing="0"
+                              class="divider_block block-6"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                              "
+                              width="100%"
+                            >
+                              <tr>
+                                <td
+                                  class="pad"
+                                  style="
+                                    padding-bottom: 10px;
+                                    padding-left: 10px;
+                                    padding-right: 10px;
+                                    padding-top: 20px;
+                                  "
+                                >
+                                  <div align="center" class="alignment">
+                                    <table
+                                      border="0"
+                                      cellpadding="0"
+                                      cellspacing="0"
+                                      role="presentation"
+                                      style="
+                                        mso-table-lspace: 0pt;
+                                        mso-table-rspace: 0pt;
+                                      "
+                                      width="65%"
+                                    >
+                                      <tr>
+                                        <td
+                                          class="divider_inner"
+                                          style="
+                                            font-size: 1px;
+                                            line-height: 1px;
+                                            border-top: 0px dotted #ffffff;
+                                          "
+                                        >
+                                          <span> </span>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                            <table
+                              border="0"
+                              cellpadding="10"
+                              cellspacing="0"
+                              class="text_block block-7"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                                word-break: break-word;
+                              "
+                              width="100%"
+                            >
+                              <tr>
+                                <td class="pad">
+                                  <div style="font-family: sans-serif">
+                                    <div
+                                      class=""
+                                      style="
+                                        font-size: 12px;
+                                        font-family: Roboto, Tahoma, Verdana,
+                                          Segoe, sans-serif;
+                                        mso-line-height-alt: 14.399999999999999px;
+                                        color: #ffffff;
+                                        line-height: 1.2;
+                                      "
+                                    >
+                                      <p
+                                        style="
+                                          margin: 0;
+                                          font-size: 12px;
+                                          text-align: center;
+                                          mso-line-height-alt: 14.399999999999999px;
+                                        "
+                                      >
+                                        <a
+                                          href="#"
+                                          rel="noopener"
+                                          style="
+                                            text-decoration: none;
+                                            color: #ffffff;
+                                          "
+                                          target="_blank"
+                                          >Magane Preferences</a
+                                        >
+                                        |
+                                        <a
+                                          href="#"
+                                          rel="noopener"
+                                          style="
+                                            text-decoration: none;
+                                            color: #ffffff;
+                                          "
+                                          target="_blank"
+                                          >Help & Contact</a
+                                        >t |
+                                        <a
+                                          href="#"
+                                          rel="noopener"
+                                          style="
+                                            text-decoration: none;
+                                            color: #ffffff;
+                                          "
+                                          target="_blank"
+                                          >Privacy Notice</a
+                                        >
+                                        |
+                                        <a
+                                          href="#"
+                                          rel="noopener"
+                                          style="
+                                            text-decoration: none;
+                                            color: #ffffff;
+                                          "
+                                          target="_blank"
+                                          >View Online</a
+                                        >
+                                      </p>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

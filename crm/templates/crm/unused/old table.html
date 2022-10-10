@@ -1,0 +1,416 @@
+<!--Buttons-->
+<div class="row" style="width:100%">
+  <div class="col">
+    <input class="form-control form-control-sm " placeholder="Search" name="search" id="search"
+      hx-post="{% url 'search_client' %}"
+      hx-target=".crm-list"
+      hx-trigger="keyup changed delay:500ms"
+      hx-headers='{"X-CSRFToken": "{{ csrf_token}}"}'/>          
+  </div>
+  <div class="col">
+    <button class="btn btn-dark btn-sm"type="reset" value="reset" id="reset"
+    hx-get="{% url 'customerlist' %}"
+    hx-target=".crm-list">
+    <i class="fas fa-sync-alt"></i></button>
+  </div>
+  <div class="col">
+    {% include 'crm/status.html' %}
+  </div>
+  <div class="col">
+    {% include 'crm/industry.html' %}
+  </div>
+  <div class="col">
+    <button type="button" class="btn btn-info btn-sm ml-1" data-toggle="modal" data-target="#add">
+    <i class="fas fa-file-circle-plus"></i>
+    </button>
+  </div>
+</div>
+
+
+
+<tbody id="DataTables_Table_2"> 
+    {% if customers %}
+    {% for customer in customers %}
+          <tr role="row">
+            <td  width="30%">{{ customer.company }}</td>
+            <td width="20%">{{ customer.industry }}</td>
+            <td width="20%">{{ customer.lead_referral_source }}</td>
+            <td width="10%">{{ customer.status }}</td>
+            <td width="20%">{{ customer.last_edit_date }}</td>
+            <div class="btn-group ">
+                <button class="btn btn-primary btn-sm"  data-toggle="modal" data-target="#show-{{ customer.id }}"><i class='bx bxs-user-detail bx-sm' ></i></button>
+                <button class="btn btn-warning btn-sm"  data-toggle="modal" data-target="#note-modal-{{ customer.id }}"><i class='bx bxs-note bx-sm'></i></button>
+                <button class="btn btn-success btn-sm"
+                        hx-get="{% url "email_form" customer.id %}"
+                        hx-target=".email-body-{{ customer.id }}"  
+                        data-toggle="modal" 
+                        data-target="#email-modal-{{ customer.id }}">
+                         <i class="bx bx-envelope bx-sm"></i>
+                        </button>
+                <button class="btn btn-danger btn-sm"  
+                  hx-headers="{"X-CSRFToken": "{{ csrf_token}}"} "
+                  class="btn btn-danger" 
+                  hx-target="#crm-list "
+                  hx-delete="{% url 'delete_client' customer.id %}"
+                  hx-confirm="Are you sure you want to delete?">
+                  <i class='bx bx-trash bx-sm'></i>
+                </button>
+            </div>
+        </tr>
+        <!-- Modals -->
+          <!-- email-Modals -->
+          <div class="modal right fade" id="email-modal-{{ customer.id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-mdb-backdrop="true" data-mdb-keyboard="false">
+            <div class="modal-dialog modal-side modal-bottom-right  modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">email@{{customer.company}}</h5>
+                </div>
+                <div class="modal-body email-body-{{ customer.id }}">
+                  {% include 'crm/email_form.html' %}
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                    Close
+                  </button>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
+          <!-- Notes-Modals -->
+          <div class="modal right fade" id="note-modal-{{ customer.id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-mdb-backdrop="true" data-mdb-keyboard="false">
+            <div class="modal-dialog modal-side modal-bottom-right  modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                  <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">...</div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
+                    Close
+                  </button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Show-Modals -->
+          <div class="modal fade " id="show-{{ customer.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+              <div class="modal-content">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="details-{{ customer.id }}-tab" data-toggle="tab" href="#details-{{ customer.id }}" role="tab" aria-controls="details-{{ customer.id }}" aria-selected="true">Details</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="contact-{{ customer.id }}-tab" data-toggle="tab" href="#contact-{{ customer.id }}" role="tab" aria-controls="contact-{{ customer.id }}" aria-selected="true">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="edit-{{ customer.id }}-tab" data-toggle="tab" href="#edit-{{ customer.id }}" hx-get="{% url 'edit_customer' customer.id %}" hx-target=".edit-form-{{ customer.id }}" hx-swapper=".swapper" role="tab" aria-controls="edit-{{ customer.id }}" aria-selected="true">Edit</a>
+                  </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                  <div class="tab-pane fade show active" id="details-{{ customer.id }}" role="tabpanel" aria-labelledby="home-tab">
+                    {% include "crm/details.html"%}
+                  </div>
+                  <div class="tab-pane fade" id="contact-{{ customer.id }}" role="tabpanel" aria-labelledby="profile-tab">
+                    {% include "crm/details.html"%}
+                  </div>
+                  <div class="tab-pane fade" id="edit-{{ customer.id }}" role="tabpanel" aria-labelledby="contact-tab">
+                    {% include "crm/edit_crm.html"%}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+      {% endfor %}
+      {% else %}
+        <span class="m-3"> You Don't Have Customers </span>
+      {% endif %}
+
+        <!-- Modals -->
+          <!-- email-Modals -->
+          <div class="modal right fade" id="email-modal-{{ customer.id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-mdb-backdrop="true" data-mdb-keyboard="false">
+            <div class="modal-dialog modal-side modal-bottom-right  modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">email@{{customer.company}}</h5>
+                </div>
+                <div class="modal-body email-body-{{ customer.id }}">
+                  {% include 'crm/email_form.html' %}
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                    Close
+                  </button>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
+          <!-- Notes-Modals -->
+          <div class="modal right fade" id="note-modal-{{ customer.id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-mdb-backdrop="true" data-mdb-keyboard="false">
+            <div class="modal-dialog modal-side modal-bottom-right  modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                  <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">...</div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
+                    Close
+                  </button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Show-Modals -->
+          <div class="modal fade " id="show-{{ customer.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+              <div class="modal-content">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="details-{{ customer.id }}-tab" data-toggle="tab" href="#details-{{ customer.id }}" role="tab" aria-controls="details-{{ customer.id }}" aria-selected="true">Details</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="contact-{{ customer.id }}-tab" data-toggle="tab" href="#contact-{{ customer.id }}" role="tab" aria-controls="contact-{{ customer.id }}" aria-selected="true">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="edit-{{ customer.id }}-tab" data-toggle="tab" href="#edit-{{ customer.id }}" hx-get="{% url 'edit_customer' customer.id %}" hx-target=".edit-form-{{ customer.id }}" hx-swapper=".swapper" role="tab" aria-controls="edit-{{ customer.id }}" aria-selected="true">Edit</a>
+                  </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                  <div class="tab-pane fade show active" id="details-{{ customer.id }}" role="tabpanel" aria-labelledby="home-tab">
+                    {% include "crm/details.html"%}
+                  </div>
+                  <div class="tab-pane fade" id="contact-{{ customer.id }}" role="tabpanel" aria-labelledby="profile-tab">
+                    {% include "crm/details.html"%}
+                  </div>
+                  <div class="tab-pane fade" id="edit-{{ customer.id }}" role="tabpanel" aria-labelledby="contact-tab">
+                    {% include "crm/edit_crm.html"%}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+
+
+
+
+
+
+
+
+          $(document).ready(function () {
+            var table=$('#customers').DataTable({
+              dom: 'Bfrtip',
+              buttons: [
+                'copyHtml5',
+                'excelHtml5',
+                'csvHtml5',
+                'pdfHtml5'
+            ],
+              "ajax":"json",
+              "columnDefs": [
+                    {   
+                        targets: -1,
+                        data: null,
+                        defaultContent: `<div class="btn-group ">
+                          <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#show" id ="#show" > <i class='bx bxs-user-detail bx-sm' ></i></button>
+                          <button class="btn btn-warning btn-sm"  id="note"><i class='bx bxs-note bx-sm'></i></button>
+                          <button class="btn btn-success btn-sm"
+                                  hx-get=""
+                                  hx-target=".email-body"  
+                                  data-toggle="modal" 
+                                  data-target="#email-modal">
+                                   <i class="bx bx-envelope bx-sm"></i>
+                                  </button>
+                          <button class="btn btn-danger btn-sm"  
+                            hx-headers="{"X-CSRFToken": "{{ csrf_token}}"} "
+                            class="btn btn-danger" 
+                            hx-target="#crm-list "
+                            hx-delete=""
+                            hx-confirm="Are you sure you want to delete?">
+                            <i class='bx bx-trash bx-sm'></i>
+                          </button>
+                      </div>`,
+                    },
+                ],
+              "columns":[
+                      {"data":"industry"},
+                      {"data":"company"},
+                      {"data":"industry"},
+                      {"data":"lead_referral_source"},
+                      {"data":"status"},
+                      {"data":"last_contact_date"},
+                      {"data":""},
+         
+                      ],
+              
+              paging:true,
+              pageLength:25,
+              legthChange:true,
+              autoWidth:false,
+              searching:true,
+              bInfo:true,
+              bSort:true,
+              select: true,
+        
+        
+            });
+        
+            $('#note tbody').on('click', 'button', function () {
+              var data = table.row($(this).parents('tr')).data();
+              alert(data[0] + "'s salary is: " + data[5]);
+          });
+        
+        });
+
+
+
+
+
+
+
+
+
+
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          Close
+        </button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+"ajax":"json",
+      "columnDefs": [
+            {   
+                targets: -1,
+                data: null,
+                defaultContent: `<div class="btn-group ">
+                  <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#show" id ="#show" > <i class='bx bxs-user-detail bx-sm' ></i></button>
+                  <button class="btn btn-warning btn-sm"  id="note"><i class='bx bxs-note bx-sm'></i></button>
+                  <button class="btn btn-success btn-sm"
+                          hx-get=""
+                          hx-target=".email-body"  
+                          data-toggle="modal" 
+                          data-target="#email-modal">
+                           <i class="bx bx-envelope bx-sm"></i>
+                          </button>
+                  <button class="btn btn-danger btn-sm"  
+                    hx-headers="{"X-CSRFToken": "{{ csrf_token}}"} "
+                    class="btn btn-danger" 
+                    hx-target="#crm-list "
+                    hx-delete=""
+                    hx-confirm="Are you sure you want to delete?">
+                    <i class='bx bx-trash bx-sm'></i>
+                  </button>
+              </div>`,
+            },
+        ],
+      "columns":[
+              {"data":"industry"},
+              {"data":"company"},
+              {"data":"industry"},
+              {"data":"lead_referral_source"},
+              {"data":"status"},
+              {"data":"last_contact_date"},
+              {"data":""},
+  
+              ],
+    });
+  
+    $('#customers tbody').on('click', 'button', function () {
+        var data = table.row($(this).parents('tr')).data();
+                
+        $("#crm-modals").html(`<!-- Show-Modals -->
+        <div class="modal fade" id="show" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+                <div class="modal-content">
+                  <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="details-tab" data-toggle="tab" href="#details" role="tab" aria-controls="details" aria-selected="true">Details</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="true">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="edit-tab" data-toggle="tab" href="#edit" hx-get="edit_form/p=`+String(data['industry'])`" hx-target=".edit-form" hx-swapper=".swapper" role="tab" aria-controls="edit" aria-selected="true">Edit</a>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="details" role="tabpanel" aria-labelledby="home-tab">
+                      {% include "crm/details.html"%}
+                    </div>
+                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="profile-tab">
+                      {% include "crm/details.html"%}
+                    </div>
+                    <div class="tab-pane fade" id="edit" role="tabpanel" aria-labelledby="contact-tab">
+                      {% include "crm/edit_crm.html"%}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>`);
+
+
+
+
+
+
+
+            <tr role="row">
+              <td width="5%" x-text="`${customer.id}`"></td>
+              <td width="30%" x-text="`${customer.company}`"></td>
+              <td width="20%" x-text="`${customer.industry}`"></td>
+              <td width="15%" x-text="`${customer.lead_referral_source}`"></td>
+              <td width="10%" x-text="`${customer.status}`">/td>
+              <td width="20%" x-text="`${customer.last_edit_date}`"></td>
+              <td class="btn-group ">
+                  <button class="btn btn-primary btn-sm"  data-toggle="modal" data-target="#show-{{ customer.id }}"><i class='bx bxs-user-detail bx-sm' ></i></button>
+                  <button class="btn btn-warning btn-sm"  data-toggle="modal" data-target="#note-modal-{{ customer.id }}"><i class='bx bxs-note bx-sm'></i></button>
+                  <button class="btn btn-success btn-sm"
+                          hx-get=""
+                          hx-target=".email-body-{{ customer.id }}"  
+                          data-toggle="modal" 
+                          data-target="#email-modal-{{ customer.id }}">
+                            <i class="bx bx-envelope bx-sm"></i>
+                          </button>
+                  <button class="btn btn-danger btn-sm"  
+                    hx-headers="{"X-CSRFToken": "{{ csrf_token}}"} "
+                    class="btn btn-danger" 
+                    hx-target="#crm-list "
+                    hx-delete=""
+                    hx-confirm="Are you sure you want to delete?">
+                    <i class='bx bx-trash bx-sm'></i>
+                  </button>
+              </td>
+            </tr>   
+          </template>

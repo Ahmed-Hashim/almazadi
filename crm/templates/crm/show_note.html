@@ -1,0 +1,20 @@
+<div class="modal-content">
+
+    <div class="modal-header">
+        <h4 class="modal-title">Note about@{{note.company}}</h4>
+        <hr>
+        <span class="badge text-bg-dark">{{note.date}}</span>
+        <span class="badge text-bg-primary">by@<b>{{note.writer}}</b></span>
+    </div>
+    <div class="modal-body">
+        <p>
+            {{note.notes}}
+        </p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">
+            Close
+        </button>
+    </div>
+
+</div>

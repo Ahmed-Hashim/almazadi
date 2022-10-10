@@ -1,0 +1,218 @@
+{% extends "base.html" %}
+{% block body %}
+  
+<div
+    class="toast-container position-fixed bottom-0 end-0 p-3"
+    style="z-index: 11"
+  >
+    <div
+      id="toast"
+      class="toast align-items-center text-white border-0"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+    >
+      <div class="d-flex">
+        <div id="toast-body" class="toast-body"></div>
+      </div>
+    </div>
+  </div>
+<div class="row">
+  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 mb-30">
+    <div class="pd-20 card-box height-100-p" hx-get="{% url 'profile_data' customer.id %}" hx-target="this" hx-trigger="load, crmChange from:body">
+
+    </div>
+  </div>
+  <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 mb-30">
+    <div class="card-box height-100-p overflow-hidden">
+      <div class="profile-tab height-100-p">
+        <div class="tab height-100-p">
+          <ul class="nav nav-tabs customtab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="tab" href="#notes" role="tab"
+                >Notes</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#emails" role="tab"
+                >Emails</a
+              >
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#contacts" role="tab"
+                  >Contacts</a
+                >
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#setting" role="tab"
+                >Settings</a
+              >
+            </li>
+          </ul>
+          <div class="tab-content">
+            <!-- Notes Tab start -->
+            <div class="tab-pane fade show active" id="notes" hx-get="{% url 'client_notes' customer.id %}" role="tabpanel" hx-trigger="load,noteChange from:body" hx-target="this">
+              
+            </div>
+            <!-- Notes Tab End -->
+            <!-- Emails Tab start -->
+            <div class="tab-pane fade" id="emails" hx-get="{% url 'client_emails' customer.id %}" role="tabpanel"  hx-trigger="load,emailChange from:body" hx-target="this">
+
+            </div>      
+            <!-- Emails Tab End -->
+            <!-- Contacts Tab start -->
+            <div class="tab-pane fade" id="contacts" role="tabpanel" >
+              <div class="row clearfix m-3" hx-get="{% url 'view_add_contact' customer.id %}" hx-trigger="load, contactChange from:body" hx-target="this">
+
+              </div>
+
+            </div>      
+            <!-- Contacts Tab End -->
+            <!-- Setting Tab start -->
+
+            <div
+              class="tab-pane fade height-100-p"
+              id="setting"
+              role="tabpanel"
+            >
+              <div class="profile-setting">
+                <div class="card-header  bg-secondary">
+                  <h5 class="modal-tilte text-light"><i class="fa-solid fa-user-pen"></i>&nbsp;&nbsp;Edit @{{ customer.slug }}</h5>
+              </div>
+                
+                      <form hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}' hx-put="{% url 'view_edit_customer' customer.id %}" autocomplete="off" novalidate>
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col-3">
+                              <h6 for="firstname">First Name</h6>
+                              {{edit_form.first_name}}
+                            </div>
+                            <div class="col-3">
+                              <h6>Middle Name</h6>
+                              {{edit_form.middle_name}}
+                            </div>
+                            <div class="col-3">
+                              <h6>Last Name</h6>
+                              {{edit_form.last_name}}
+                            </div>
+                            <div class="col-3">
+                              <h6>Gender</h6>
+                              {{edit_form.gender}}
+                            </div>
+                          </div>
+                          <div class="row bg-secondary p-2 mb-3 mt-3">
+                            <h5 class="text-light">
+                              <i class="fa-solid fa-globe"></i>&nbsp;&nbsp;Source-Info
+                            </h5>
+                          </div>
+                          <div class="row mt-13">
+                            <div class="col-12  mb-2">
+                              <h6>Lead Source</h6>
+                              {{edit_form.lead_referral_source}}
+                            </div>
+                          </div>
+                          <div class="row mt-2">
+                            <div class="col mb-3">
+                              <h6 class="mb-1">Background Info</h6>
+                              {{edit_form.background_info}}
+                            </div>
+                          </div>
+                          <div class="row bg-secondary p-2 mb-3">
+                            <h5 class="text-light">
+                              <i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;General-Info
+                            </h5>
+                          </div>
+                          <div class="row mt-1">
+                            <div class="col">
+                              <h6>Company</h6>
+                              {{edit_form.company}}
+                            </div>
+                            <div class="col">
+                              <h6>Industry</h6>
+                              {{edit_form.industry}}
+                            </div>
+                            <div class="col">
+                              <h6>Address</h6>
+                              {{edit_form.address}}
+                            </div>
+                            <div class="col">
+                              <h6>Street</h6>
+                              {{edit_form.street}}
+                            </div>
+                          </div>
+                          <div class="row bg-secondary p-2 mb-3 mt-3">
+                            <h5 class="text-light">
+                              <i class="fa-solid fa-address-book"></i>&nbsp;&nbsp;Contact Data
+                            </h5>
+                          </div>
+                          <div class="row mt-1">
+                            <div class="col-4">
+                              <h6>Email</h6>
+                              {{edit_form.email}}
+                            </div>
+                            <div class="col-4">
+                              <h6>Website</h6>
+                              {{edit_form.website}}
+                            </div>                  
+                            <div class="col-4">
+                              <h6>Phone Number</h6>
+                              {{edit_form.land_phone_number}}
+                            </div>
+                          </div>
+                          <div class="row bg-secondary p-2 mb-3 mt-3">
+                            <h5 class="text-light">
+                              <i class="fa-solid fa-users"></i>&nbsp;&nbsp;Social Media
+                            </h5>
+                          </div>
+                          <div class="form-group">
+                            <div class="row mt-1">
+                              <div class="col-4">
+                                <h6>Facebook</h6>
+                                {{edit_form.facebook_url}}
+                              </div>
+                              <div class="col-4">
+                                <h6>Instgram</h6>
+                                {{edit_form.instagram_url}}
+                              </div>
+                              <div class="col-4">
+                                <h6>Twitter</h6>
+                                {{edit_form.twitter_url}}
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row mt-1">
+                            <div class="col-4">
+                              <h6>Linkedin</h6>
+                              {{edit_form.linkedin_url}}
+                            </div>
+                            <div class="col-4">
+                              <h6>Skype</h6>
+                              {{edit_form.skype_url}}
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-footer">
+                          <button type="submit" class="btn btn-sm btn-primary">Save</button>
+                          <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">
+                            Close
+                          </button>
+                        </div>
+                      </form>
+              </div>
+            </div>
+            <!-- Setting Tab End -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+
+  </script>
+<!--Modals-->
+<div id="modal" class="modal fade">
+  <div id="dialog" class="modal-dialog modal-lg" hx-target="this"></div>
+</div>
+
+{% endblock body %}

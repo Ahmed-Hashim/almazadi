@@ -1,0 +1,132 @@
+<div class="modal edit-form">
+  <div class="modal-header bg-secondary">
+    <h5 class="modal-tilte text-light">
+      <i class="fa-solid fa-user-pen"></i>&nbsp;&nbsp;Edit @{{ customer.slug }}
+    </h5>
+  </div>
+
+  <form
+    hx-put="view_edit_customer/p={{customer.id}}" hx-target="#crm-list" novalidate>
+    <div class="modal-body">
+      <div class="row">
+        <div class="col-3">
+          <h6 for="firstname">First Name</h6>
+          {{edit_form.first_name}}
+        </div>
+
+        <div class="col-3">
+          <h6>Middle Name</h6>
+          {{edit_form.middle_name}}
+        </div>
+        <div class="col-3">
+          <h6>Last Name</h6>
+          {{edit_form.last_name}}
+        </div>
+        <div class="col-3">
+          <h6>Gender</h6>
+          {{edit_form.gender}}
+        </div>
+      </div>
+
+      <div class="row bg-secondary p-2 mb-3">
+        <h5 class="text-light">
+          <i class="fa-solid fa-globe"></i>&nbsp;&nbsp;Source-Info
+        </h5>
+      </div>
+
+      <div class="row mt-13">
+        <div class="col-12">
+          <h6>Lead Source</h6>
+          {{edit_form.lead_referral_source}}
+        </div>
+      </div>
+      <div class="row mt-1">
+        <div class="col">
+          <h6>Background Info</h6>
+          {{edit_form.background_info}}
+        </div>
+      </div>
+
+      <div class="row bg-secondary p-2 mb-3">
+        <h5 class="text-light">
+          <i class="fa-solid fa-address-book"></i>&nbsp;&nbsp;Contact Data
+        </h5>
+      </div>
+
+      <div class="row mt-1">
+        <div class="col">
+          <h6>Company</h6>
+          {{edit_form.company}}
+        </div>
+        <div class="col">
+          <h6>Industry</h6>
+          {{edit_form.industry}}
+        </div>
+        <div class="col">
+          <h6>Address</h6>
+          {{edit_form.address}}
+        </div>
+        <div class="col">
+          <h6>Street</h6>
+          {{edit_form.street}}
+        </div>
+      </div>
+
+      <div class="row bg-secondary p-2 mb-3">
+        <h5 class="text-light">
+          <i class="fa-solid fa-users"></i>&nbsp;&nbsp;Social Media
+        </h5>
+      </div>
+
+      <div class="row mt-1">
+        <div class="col-4">
+          <h6>Email</h6>
+          {{edit_form.email}}
+        </div>
+        <div class="col-4">
+          <h6>Website</h6>
+          {{edit_form.website}}
+        </div>
+      </div>
+
+      <h5>Social Media</h5>
+
+      <div class="form-group">
+        <div class="row mt-1">
+          <div class="col-4">
+            <h6>Facebook</h6>
+            {{edit_form.facebook_url}}
+          </div>
+          <div class="col-4">
+            <h6>Instgram</h6>
+            {{edit_form.instagram_url}}
+          </div>
+          <div class="col-4">
+            <h6>Twitter</h6>
+            {{edit_form.twitter_url}}
+          </div>
+        </div>
+      </div>
+      <div class="row mt-1">
+        <div class="col-4">
+          <h6>Linkedin</h6>
+          {{edit_form.linkedin_url}}
+        </div>
+        <div class="col-4">
+          <h6>Skype</h6>
+          {{edit_form.skype_url}}
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="submit" class="btn btn-sm btn-primary">Save</button>
+      <button
+        type="button"
+        class="btn btn-sm btn-secondary"
+        data-dismiss="modal"
+      >
+        Close
+      </button>
+    </div>
+  </form>
+</div>

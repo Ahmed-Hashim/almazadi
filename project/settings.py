@@ -45,25 +45,38 @@ MESSAGE_TAGS = {
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    "bootstrap4",
     'crispy_forms',
+    "crispy_bootstrap5",
     'django_crontab',
+    'rest_framework',
+    'widget_tweaks',
+    "django_htmx",
+    
+
 
 
     #myapps
     'posts',
     'members',
+    'crm',
+
 ]
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    "django_htmx.middleware.HtmxMiddleware",
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -168,6 +181,19 @@ LOGIN_REDIRECT_URL='dashboard'
 LOGOUT_REDIRECT_URL='login'
 LOGIN_URL='login'
 
-CRISPY_TEMPLATE_PACK = 'bootstrap'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'ah.abolaban@gmail.com'
+EMAIL_HOST_PASSWORD ='iomsaybasdlhatnr'
 
 
+
+MESSAGE_TAGS = {
+    messages.DEBUG: 'bg-info',
+    messages.INFO: 'bg-info',
+    messages.SUCCESS: 'bg-success',
+    messages.WARNING: 'bg-warning',
+    messages.ERROR: 'bg-danger',
+}

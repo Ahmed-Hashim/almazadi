@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div x-data="{customers: [],}" 
+    x-init="customers = await (await fetch('./api/crmlist/')).json()">
+    <template x-for="customer in customers">
+            <tr role="row">
+                <td  width="30%" x-text="`${customer.company}`">{{ customer.company }}</td>
+                <td width="20%" x-text="`${customer.industry}`">{{ customer.industry }}</td>
+                <td width="20%" x-text="`${customer.lead_referral_source}`">{{ customer.lead_referral_source }}</td>
+                <td width="10%" x-text="`${customer.status}`">{{ customer.status }}</td>
+                <td width="20%" x-text="`${customer.last_edit_date}`">{{ customer.last_edit_date }}</td>
+                <div class="btn-group ">
+                    <button class="btn btn-primary btn-sm"  data-toggle="modal" data-target="#show-{{ customer.id }}"><i class='bx bxs-user-detail bx-sm' ></i></button>
+                    <button class="btn btn-warning btn-sm"  data-toggle="modal" data-target="#note-modal-{{ customer.id }}"><i class='bx bxs-note bx-sm'></i></button>
+                    <button class="btn btn-success btn-sm"
+                            hx-get=""
+                            hx-target=".email-body-{{ customer.id }}"  
+                            data-toggle="modal" 
+                            data-target="#email-modal-{{ customer.id }}">
+                             <i class="bx bx-envelope bx-sm"></i>
+                            </button>
+                    <button class="btn btn-danger btn-sm"  
+                      hx-headers="{"X-CSRFToken": "{{ csrf_token}}"} "
+                      class="btn btn-danger" 
+                      hx-target="#crm-list "
+                      hx-delete=""
+                      hx-confirm="Are you sure you want to delete?">
+                      <i class='bx bx-trash bx-sm'></i>
+                    </button>
+                </div>
+            </tr>   
+    </template>
+</div>
+<script src="//unpkg.com/alpinejs" defer></script>
+</body>
+</html>

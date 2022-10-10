@@ -1,0 +1,51 @@
+{% load static %}
+      <h5 class="text-center h5 mb-0">{% if customer.title  %}
+        
+        {{customer.title}}&nbsp;{% endif %}{{customer.first_name}}&nbsp;{{customer.middle_name}}&nbsp;{{customer.last_name}}</h5>
+        <p class="text-center text-muted font-14">{{customer.industry}}</p>
+        <div class="profile-info">
+          <h5 class="mb-20 h5 text-blue">Contact Information</h5>
+          <ul>
+            <li>
+              <span>Email Address:</span>
+              {{customer.email}}
+            </li>
+            <li>
+              <span>Phone Number:</span>
+              {{customer.land_phone_number}}
+            </li>
+            <li>
+              <span>Company:</span>
+              {{customer.company}}
+            </li>
+            <li>
+              <span>Address:</span>
+              {{customer.address}}
+            </li>
+          </ul>
+        </div>
+        <hr class="profile-social">
+        <h5 class="mb-20 h5 text-blue">Social Media</h5>
+                {% if customer.facebook_url or customer.instagram_url or customer.twitter_url or customer.linkedin_url or customer.skype_url%}
+                <div class="clearfix">
+                  {% if customer.facebook_url %}
+                  <a href="#" class="btn" data-bgcolor="#3b5998" data-color="#ffffff"><i class="fa fa-facebook"></i></a>
+                  {% endif %}
+                  {% if customer.instagram_url %}
+                  <a class="btn"  href="{{customer.instagram_url}}" data-bgcolor="#f46f30" data-color="#ffffff"><i class="fa fa-instagram"></i></a> 
+                  {% endif %}
+                  {% if customer.twitter_url %}
+                  <a class="btn" data-bgcolor="#1da1f2" data-color="#ffffff"  href="{{customer.twitter_url}}"><i class="fa fa-twitter"></i></a>
+                  {% endif %}
+                  {% if customer.linkedin_url %}
+                  <a class="btn" href="{{customer.linkedin_url}}" data-bgcolor="#007bb5" data-color="#ffffff"><i class="fa fa-linkedin"></i></a>
+                  {% endif %}
+                  {% if customer.skype_url %}
+                  <a class="btn" href="{{customer.skype_url}}"  data-bgcolor="#00aff0" data-color="#ffffff"><i class="fa fa-skype"></i></a>
+                  {% endif %}
+                </div>
+                {% else %}
+              <div>
+                <strong> NO SOCIAL MEDIA DATA!</strong>
+              </div>
+                {% endif %}

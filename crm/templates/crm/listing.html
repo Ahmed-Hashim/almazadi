@@ -1,0 +1,130 @@
+
+<table class="table crm-table table-bordered"
+       id="customers"
+       role="grid">
+
+    <thead class="table-primary">
+      <tr role="row">
+        <th>ID</th>
+        <th>Company</th>
+        <th>Industry</th>
+        <th>Lead Source</th>
+        <th>Status</th>
+        <th>Last Edit</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody > 
+
+         {% if customers %}
+        {% for customer in customers %}
+              <tr style="cursor:pointer" role="row">
+                <td  width="5%">{{ customer.id }}</td>
+                <td  width="30%"><a href="{% url 'client_profile' customer.id %}">{{ customer.company }}</a></td>
+                <td width="20%">{{ customer.industry }}</td>
+                <td width="15%">{{ customer.lead_referral_source }}</td>
+                <td width="10%">{{ customer.status }}</td>
+                <td width="20%">{{ customer.last_edit_date }}</td>
+                <td class="btn-group ">
+                    <button class="btn btn-primary btn-sm"
+                            hx-get="{% url 'view_edit_customer' customer.id %}"
+                            hx-target="#dialog">
+                      <i class='bx bxs-user-detail bx-sm' ></i>
+                    </button>
+                    <button class="btn btn-warning btn-sm"  data-toggle="modal" data-target="#note-modal-{{ customer.id }}"><i class='bx bxs-note bx-sm'></i></button>
+                    <button class="btn btn-success btn-sm"
+                            hx-get="{% url "emails" customer.id %}"
+                            hx-target="#dialog"  
+>
+                             <i class="bx bx-envelope bx-sm"></i>
+                    </button>
+                    <button class="btn btn-danger btn-sm"  
+                      class="btn btn-danger" 
+                      hx-get="{% url 'delete_client' customer.id %}" hx-target="#dialog">
+                      <i class='bx bx-trash bx-sm'></i>
+                    </button>
+                </td>
+            </tr>
+        {% endfor %}
+{% endif %}
+</tbody>
+</table>
+<script>
+  $(document).ready( function () {
+    var table=$('#customers').DataTable({
+      paging:true,
+      pageLength:10,
+      lengthChange:true,
+      autoWidth:true,
+      searching:true,
+      bInfo:true,
+      bSort:true,
+      dom:'lBfrtip',
+      buttons:[
+        {
+          extend:'copy',
+          text:'<i class="fas fa-clone"></i>',
+          className:'btn btn-secondary',
+          titleAttr:'Copy',
+          exportOptions:{
+            columns:[0,1,2,3,4]
+          }
+        },
+        {
+          extend:'pdf',
+          text:'<i class="fas fa-file-pdf"></i>',
+          className:'btn btn-secondary',
+          titleAttr:'PDF',
+          exportOptions:{
+            columns:[0,1,2,3,4]
+          },
+          tableHeader:{
+            alignment:'center'
+          },
+          customize: function (doc){
+            doc.styles.tableHeader.alignment='center';
+            doc.styles.tableBodyOdd.alignment='center';
+            doc.styles.tableBodyEven.alignment='center';
+            doc.styles.tableHeader.fontSize=7;
+            doc.defaultStyle.fontSize=6;
+            doc.content[1].table.widths=Array(doc.content[1].table.body[1].length+1).join('*').split('');
+
+          }
+        },
+        {
+          extend:'print',
+          text:'<i class="fas fa-print"></i>',
+          className:'btn btn-secondary',
+          titleAttr:'Print',
+          exportOptions:{
+            columns:[0,1,2,3,4]
+          },
+          customize:function ( win ){
+            $(win.document.body).css('font-size','10pt')
+            $(win.document.body).find('table')
+              .addClass('compact')
+              .css('font-size','inherit');
+          }
+        },
+        {
+          extend:'excel',
+          text:'<i class="fas fa-file-excel"></i>',
+          className:'btn btn-secondary',
+          titleAttr:'Excel',
+          exportOptions:{
+            columns:[0,1,2,3,4]
+          }
+        },
+      ]
+    });
+    var newSearch=$('#customers').DataTable();
+$('#searchlive').keyup(function(){
+    newSearch.search($(this).val()).draw();
+})
+});
+
+document.body.addEventListener('htmx:configRequest', (event) => {
+  event.detail.headers['X-CSRFToken'] = '{{ csrf_token }}';
+})
+
+</script>

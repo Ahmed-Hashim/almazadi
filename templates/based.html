@@ -7,17 +7,17 @@
         <meta charset="utf-8">
         <title>Al-Mazadi - Marketing Admin Dashboard</title>
         {% load static %}
-        {% load bootstrap4 %}
+        
     
         <!-- Site favicon -->
         <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/almazadi/logo2.png'%}">
         <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/almazadi/logo2.png'%}">
         <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/almazadi/logo2.png'%}">
-    
+        
         {% block css %}
         {% endblock css %}
     </head>
-    <body class="header-dark">
+    <body class="header-light">
         <div class="pre-loader">
             <div class="pre-loader-box">
                 <div class="loader-logo"><img src="{% static 'images/almazadi/logo2.png'%}" alt=""></div>
@@ -127,8 +127,8 @@
         <div class="left-side-bar">
             <div class="brand-logo">
                 <a href="{% url 'dashboard'%}">
-                    <img src="{%static 'images/almazadi/newlogo.png'%}" alt="" class="dark-logo">
-                    <img src="{%static 'images/almazadi/newlogo.png'%}" alt="" class="light-logo">
+                    <img src="{%static 'images/almazadi/newlogo2.png'%}" alt="" class="dark-logo">
+                    <img src="{%static 'images/almazadi/newlogo2.png'%}" alt="" class="light-logo">
                 </a>
                 <div class="close-sidebar" data-toggle="left-sidebar-close">
                     <i class="ion-close-round"></i>
@@ -154,6 +154,17 @@
                                 <li><a href="{% url 'schedule_posts' %}">Scheduled Posts</a></li>
                                 <li><a href="{% url 'upload' %}">Get Posts</a></li>
     
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="javascript:;" class="dropdown-toggle">
+                                <span class="micon icon-copy dw dw-id-card2"></span><span class="mtext">CRM</span>
+                            </a>
+                            <ul class="submenu">
+                                <li><a href="{% url 'crm_list' %}">Customer list</a></li>
+                                <li><a href="{% url 'unpublished' %}">Add Customer</a></li>
+                                <li><a href="{% url 'create_post' %}">Send Email</a></li>
+                                <li><a href="{% url 'schedule_posts' %}">Send Whatsapp</a></li>
                             </ul>
                         </li>
                         

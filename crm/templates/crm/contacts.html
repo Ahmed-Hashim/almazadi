@@ -1,0 +1,20 @@
+{% for contact in contacts %}
+<div class="col-lg-3 col-md-6 col-sm-12 mb-30">
+  <div class="card">
+    <div class="card-header bg-light p-1 text-center">
+      <a   hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}' hx-delete="{% url 'delete_contact' contact.id %}" hx-confirm="Are you sure you wish to delete ?"><i style="cursor: pointer;" class="icon-copy fa fa-id-card text-danger" aria-hidden="true"></i></a>
+    </div>
+    <div class="card-body text-center">
+      <h5 class="card-title">{{contact.full_name}}</h5>
+      <hr style="width: 80%" />
+      <h6>{{contact.position}}</h6>
+      <hr style="width: 80%" />
+      <i class="icon-copy fa fa-mobile-phone" aria-hidden="true"></i>
+      <span style="font-size: 14px"
+        ><strong>{{contact.phone_number}}</strong></span
+      >
+    </div>
+    <div class="card-footer bg-secondary p-1"></div>
+  </div>
+</div>
+{% endfor %}

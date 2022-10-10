@@ -1,0 +1,16 @@
+<div class="card edit-form">
+    <div class="card-header">
+        <h5>Edit @{{ customer.slug }}</h5>
+    </div>
+      
+    <form hx-put="edit_customer/p={{customer.id}}" hx-target=".crm-table" hx-headers='{"X-CSRFToken": "{{ csrf_token}}"}'>
+        <div class="card-body ">  
+            {{formi.as_p}}
+            
+        </div>
+        <div class="card-footer">
+            <button type="submit" data-dismiss="modal" class="btn btn-sm btn-primary" >Save</button>
+            <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button> 
+        </div>
+    </form>
+</div>

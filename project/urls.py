@@ -23,10 +23,10 @@ from posts import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('posts/', include('posts.urls')),
+    path('crm/', include('crm.urls')),
     path('members/', include('members.urls')),
     path('members/', include('django.contrib.auth.urls')),
     path('', views.dashboard,name='dashboard'),
-    path('data',views.get_json),
 
 ]
 urlpatterns+=static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

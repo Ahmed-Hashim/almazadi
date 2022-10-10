@@ -1,0 +1,23 @@
+{% load crispy_forms_tags %} {% load static %}
+<div class="modal-content">
+    <div class="modal-header">
+        <h4 class="modal-tilte"><i class="fa-solid fa-note-sticky"></i>&nbsp;&nbsp;Add note@{{customer.company}}</h4>
+    </div>
+    <form hx-post="{% url 'add_note' customer.id %}" hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}' hx-target="#notes">
+    <div class="modal-body">
+        {{form|crispy}}
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-sm btn-dark"><i class="fa-solid fa-notes-medical"></i></button>
+        <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">
+          Close
+        </button>
+    </div>
+    </form> 
+    <script >
+        var user='{{user.id}}';
+        var company="{{customer.id}}";
+        document.getElementById("user").value = user;
+        document.getElementById("company").value = company;
+      </script>
+</div>

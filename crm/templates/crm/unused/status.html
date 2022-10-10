@@ -1,0 +1,15 @@
+{% extends 'crm/parts/dropdownform.html' %} 
+{% block url %}{% url 'search_status' %}{% endblock url %}
+{% block name %}status{% endblock name %}
+{% block id %}status{% endblock id %} 
+{% block droplist %} 
+    {% if statuses %} 
+        <option>------</option>
+        {% for status in statuses %}
+        <option>{{status.type}}</option>
+        {% endfor %}
+    {% else %}
+        <option>------</option>
+    {% endif %} 
+{% endblock droplist %}
+{% block namem %}&nbsp;Status{% endblock namem %}

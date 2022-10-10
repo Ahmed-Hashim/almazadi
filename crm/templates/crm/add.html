@@ -1,0 +1,84 @@
+{% load crispy_forms_tags %} {% load static %}
+<div class="modal-content">
+  <div class="modal-header bg-secondary">
+    <h5 class="modal-tilte text-light">
+      <i class="fa-solid fa-file-circle-plus"></i>&nbsp;&nbsp;Add New Customer
+    </h5>
+  </div>
+  <form hx-post="{% url 'add_customer' %}" autocomplete="off" novalidate>
+    <div class="modal-body">
+      <div class="row">
+        <div class="col-3">{{form.first_name | as_crispy_field}}</div>
+        <div class="col-3">{{form.middle_name| as_crispy_field}}</div>
+        <div class="col-3">{{form.last_name | as_crispy_field}}</div>
+        <div class="col-3">{{form.gender| as_crispy_field}}</div>
+      </div>
+
+      <div class="row bg-secondary p-2 mb-3">
+        <h5 class="text-light">
+          <i class="fa-solid fa-globe"></i>&nbsp;&nbsp;Source-Info
+        </h5>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          {{form.lead_referral_source | as_crispy_field}}
+        </div>
+      </div>
+      <div class="row">{{form.background_info | as_crispy_field}}</div>
+
+      <div class="row bg-secondary p-2 mb-3">
+        <h5 class="text-light">
+          <i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;General-Info
+        </h5>
+      </div>
+
+      <div class="row">
+        <div class="col">{{form.company | as_crispy_field}}</div>
+        <div class="col">{{form.industry | as_crispy_field}}</div>
+        <div class="col">{{form.address | as_crispy_field}}</div>
+        <div class="col">{{form.street | as_crispy_field}}</div>
+      </div>
+      <div class="row bg-secondary p-2 mb-3">
+        <h5 class="text-light">
+          <i class="fa-solid fa-address-book"></i>&nbsp;&nbsp;Contact Data
+        </h5>
+      </div>
+
+      <div class="row">
+        <div class="col-4">{{form.email | as_crispy_field}}</div>
+        <div class="col-4">{{form.website | as_crispy_field}}</div>
+        <div class="col-4">{{form.land_phone_number | as_crispy_field}}</div>
+      </div>
+
+      <div class="row bg-secondary p-2 mb-3">
+        <h5 class="text-light">
+          <i class="fa-solid fa-users"></i>&nbsp;&nbsp;Social Media
+        </h5>
+      </div>
+      <div class="form-group">
+        <div class="row">
+          <div class="col-4">{{form.facebook_url | as_crispy_field}}</div>
+          <div class="col-4">{{form.instagram_url | as_crispy_field}}</div>
+          <div class="col-4">{{form.twitter_url | as_crispy_field}}</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">{{form.linkedin_url | as_crispy_field}}</div>
+        <div class="col-4">{{form.skype_url| as_crispy_field}}</div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="submit" class="btn btn-primary btn-sm">
+        <i class="fa-regular fa-file-lines"></i>&nbsp;&nbsp; ADD +
+      </button>
+      <button
+        type="button"
+        class="btn btn-sm btn-secondary"
+        data-dismiss="modal"
+      >
+        Close
+      </button>
+    </div>
+  </form>
+</div>

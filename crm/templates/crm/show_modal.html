@@ -1,0 +1,303 @@
+{% load crispy_forms_tags %}
+<div class="modal-content">
+    <ul class="nav  nav-pills  btn-group" id="myTab" role="tablist">
+        <li class="btn btn-sm btn-dark" role="presentation">
+          <a class="nav-link active  bg-dark text-light" id="details-tab" data-toggle="tab" href="#show-modal" role="tab" aria-controls="show-modal" aria-selected="true">Details</a>
+        </li>
+        <li class="btn btn-sm btn-dark" role="presentation">
+          <a class="nav-link bg-dark text-light" style="border: 0px; border-radius: 0%;" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="true">Contact</a>
+        </li>
+        <li class="btn btn-sm btn-dark" role="presentation">
+          <a class="nav-link bg-dark text-light" id="edit-tab" data-toggle="tab" href="#edit" role="tab" aria-controls="edit" aria-selected="true">Edit</a>
+        </li>
+      </ul>
+    <div class="tab-content" >
+      <div class="tab-pane fade show active" id="show-modal" role="tabpanel" aria-labelledby="show-modal">
+        <div class="card mb-0">
+            <div class="card-header mt-0">
+              <h5 >Profile @{{ customer.slug }}</h5>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-3">
+                  <h6>First Name</h6>
+                  <span>{{customer.first_name}}  </span> 
+                </div>
+                <div class="col-3">
+                  <h6>Middle Name</h6>
+                  <span>{{customer.middle_name}}</span> 
+                </div>
+                <div class="col-3">
+                  <h6>Last Name</h6>
+                  <span>{{customer.last_name}} </span>
+                </div>
+                <div class="col-3">
+                  <h6>Gender</h6>
+                  <span>{{customer.gender}}  </span> 
+                </div>
+              </div>
+              <hr class="profile-social">
+              <h5>Source-Info</h5>
+              <hr class="profile-social">  
+              <div class="row mt-13">
+                <div class="col-12">
+                  <h6>Lead Source</h6>
+                  <span>{{customer.lead_referral_source}}</span> 
+                </div>
+                </div>
+              <div class="row mt-1">
+                <div class="col-3">
+                <h6>Background Info</h6>
+                <p>{{customer.background_info}}</p> 
+                </div>
+              </div>
+              <hr class="profile-social">
+              <h5>General-Info</h5>
+              <hr class="profile-social">
+              <div class="row mt-1">
+                <div class="col">
+                  <h6>Company</h6>
+                  <span>{{customer.company}}  </span> 
+                </div>
+                <div class="col">
+                  <h6>Industry</h6>
+                  <span>{{customer.industry}}</span>
+                </div>
+                <div class="col">
+                  <h6>Address</h6>
+                  <span>{{customer.address}}</span> 
+                </div>
+                <div class="col">
+                  <h6>Street</h6>
+                  <span>{{customer.street}}</span>
+                </div>
+              </div>
+              <hr class="profile-social">
+              <h5>Contact Data</h5>
+              <hr class="profile-social">
+              <div class="row mt-1">
+                <div class="col-4">
+                  <h6>Email</h6>
+                  <span>{{customer.email}}</span> 
+                </div>
+                <div class="col-4">
+                  <h6>Website</h6>
+                  <span>{{customer.website}}</span> 
+                </div>              
+                <div class="col-4">
+                  <h6>Phone Number</h6>
+                  <span>{{customer.land_phone_number}}</span> 
+                </div>
+              </div>
+              <hr class="profile-social">
+              <h5>Social Media</h5>
+              <hr class="profile-social">
+              {% if customer.facebook_url or customer.instagram_url or customer.twitter_url or customer.linkedin_url or customer.skype_url%}
+              <div class="clearfix">
+                {% if customer.facebook_url %}
+                <a href="#" class="btn" data-bgcolor="#3b5998" data-color="#ffffff"><i class="fa fa-facebook"></i></a>
+                {% endif %}
+                {% if customer.instagram_url %}
+                <a class="btn"  href="{{customer.instagram_url}}" data-bgcolor="#f46f30" data-color="#ffffff"><i class="fa fa-instagram"></i></a> 
+                {% endif %}
+                {% if customer.twitter_url %}
+                <a class="btn" data-bgcolor="#1da1f2" data-color="#ffffff"  href="{{customer.twitter_url}}"><i class="fa fa-twitter"></i></a>
+                {% endif %}
+                {% if customer.linkedin_url %}
+                <a class="btn" href="{{customer.linkedin_url}}" data-bgcolor="#007bb5" data-color="#ffffff"><i class="fa fa-linkedin"></i></a>
+                {% endif %}
+                {% if customer.skype_url %}
+                <a class="btn" href="{{customer.skype_url}}"  data-bgcolor="#00aff0" data-color="#ffffff"><i class="fa fa-skype"></i></a>
+                {% endif %}
+              </div>
+              {% else %}
+            <div>
+              <strong> NO SOCIAL MEDIA DATA!</strong>
+            </div>
+              {% endif %}
+            </div>
+            </div>
+          <div class="card-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> 
+          </div>         
+        </div>
+      <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="profile-tab">
+        
+          
+        
+        <div class="card">
+          <div class="card-header row">
+            
+              <h5 class="col-9">
+                <i class="icon-copy fa fa-address-book" aria-hidden="true"></i>&nbsp;&nbsp;Contacts of @{{ customer.slug }}</h5>
+              </h5>
+              <div class="col-3">
+              <button class="btn btn-outline-dark btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#add-contact" aria-expanded="false" aria-controls="collapseExample">
+                <i class="icon-copy fa fa-address-book-o" aria-hidden="true"></i>&nbsp;New Contact
+              </button>
+            </div>
+          </div>
+          <div class="card-body">
+            
+            <div class="collapse mb-2" id="add-contact">
+              <div class="card card-body">
+                <form hx-post="{% url 'view_add_contact' customer.id %}" autocomplete="off" novalidate>
+                  {{contactform.full_name|as_crispy_field}}
+                  <div class="row">
+                    <div class="col-6">
+                      {{contactform.position|as_crispy_field}}
+                    </div>
+                    <div class="col-6">
+                      {{contactform.phone_number|as_crispy_field}}
+                    </div>
+                  </div>
+                  {{contactform.company|as_crispy_field}}
+                  <script>
+                    var company = "{{ customer.id }}";
+                    document.getElementById("company").value = company;
+                  </script>
+                  <button class="btn btn-outline-dark btn-sm" type="submit"><i class="icon-copy ion-ios-plus-outline"></i></button>
+                </form>
+              </div>
+            </div>
+
+            <div class="row clearfix" hx-get="{% url 'view_add_contact' customer.id %}" hx-trigger="load, contactChange from:body" hx-target="this">
+            
+            </div>
+          </div>
+          <div class="card-footer">
+            <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="edit" role="tabpanel" aria-labelledby="contact-tab">
+        <div class="card" style="margin-top:0;">
+            <div class="card-header  bg-secondary">
+                <h5 class="modal-tilte text-light"><i class="fa-solid fa-user-pen"></i>&nbsp;&nbsp;Edit @{{ customer.slug }}</h5>
+            </div>
+              
+            <form hx-put="view_edit_customer/p={{customer.id}}" autocomplete="off" novalidate>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-3">
+                    <h6 for="firstname">First Name</h6>
+                    {{edit_form.first_name}}
+                  </div>
+                  <div class="col-3">
+                    <h6>Middle Name</h6>
+                    {{edit_form.middle_name}}
+                  </div>
+                  <div class="col-3">
+                    <h6>Last Name</h6>
+                    {{edit_form.last_name}}
+                  </div>
+                  <div class="col-3">
+                    <h6>Gender</h6>
+                    {{edit_form.gender}}
+                  </div>
+                </div>
+                <div class="row bg-secondary p-2 mb-3 mt-3">
+                  <h5 class="text-light">
+                    <i class="fa-solid fa-globe"></i>&nbsp;&nbsp;Source-Info
+                  </h5>
+                </div>
+                <div class="row mt-13">
+                  <div class="col-12  mb-2">
+                    <h6>Lead Source</h6>
+                    {{edit_form.lead_referral_source}}
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col mb-3">
+                    <h6 class="mb-1">Background Info</h6>
+                    {{edit_form.background_info}}
+                  </div>
+                </div>
+                <div class="row bg-secondary p-2 mb-3">
+                  <h5 class="text-light">
+                    <i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;General-Info
+                  </h5>
+                </div>
+                <div class="row mt-1">
+                  <div class="col">
+                    <h6>Company</h6>
+                    {{edit_form.company}}
+                  </div>
+                  <div class="col">
+                    <h6>Industry</h6>
+                    {{edit_form.industry}}
+                  </div>
+                  <div class="col">
+                    <h6>Address</h6>
+                    {{edit_form.address}}
+                  </div>
+                  <div class="col">
+                    <h6>Street</h6>
+                    {{edit_form.street}}
+                  </div>
+                </div>
+                <div class="row bg-secondary p-2 mb-3 mt-3">
+                  <h5 class="text-light">
+                    <i class="fa-solid fa-address-book"></i>&nbsp;&nbsp;Contact Data
+                  </h5>
+                </div>
+                <div class="row mt-1">
+                  <div class="col-4">
+                    <h6>Email</h6>
+                    {{edit_form.email}}
+                  </div>
+                  <div class="col-4">
+                    <h6>Website</h6>
+                    {{edit_form.website}}
+                  </div>                  
+                  <div class="col-4">
+                    <h6>Phone Number</h6>
+                    {{edit_form.land_phone_number}}
+                  </div>
+                </div>
+                <div class="row bg-secondary p-2 mb-3 mt-3">
+                  <h5 class="text-light">
+                    <i class="fa-solid fa-users"></i>&nbsp;&nbsp;Social Media
+                  </h5>
+                </div>
+                <div class="form-group">
+                  <div class="row mt-1">
+                    <div class="col-4">
+                      <h6>Facebook</h6>
+                      {{edit_form.facebook_url}}
+                    </div>
+                    <div class="col-4">
+                      <h6>Instgram</h6>
+                      {{edit_form.instagram_url}}
+                    </div>
+                    <div class="col-4">
+                      <h6>Twitter</h6>
+                      {{edit_form.twitter_url}}
+                    </div>
+                  </div>
+                </div>
+                <div class="row mt-1">
+                  <div class="col-4">
+                    <h6>Linkedin</h6>
+                    {{edit_form.linkedin_url}}
+                  </div>
+                  <div class="col-4">
+                    <h6>Skype</h6>
+                    {{edit_form.skype_url}}
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                <button type="submit" class="btn btn-sm btn-primary">Save</button>
+                <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">
+                  Close
+                </button>
+              </div>
+            </form>
+          
+          </div>
+      </div>
+    </div>
+        </div>

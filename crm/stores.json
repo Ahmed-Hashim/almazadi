@@ -1,0 +1,3416 @@
+{
+    "customers": [
+        {
+            "name": "Hted store",
+            "phones": "'0794424069'"
+        },
+        {
+            "name": "Microland informatique",
+            "phones": "'+213778450602'"
+        },
+        {
+            "name": "INKRAFT ETIQUETTE",
+            "phones": "'+213560105244', '+213554161470'"
+        },
+        {
+            "name": "SARL Ibelaiden",
+            "phones": "'+213550968136', '+213659751317', '+21323153684'"
+        },
+        {
+            "name": "Agence Marwa",
+            "phones": ""
+        },
+        {
+            "name": "DESKCOM",
+            "phones": "'+213557144758'"
+        },
+        {
+            "name": "BUYMORE",
+            "phones": ""
+        },
+        {
+            "name": "INFOLUX",
+            "phones": "'+213550549282'"
+        },
+        {
+            "name": "Ritacreation",
+            "phones": "'0775619758'"
+        },
+        {
+            "name": "MLK731",
+            "phones": "'+213552537702'"
+        },
+        {
+            "name": "Correct Tours",
+            "phones": "'+213541604484'"
+        },
+        {
+            "name": "High Architecture ",
+            "phones": "'+213552853078'"
+        },
+        {
+            "name": "CDSINFORMATIQUE",
+            "phones": "'+213555033375'"
+        },
+        {
+            "name": "Immobilier  centre alger",
+            "phones": ""
+        },
+        {
+            "name": "FORT HYDRO",
+            "phones": "'+213561684849', '+213561686769', '+213555204907'"
+        },
+        {
+            "name": "\u0623\u0628\u0648 \u062d\u064e\u064a\u0652\u062f\u0631\u0629",
+            "phones": "'+213551098711'"
+        },
+        {
+            "name": "IMMOTI 15",
+            "phones": "'+213552190661'"
+        },
+        {
+            "name": "store",
+            "phones": ""
+        },
+        {
+            "name": "ABM3 SERVICES",
+            "phones": ""
+        },
+        {
+            "name": "Matelas n\u00b0one",
+            "phones": "'+213552456519', '+213771800538'"
+        },
+        {
+            "name": "services construction & travaux",
+            "phones": "'+213796903866'"
+        },
+        {
+            "name": "SNC ASSEFI",
+            "phones": "'+213550496423'"
+        },
+        {
+            "name": "Noblesse25",
+            "phones": "'+213550550767'"
+        },
+        {
+            "name": "Cuisinox Alg\u00e9rie ",
+            "phones": "'+213560343377'"
+        },
+        {
+            "name": "Soudetole",
+            "phones": "'0770482935', '0775069005'"
+        },
+        {
+            "name": "Foot Phone",
+            "phones": ""
+        },
+        {
+            "name": "Agence el Amir",
+            "phones": "'+213550581075', '+21321505359'"
+        },
+        {
+            "name": "Dar Jadida Lil Akar",
+            "phones": "'+213552643286'"
+        },
+        {
+            "name": "GSsubaquatique",
+            "phones": "'+213558410686', '+213549568878'"
+        },
+        {
+            "name": "Batubex Inox",
+            "phones": "'+213550760606'"
+        },
+        {
+            "name": "Almouamala Alhasana",
+            "phones": "'+213550414236'"
+        },
+        {
+            "name": "Realsoundalgeria",
+            "phones": "'+213549521369', '+213777389946'"
+        },
+        {
+            "name": "\u0635\u0646\u0639\u0629 \u0627\u0644\u062d\u0631\u0627\u064a\u0631",
+            "phones": "'0665904007'"
+        },
+        {
+            "name": "Peintre Pro",
+            "phones": "'+213560344571', '+213799343446'"
+        },
+        {
+            "name": "Bantoura",
+            "phones": "'+213790068070'"
+        },
+        {
+            "name": "Andalus Tech",
+            "phones": "'+213554783353'"
+        },
+        {
+            "name": "Agence La Petite R\u00e9sidence ",
+            "phones": "'+213551759361'"
+        },
+        {
+            "name": "Aymen Promotion / ID  Wassila",
+            "phones": "'+213560002358'"
+        },
+        {
+            "name": "HPCH  Plombier",
+            "phones": "'+213675848116'"
+        },
+        {
+            "name": "speedy porte bagage algerie",
+            "phones": "'+213556723544'"
+        },
+        {
+            "name": "Mondotruck",
+            "phones": "'+213560951920'"
+        },
+        {
+            "name": "Business Informatics and Consulting",
+            "phones": "'+213555438660'"
+        },
+        {
+            "name": "Salah TRAVEL ",
+            "phones": "'+213551862010'"
+        },
+        {
+            "name": "Setif Immo",
+            "phones": "'+213550869936', '+213797222132'"
+        },
+        {
+            "name": "Cerf Travel",
+            "phones": "'+213798328989'"
+        },
+        {
+            "name": "Auto Option",
+            "phones": "'+21331930930', '+213671000700'"
+        },
+        {
+            "name": "EL MAYSARA PROMOTION",
+            "phones": "'+213551374052'"
+        },
+        {
+            "name": "Le Roi Du Caf\u00e9",
+            "phones": "'+213558564282'"
+        },
+        {
+            "name": "A TECH SOLUTIONS",
+            "phones": "'+213541947651'"
+        },
+        {
+            "name": "Meubles nerdjas ",
+            "phones": "'+213559269501'"
+        },
+        {
+            "name": "Salle Saoula",
+            "phones": "'+213559675653'"
+        },
+        {
+            "name": "BMI INDUSTRIE",
+            "phones": "'+213661232166'"
+        },
+        {
+            "name": "Groupe \u00e9lectrog\u00e8ne (sarl PLASATECH)",
+            "phones": "'+213541221513', '+213556582953'"
+        },
+        {
+            "name": "Agence Immobili\u00e8re PATRICIA",
+            "phones": "'+213561237443'"
+        },
+        {
+            "name": "FOCUS GROUP Algerie ",
+            "phones": ""
+        },
+        {
+            "name": "Balingo auto",
+            "phones": "'+213550133797'"
+        },
+        {
+            "name": "Agence Rafik",
+            "phones": "'+213552771602'"
+        },
+        {
+            "name": "Les 5 \u00c9l\u00e9ments",
+            "phones": "'+213557989609', '+213554149651', '+21323473256'"
+        },
+        {
+            "name": "Dar El Dounia ",
+            "phones": "'+213559933418'"
+        },
+        {
+            "name": "HAPPY  TRAVEL",
+            "phones": "'+213542713311'"
+        },
+        {
+            "name": "aimenriad ",
+            "phones": ""
+        },
+        {
+            "name": "your dream travel",
+            "phones": "'+213553271901', '+21321201432'"
+        },
+        {
+            "name": "Kouba Computer",
+            "phones": "'+21323601685', '+21321222305', '+213555619620'"
+        },
+        {
+            "name": "CABOKI TOPPIK ALGERIE",
+            "phones": "'+213550603425', '+213658498246'"
+        },
+        {
+            "name": "YOUSRA IMMOBILIER",
+            "phones": "'+213552227921', '+21323393008'"
+        },
+        {
+            "name": " PLANETE RENAULT",
+            "phones": "'+213557235544', '+213550487137'"
+        },
+        {
+            "name": "Canny School",
+            "phones": "'+213558711237', '+213551247274'"
+        },
+        {
+            "name": "ORAN LUXURY IMMOBILIER",
+            "phones": "'+213560053079', '+213560053424'"
+        },
+        {
+            "name": "AGENCE EL BAHIA ",
+            "phones": "'+21323433636', '+213558555656', '+213557037171'"
+        },
+        {
+            "name": "TDMAlgerie",
+            "phones": "'+213550430053'"
+        },
+        {
+            "name": "Pointeuse Biom\u00e9trique Alg\u00e9rie ",
+            "phones": "'+213770676198', '0558535154'"
+        },
+        {
+            "name": "Bureau d'affaires Said",
+            "phones": "'+213554976742'"
+        },
+        {
+            "name": "Boule d'attelage Birtouta",
+            "phones": "'+213781891419'"
+        },
+        {
+            "name": "SIGMA",
+            "phones": "'0550145222'"
+        },
+        {
+            "name": "WELTINFO",
+            "phones": "'+21321745769', '+213697912557'"
+        },
+        {
+            "name": "Ecole Allia",
+            "phones": "'+213550232329'"
+        },
+        {
+            "name": "Yacou Store B E K ",
+            "phones": "'+213541758546', '+213561445238'"
+        },
+        {
+            "name": "The souheilos",
+            "phones": "'+213561591172'"
+        },
+        {
+            "name": "D\u00e9cafitness alg\u00e9rie",
+            "phones": "'+213561464805'"
+        },
+        {
+            "name": "CIBIC Algerie   Immigration au Canada",
+            "phones": "'+21323224142', '+21323224150', '+213552555060'"
+        },
+        {
+            "name": "In Media",
+            "phones": "'+213541989003'"
+        },
+        {
+            "name": "kotama ",
+            "phones": "'+213556058297'"
+        },
+        {
+            "name": "aich_technologie",
+            "phones": "'+213559751698'"
+        },
+        {
+            "name": "WATCHESCENTER.DZ",
+            "phones": "'0560033539', '0550586494'"
+        },
+        {
+            "name": "Sarl FOMDIE",
+            "phones": "'+213660820013'"
+        },
+        {
+            "name": "EURL ISOLTEHC Algerie",
+            "phones": "'+213560020893'"
+        },
+        {
+            "name": "QICHEN MACHINE",
+            "phones": "'+213697021021'"
+        },
+        {
+            "name": "ITCDZSTORE",
+            "phones": "'+213676738235'"
+        },
+        {
+            "name": "chafik jante alliage",
+            "phones": "'+213550653017'"
+        },
+        {
+            "name": "BOULABE OUTILLAGE ",
+            "phones": "'+213561619270'"
+        },
+        {
+            "name": "AB Tech Services Informatiques",
+            "phones": "'0773034035'"
+        },
+        {
+            "name": "Eurl Ecopos",
+            "phones": "'+213551363846'"
+        },
+        {
+            "name": "Dzira immo",
+            "phones": "'+213550085485'"
+        },
+        {
+            "name": "Mohli Construction Machines",
+            "phones": "'+213560061002'"
+        },
+        {
+            "name": "FR AUTO ",
+            "phones": "'+213550575157'"
+        },
+        {
+            "name": "Architecte | binaa studio | Bureau d\u2019\u00e9tudes | Ing\u00e9nieur en G\u00e9nie civil",
+            "phones": "'+213550796088', '+213557867177'"
+        },
+        {
+            "name": "Azur Laptop ",
+            "phones": "'+213540321200', '+213542583958'"
+        },
+        {
+            "name": "agence dallas",
+            "phones": "'+213553702062'"
+        },
+        {
+            "name": "Al Basmala ",
+            "phones": "'+213558012026'"
+        },
+        {
+            "name": "Bladi Shop Dz",
+            "phones": "'0554798874'"
+        },
+        {
+            "name": "Rayane Issam",
+            "phones": "'+213662027106'"
+        },
+        {
+            "name": "Adel Immobilier",
+            "phones": "'+213552982682'"
+        },
+        {
+            "name": "Bureau d'Affaires Oukrine Bey",
+            "phones": "'+213551066702', '+213770420427', '+21323298782'"
+        },
+        {
+            "name": "OTLOB TECH",
+            "phones": "'+213540226303'"
+        },
+        {
+            "name": "Graphibox",
+            "phones": "'+213556004308'"
+        },
+        {
+            "name": "Mourad Plombier",
+            "phones": ""
+        },
+        {
+            "name": "MAX FURNITURES - CHAISE - BUREAU - MOBILIER",
+            "phones": "'+213560028100'"
+        },
+        {
+            "name": "Breydo Quincaillerie de Luxe",
+            "phones": "'0661563247', '0658258080'"
+        },
+        {
+            "name": "\u0627\u0644\u0648\u0643\u0627\u0644\u0629 \u0627\u0644\u0639\u0642\u0627\u0631\u064a\u0629 \u0639\u062a\u0628\u0629 \u0627\u0644\u062e\u064a\u0631",
+            "phones": "'+213542562813'"
+        },
+        {
+            "name": "MB DEUX DZ",
+            "phones": ""
+        },
+        {
+            "name": "Agence Tawafek",
+            "phones": "'+213553252357'"
+        },
+        {
+            "name": "Achats En Ligne DZ",
+            "phones": "'+213555875736'"
+        },
+        {
+            "name": "L MED ",
+            "phones": "'+21321283611', '+213770780125'"
+        },
+        {
+            "name": "Fouad Mostafa",
+            "phones": "'+213556921239'"
+        },
+        {
+            "name": "REFKONCLIMA",
+            "phones": "'0542506732', '0777426384'"
+        },
+        {
+            "name": "Sarl MAEG",
+            "phones": "'+213550950991', '+213550950992'"
+        },
+        {
+            "name": "Merouaneb76",
+            "phones": ""
+        },
+        {
+            "name": "KING PHONE NASSRO",
+            "phones": "'+213775769494'"
+        },
+        {
+            "name": "OXBridge",
+            "phones": "'+213560798462', '+213560616918'"
+        },
+        {
+            "name": "Brica D\u00e9co",
+            "phones": "'0770562967'"
+        },
+        {
+            "name": "Eurl Cite Tubes",
+            "phones": "'+213561667275', '+213561667274', '+21321502631'"
+        },
+        {
+            "name": "Visiophone, climatisation, Maison intelligente by SOMFY ",
+            "phones": "'+213770742135'"
+        },
+        {
+            "name": "Ascenseur DUNE INTERNATIONAL ",
+            "phones": "'+21323597660', '+213770598630', '+21323597791'"
+        },
+        {
+            "name": "Capmicrodz",
+            "phones": "'0550599642'"
+        },
+        {
+            "name": "HARIKA VOYAGES",
+            "phones": "'0770782299', '0550055052'"
+        },
+        {
+            "name": "DIDOU2008",
+            "phones": "'+213551850427', '+213551760605'"
+        },
+        {
+            "name": "relais_vert1992",
+            "phones": "'+213550929511'"
+        },
+        {
+            "name": "Soleil Immo Bejaia",
+            "phones": "'+213560956085', '+213560940759', '+21334111943', '+213661754600'"
+        },
+        {
+            "name": "CYGNE bleu",
+            "phones": "'+213550053514'"
+        },
+        {
+            "name": "Izem Multi Services",
+            "phones": "'+213553064879', '+213675211633'"
+        },
+        {
+            "name": "Anzartravel",
+            "phones": ""
+        },
+        {
+            "name": "Sarl B HTEK",
+            "phones": "'+213660378837'"
+        },
+        {
+            "name": "Pc 2000",
+            "phones": "'+213550534365'"
+        },
+        {
+            "name": " SAID SYSTEM",
+            "phones": "'+213560189245'"
+        },
+        {
+            "name": "DAD ELECTRONICS",
+            "phones": "'+21321449040', '+213770504504'"
+        },
+        {
+            "name": "SARLKRIONTEC",
+            "phones": "'+213555675943'"
+        },
+        {
+            "name": "Apple pro informatique",
+            "phones": "'+213799592424'"
+        },
+        {
+            "name": "creanel.silverjewelry",
+            "phones": "'0557840611'"
+        },
+        {
+            "name": "ETS TOPCABLE ",
+            "phones": "'0661300790'"
+        },
+        {
+            "name": "GREEN INK",
+            "phones": "'+213561990458'"
+        },
+        {
+            "name": "Best form",
+            "phones": "'0770770476', '0770770472', '0561679575', '0560986365', '0663651165'"
+        },
+        {
+            "name": "RGTIC",
+            "phones": "'+21323740070'"
+        },
+        {
+            "name": "Agence immobili\u00e8re Un Toit De Suite ",
+            "phones": ""
+        },
+        {
+            "name": "algricambi.dz",
+            "phones": ""
+        },
+        {
+            "name": "Agence Thouria",
+            "phones": "'+213550083211'"
+        },
+        {
+            "name": "Agenc houda hind",
+            "phones": "'+213540653148'"
+        },
+        {
+            "name": "Ultra-sat.com",
+            "phones": "'+213542804985'"
+        },
+        {
+            "name": "My Body Alg\u00e9rie",
+            "phones": "'+213551888020'"
+        },
+        {
+            "name": "soltano34",
+            "phones": "'0780433613'"
+        },
+        {
+            "name": "Ma Cuisinova",
+            "phones": "'+213665349213'"
+        },
+        {
+            "name": "Akham Oughilas",
+            "phones": "'+213542002210'"
+        },
+        {
+            "name": "Micro Mobilier - Chaise - Bureau",
+            "phones": "'+213560112214'"
+        },
+        {
+            "name": "Lola Deco",
+            "phones": "'0550140797'"
+        },
+        {
+            "name": "Kouba Dealz",
+            "phones": "'+213558313230'"
+        },
+        {
+            "name": "PROMO IMMI MECHENTEL",
+            "phones": "'+213550103296'"
+        },
+        {
+            "name": "Allied Machinery",
+            "phones": "'+213550025883', '+213550539125', '+213557227768', '0562403243'"
+        },
+        {
+            "name": "GA Distribution ",
+            "phones": "'+21323859738'"
+        },
+        {
+            "name": "Sidi Yahia Phone",
+            "phones": "'+213556630010'"
+        },
+        {
+            "name": "Deco New",
+            "phones": "'+213552030234'"
+        },
+        {
+            "name": "Agence DAR EDDOUNIA agr\u00e9e par l'\u00e9tat",
+            "phones": "'+21323376517', '+213550586576', '+213771137226'"
+        },
+        {
+            "name": "TOPPIK Alg\u00e9rie",
+            "phones": "'+213558813047'"
+        },
+        {
+            "name": "BS AQUADECO",
+            "phones": "'0670243494'"
+        },
+        {
+            "name": "MD Life Company ",
+            "phones": ""
+        },
+        {
+            "name": "FIRST REMED",
+            "phones": "'+213770543080'"
+        },
+        {
+            "name": "Formation Trading Forex Cfd Future",
+            "phones": "'0542974920'"
+        },
+        {
+            "name": "GROUPE TOP SANT\u00c9",
+            "phones": "'+213771632048'"
+        },
+        {
+            "name": "HDISPO",
+            "phones": "'0555044436'"
+        },
+        {
+            "name": "SPORTS DEPOT",
+            "phones": "'+213555015571', '+213551750644'"
+        },
+        {
+            "name": "SBIE19-TECH",
+            "phones": "'0665548596'"
+        },
+        {
+            "name": "Quincaillerie La radieuse",
+            "phones": "'+213667555665'"
+        },
+        {
+            "name": "Agence Immo Pro",
+            "phones": "'+213550190460'"
+        },
+        {
+            "name": "Sache Maison et d\u00e9coration ",
+            "phones": "'+213770308428', '+213784365738', '+213797722383'"
+        },
+        {
+            "name": "Bureau D'affaire Dallas",
+            "phones": "'+213770722528'"
+        },
+        {
+            "name": "Pare brise vitre fume",
+            "phones": "'+213555934516'"
+        },
+        {
+            "name": "Eurl Dats Car",
+            "phones": "'+213550646150'"
+        },
+        {
+            "name": "Narimane hp (soualah yacine)",
+            "phones": "'+213662425251', '+213558390011'"
+        },
+        {
+            "name": "Alg\u00e9ro Pack",
+            "phones": "'+213661512235'"
+        },
+        {
+            "name": "Business-Pro",
+            "phones": ""
+        },
+        {
+            "name": "Bledvoyages",
+            "phones": "'0549837471'"
+        },
+        {
+            "name": "Valsports Val d'hydra",
+            "phones": "'+213770460530'"
+        },
+        {
+            "name": "CROWN \"CHEKTOOLS\"",
+            "phones": ""
+        },
+        {
+            "name": "Carrefour De l'Automobile",
+            "phones": "'+213781698020'"
+        },
+        {
+            "name": "Ames",
+            "phones": ""
+        },
+        {
+            "name": "Lotus Ait Djebbara",
+            "phones": ""
+        },
+        {
+            "name": "Duo Infinis Immobilier",
+            "phones": "'+213560996245'"
+        },
+        {
+            "name": "Eurl Electro Portatif",
+            "phones": "'+213671539738'"
+        },
+        {
+            "name": "Meubles AFAK Djema Foudil",
+            "phones": ""
+        },
+        {
+            "name": "R\u00e9seaux Poids Lourds",
+            "phones": "'0560078821'"
+        },
+        {
+            "name": "AMC ENGINEERING",
+            "phones": "'+213560034440', '+213561656331'"
+        },
+        {
+            "name": "OLuNet",
+            "phones": "'0699771041'"
+        },
+        {
+            "name": "elizdihar",
+            "phones": ""
+        },
+        {
+            "name": "Kagex",
+            "phones": "'+213662119156'"
+        },
+        {
+            "name": "MutaShop",
+            "phones": "'+213698835006'"
+        },
+        {
+            "name": "Safakati",
+            "phones": "'+213561176463'"
+        },
+        {
+            "name": "ASTALAVISTA: Location Chapiteau et logistique \u00e9v\u00e8nementielle",
+            "phones": ""
+        },
+        {
+            "name": "LABELIMMO HYDRA",
+            "phones": "'+213771720237', '+213550032326'"
+        },
+        {
+            "name": "ELEGANT PC ",
+            "phones": "'+213550144483'"
+        },
+        {
+            "name": "Info Zone",
+            "phones": "'+213549475140'"
+        },
+        {
+            "name": "Relais immobilier",
+            "phones": ""
+        },
+        {
+            "name": "Espadonboats Algerie",
+            "phones": "'+21334101104'"
+        },
+        {
+            "name": "Go For Studies ",
+            "phones": ""
+        },
+        {
+            "name": "GENERAL LINKS",
+            "phones": "'+213560872855', '+213555295800'"
+        },
+        {
+            "name": "Agence Elwiem",
+            "phones": "'+213663530670'"
+        },
+        {
+            "name": "smill06",
+            "phones": ""
+        },
+        {
+            "name": "Tonnellerie Bouayed Tlemcen",
+            "phones": "'0559095318'"
+        },
+        {
+            "name": "Lounes Auto",
+            "phones": "'+213559892978'"
+        },
+        {
+            "name": "SARL FABP  SADOUDI",
+            "phones": "'0560948118', '0555400820'"
+        },
+        {
+            "name": "snc arkametal",
+            "phones": "'0772157388', '0560199969'"
+        },
+        {
+            "name": "FAYEZ  AUTO",
+            "phones": "'+213553379313'"
+        },
+        {
+            "name": "\u062e\u0632\u0627\u0646\u0627\u062a \u0627\u0644\u0645\u064a\u0627\u0647 Citerne plastic",
+            "phones": ""
+        },
+        {
+            "name": "Yoka Phone 1",
+            "phones": "'+213554364778', '+213656256676'"
+        },
+        {
+            "name": "Eurl FARISSIA BTP HAULOTTE ",
+            "phones": "'+213561649860', '+213560994603'"
+        },
+        {
+            "name": "Animalerie Happynimo",
+            "phones": "'+213782943676'"
+        },
+        {
+            "name": "PDR CAT",
+            "phones": ""
+        },
+        {
+            "name": "M&F Meubles Ain Beniane ",
+            "phones": "'0771450043'"
+        },
+        {
+            "name": "LOCATION NACELLE ALGERIE",
+            "phones": "'+213560002872'"
+        },
+        {
+            "name": "TPC plomberie",
+            "phones": "'+213698591335'"
+        },
+        {
+            "name": "Electrom\u00e9nager Livraison ",
+            "phones": ""
+        },
+        {
+            "name": "FININVEST",
+            "phones": "'+213771344411', '+213541611767'"
+        },
+        {
+            "name": "Le Parc immobilier  Agr\u00e9\u00e9e par L'\u00e9tat",
+            "phones": "'+213550680385'"
+        },
+        {
+            "name": "Travaux B\u00e2timents A B ",
+            "phones": "'+213556124337'"
+        },
+        {
+            "name": "Groupe Malek Adesivi",
+            "phones": "'+213560024823'"
+        },
+        {
+            "name": "Medyas voyages",
+            "phones": "'+21323802846'"
+        },
+        {
+            "name": "cci informatico",
+            "phones": "'+213559583392'"
+        },
+        {
+            "name": "NETLAB",
+            "phones": "'+213770376385', '0542002883'"
+        },
+        {
+            "name": "Tagdempt voyages",
+            "phones": "'0656440780'"
+        },
+        {
+            "name": "MARWA PROMOTION",
+            "phones": "'+21325313440'"
+        },
+        {
+            "name": "Formidable voyage",
+            "phones": "'+213552674077', '+213557019310'"
+        },
+        {
+            "name": "UPS",
+            "phones": "'+21323482353'"
+        },
+        {
+            "name": "MENAIEL TOURS",
+            "phones": ""
+        },
+        {
+            "name": "AlgerPC",
+            "phones": "' 0561606767', '0561606606', '0561606769 ', '0561606600', '0555286717'"
+        },
+        {
+            "name": "zaki shop",
+            "phones": "'+213777719624'"
+        },
+        {
+            "name": "Bzbook info",
+            "phones": "'+213550538446'"
+        },
+        {
+            "name": " Golden Wings Travel",
+            "phones": ""
+        },
+        {
+            "name": "Family Sat ",
+            "phones": "'+213779493729'"
+        },
+        {
+            "name": "WANASA TOURS",
+            "phones": "'+213550776282'"
+        },
+        {
+            "name": "Mouha HP",
+            "phones": "'+213668359398'"
+        },
+        {
+            "name": "JoySticks",
+            "phones": "'+213779380448'"
+        },
+        {
+            "name": "Bureau D'affaires Hind",
+            "phones": ""
+        },
+        {
+            "name": "agence well trip",
+            "phones": "'+213554247861', '+213554296050'"
+        },
+        {
+            "name": "IMA Plomberie",
+            "phones": "'+213555367243'"
+        },
+        {
+            "name": "TK HOMES",
+            "phones": "'+213558900777'"
+        },
+        {
+            "name": "Agence Slimani",
+            "phones": "'+21338479266', '+213560676426'"
+        },
+        {
+            "name": "Webdispo ",
+            "phones": ""
+        },
+        {
+            "name": "Vitamine Premium",
+            "phones": "'+213698354569'"
+        },
+        {
+            "name": "Global Cabine",
+            "phones": "'+213550666223', '+213550777428', '+213560154390', '+21323837283'"
+        },
+        {
+            "name": "Image24",
+            "phones": "'+213561757383'"
+        },
+        {
+            "name": "KEEWAY MOTOR",
+            "phones": "'+213770294068'"
+        },
+        {
+            "name": "Sarl Nv Solutions",
+            "phones": "'0660572995'"
+        },
+        {
+            "name": "InfinityTech",
+            "phones": "'+213542652417'"
+        },
+        {
+            "name": "Bureau D'affaires DREAM",
+            "phones": "'+213551122786'"
+        },
+        {
+            "name": "Snake Games",
+            "phones": "'+213561349849'"
+        },
+        {
+            "name": "Great Shopping ",
+            "phones": "'+213550750054'"
+        },
+        {
+            "name": "samfoursarl",
+            "phones": "'+213550706788'"
+        },
+        {
+            "name": "Sarl E Water",
+            "phones": "'+213560896846'"
+        },
+        {
+            "name": "Sarl Hard Equipement",
+            "phones": "'0770819500', '0699105104'"
+        },
+        {
+            "name": "Algerian Gadget",
+            "phones": "'+213770717885', '+213770303744'"
+        },
+        {
+            "name": "V2 TECH",
+            "phones": "'0552665100'"
+        },
+        {
+            "name": " Bhassen",
+            "phones": "'+213771663123'"
+        },
+        {
+            "name": "Zebra Algerie",
+            "phones": "'+213554161470', '+213560105244'"
+        },
+        {
+            "name": "Easy Life",
+            "phones": "'+213549497195'"
+        },
+        {
+            "name": "Abdoo95",
+            "phones": "'+213542937158'"
+        },
+        {
+            "name": "Bureau d'affaires oasis",
+            "phones": "'+213550702869'"
+        },
+        {
+            "name": "Exceptionnelle cuisine",
+            "phones": "'+213550356250'"
+        },
+        {
+            "name": "Anis Auto",
+            "phones": "'0774618738'"
+        },
+        {
+            "name": "HD FACTORY",
+            "phones": "'+213771111358', '+213557689880', '+213561722430'"
+        },
+        {
+            "name": "Sam boat",
+            "phones": "'+213549748208'"
+        },
+        {
+            "name": "El Moultaka",
+            "phones": "'+213550583101'"
+        },
+        {
+            "name": "Easycar paris",
+            "phones": ""
+        },
+        {
+            "name": "CPH Hydraulique",
+            "phones": "'+213561650561'"
+        },
+        {
+            "name": "Laptops Store",
+            "phones": "'0551831378', '0673410484'"
+        },
+        {
+            "name": "IMAAR EL DJAZAIR",
+            "phones": "'+213560999959'"
+        },
+        {
+            "name": "HD Connect",
+            "phones": "'+213549753040'"
+        },
+        {
+            "name": "Algerie Transport marchandise et D\u00e9m\u00e9nagement ",
+            "phones": ""
+        },
+        {
+            "name": "EURL HTM",
+            "phones": "'+213796826503'"
+        },
+        {
+            "name": "Gouigah Mounir agence immobili\u00e8re ",
+            "phones": "'0797323635', '0552254496', '0559357902'"
+        },
+        {
+            "name": "EURL C I A",
+            "phones": "'+21323484575', '+21323484576'"
+        },
+        {
+            "name": "Agence Grand Espace",
+            "phones": "'+21321636490'"
+        },
+        {
+            "name": "Water com Plomberie Chauffage",
+            "phones": "'+213540209862'"
+        },
+        {
+            "name": "Agence Elzohour",
+            "phones": "'+213559600926'"
+        },
+        {
+            "name": "DIARCOM ",
+            "phones": "'0770391130', '0770395001'"
+        },
+        {
+            "name": "Abdessemed Art Et Cr\u00e9ativit\u00e9 ",
+            "phones": "'0777705077'"
+        },
+        {
+            "name": "Brame Agency",
+            "phones": "'+213556790394'"
+        },
+        {
+            "name": "ADAGIO",
+            "phones": "'+213551060329', '+213542960940', '+213541567199'"
+        },
+        {
+            "name": "Bureau d'Affaires Madjid",
+            "phones": "'+213551405001', '+213773332146'"
+        },
+        {
+            "name": "Khaled Vidange",
+            "phones": "'0542 80 70 15'"
+        },
+        {
+            "name": "La Riviera",
+            "phones": "'+213661504350'"
+        },
+        {
+            "name": "DALI PLUS",
+            "phones": "'+213555612157', '+213555066374'"
+        },
+        {
+            "name": "BK Immo",
+            "phones": "'+213550783034'"
+        },
+        {
+            "name": "RS Futur Geotextile",
+            "phones": "'+213553465043'"
+        },
+        {
+            "name": "Agence Immobili\u00e8re                                                        MALISSA",
+            "phones": "'+213550430020', '+213550572277'"
+        },
+        {
+            "name": "ALEMBAL",
+            "phones": "'+213660151106', '+213558196845'"
+        },
+        {
+            "name": "Why Not ?",
+            "phones": "'+213561111490'"
+        },
+        {
+            "name": "16 Store : Vente des amplificateurs GSM Camera de surveillance",
+            "phones": "'0776477790'"
+        },
+        {
+            "name": "Poirson immobilier",
+            "phones": "'0783121601'"
+        },
+        {
+            "name": "GRILLAGE METAL ",
+            "phones": "'+213542099796'"
+        },
+        {
+            "name": "HUMIDI CLIM ",
+            "phones": "'+213561626522'"
+        },
+        {
+            "name": "ZED STORE",
+            "phones": "'+213560784174'"
+        },
+        {
+            "name": "El ALAMI ",
+            "phones": "'0770188128', '023820185'"
+        },
+        {
+            "name": "soundsolution",
+            "phones": "'+213559694161', '+213666262742'"
+        },
+        {
+            "name": "EURL BENABED",
+            "phones": ""
+        },
+        {
+            "name": "zine1966",
+            "phones": "'+213662560869'"
+        },
+        {
+            "name": "S Concept",
+            "phones": "'0560906620'"
+        },
+        {
+            "name": "Agence Immobiliere El-Menzeh",
+            "phones": "'0662011508'"
+        },
+        {
+            "name": "Photography Store ",
+            "phones": "'0697889516 '"
+        },
+        {
+            "name": "Eurl Fammed",
+            "phones": "'+213776462681', '+213542615541', '+21326190165'"
+        },
+        {
+            "name": "SARL .RTB",
+            "phones": "'+213542175012'"
+        },
+        {
+            "name": "Agence ilyes",
+            "phones": "'+213554518982', '+213550470212', '+21323600543', '+213772831004'"
+        },
+        {
+            "name": "AUTOQUAL",
+            "phones": ""
+        },
+        {
+            "name": "Adnan Deyaar Promotion Immobili\u00e8re ",
+            "phones": "'+213770403738'"
+        },
+        {
+            "name": "kabShop",
+            "phones": ""
+        },
+        {
+            "name": "EURL MACHINERY DZ ",
+            "phones": "'0699455041', '0699455064', '0699455074', '0699455031'"
+        },
+        {
+            "name": "VMSMOTO",
+            "phones": "'+213791050693'"
+        },
+        {
+            "name": "Haithem Auto El harrach",
+            "phones": "'0550091213'"
+        },
+        {
+            "name": "Immo Souhaib",
+            "phones": "'+213551751467'"
+        },
+        {
+            "name": "TISCOBA ",
+            "phones": "'+21329228000'"
+        },
+        {
+            "name": "El Djadid Immo ",
+            "phones": "'0550621899'"
+        },
+        {
+            "name": "Eurl Makelec",
+            "phones": "'0555017326'"
+        },
+        {
+            "name": "SARL BK piscine ",
+            "phones": "'+213561844720'"
+        },
+        {
+            "name": "R\u00e9sine epoxy, pon\u00e7age, rabotage b\u00e9ton, boucharder",
+            "phones": "'+213556634674'"
+        },
+        {
+            "name": "SpeedMark",
+            "phones": ""
+        },
+        {
+            "name": "CCS Informatique",
+            "phones": "'+213770881807', '+213552669596', '+21323328550', '+213560103911'"
+        },
+        {
+            "name": "AT HOME",
+            "phones": "'+213554000076', '+213669377193'"
+        },
+        {
+            "name": "HOUSE OF TRAVEL",
+            "phones": ""
+        },
+        {
+            "name": "ELITE PROTECTION S\u00c9CURIT\u00c9",
+            "phones": "'+213562085042'"
+        },
+        {
+            "name": "ETS Rahmani Nettoyage Assainissement & Curage",
+            "phones": "'+213779321988'"
+        },
+        {
+            "name": "SARLUMIR",
+            "phones": "'+213696115039', '+213560217402'"
+        },
+        {
+            "name": "RIVER SEY MACHINERIE ",
+            "phones": "'0561653612', '0561653613', '0561653614'"
+        },
+        {
+            "name": "Ryma Lab ",
+            "phones": "'+213779904867'"
+        },
+        {
+            "name": "DKPROM",
+            "phones": "'+21341218423'"
+        },
+        {
+            "name": "Eurl B Y K promotion",
+            "phones": "'+21323153272'"
+        },
+        {
+            "name": "Watches World DZ",
+            "phones": "'+213669118515', '+213549912922'"
+        },
+        {
+            "name": "UVEDS DIESEL",
+            "phones": "'+213662031330', '+213557674842', '+213670216215', '+213770343437'"
+        },
+        {
+            "name": "Sarl Djami ",
+            "phones": "'+213551619442', '+21325294804'"
+        },
+        {
+            "name": "yacine clim",
+            "phones": "'+213555790657'"
+        },
+        {
+            "name": "Bureau D'affaires Fernand Ville",
+            "phones": "'+213550031664', '+213798531149'"
+        },
+        {
+            "name": "Agence Immobili\u00e9re L'Auberge",
+            "phones": "'+213556542140'"
+        },
+        {
+            "name": "HYDRO \u0627\u0644\u062d\u0643\u064a\u0645 \u0644\u0642\u0645\u0627\u0646",
+            "phones": "'+213553105059'"
+        },
+        {
+            "name": "LEO ALGERIE",
+            "phones": "'+21323867610'"
+        },
+        {
+            "name": "GET INDUSTRIEL",
+            "phones": "'+213560033387', '+213770989767', '+213770376677', '+213770828489'"
+        },
+        {
+            "name": "KAMI construction",
+            "phones": "'+213776494988'"
+        },
+        {
+            "name": "Jotun Dealer",
+            "phones": "'+213798531108'"
+        },
+        {
+            "name": "dadyimmo2020",
+            "phones": "'+213555311110'"
+        },
+        {
+            "name": "ALGOMAT",
+            "phones": "'+213770001012', '+21325200186'"
+        },
+        {
+            "name": "Global paint",
+            "phones": "'+213556786862', '+213560742154'"
+        },
+        {
+            "name": "Win Computer",
+            "phones": "'+213561961677', '+213795865778'"
+        },
+        {
+            "name": "Agence le Triomphe  ",
+            "phones": "'+213550587303'"
+        },
+        {
+            "name": "WEST LINK",
+            "phones": "'0555230756'"
+        },
+        {
+            "name": "Costaland",
+            "phones": "'+213560065823'"
+        },
+        {
+            "name": "agence immobili\u00e8re la roserie ",
+            "phones": "'+213555485871'"
+        },
+        {
+            "name": "AFRIMAT",
+            "phones": "'+213774389632'"
+        },
+        {
+            "name": "EASY SOFT",
+            "phones": "'+213552860366'"
+        },
+        {
+            "name": "Deken Machine ",
+            "phones": "'+213794672432', '+213551698850'"
+        },
+        {
+            "name": "VMS BOUMERDES",
+            "phones": "'+213554212303'"
+        },
+        {
+            "name": "MAG MATAGRI",
+            "phones": "'+213560026475', '+213555029566', '+213555029562'"
+        },
+        {
+            "name": "EURL DINFLEX",
+            "phones": "'+213561895928', '+213560986916'"
+        },
+        {
+            "name": "BABAHI 1975 ",
+            "phones": "'+213661377122'"
+        },
+        {
+            "name": "Machine Ain Kerman",
+            "phones": "'+213660607107'"
+        },
+        {
+            "name": "\u0645\u0631\u0642\u062f \u0627\u0644\u0633\u0644\u0627\u0645 Dortoir Essalem",
+            "phones": "'+213557285125'"
+        },
+        {
+            "name": "The Address Phone",
+            "phones": "'+213665000022', '+213542000022'"
+        },
+        {
+            "name": "kids fashion",
+            "phones": "'+213553321467'"
+        },
+        {
+            "name": "SARL CECi",
+            "phones": "'+21336828003'"
+        },
+        {
+            "name": "H&N automobiles",
+            "phones": "'+213551156629', '+213561247580', '+213550084436'"
+        },
+        {
+            "name": "SUIVEZ NOUS VOYAGE",
+            "phones": "'+213542085592'"
+        },
+        {
+            "name": "Formation Technique",
+            "phones": ""
+        },
+        {
+            "name": "LOOKISSIMO",
+            "phones": "'0550909122'"
+        },
+        {
+            "name": "GTT SARL",
+            "phones": "'+213661581746'"
+        },
+        {
+            "name": "gamer zone",
+            "phones": "'+213667417841'"
+        },
+        {
+            "name": "D\u00e9m\u00e9nagement, Transport de marchandises",
+            "phones": "'+213550455450'"
+        },
+        {
+            "name": "TN MARINE ",
+            "phones": "'0561620752', '0555562122'"
+        },
+        {
+            "name": "Massi Net Pro",
+            "phones": "'+213782043469'"
+        },
+        {
+            "name": "Taha Immobilier",
+            "phones": "'+213674280445'"
+        },
+        {
+            "name": "promotion immobili\u00e8re sposkor ",
+            "phones": "'0551 83 64 03', '0673540144', '0780260072', '0556717079'"
+        },
+        {
+            "name": "Tizi_Bio",
+            "phones": "'+213666703701'"
+        },
+        {
+            "name": "DR APPLE",
+            "phones": "'+213550579022'"
+        },
+        {
+            "name": "apexoffice35",
+            "phones": "'+213552753531'"
+        },
+        {
+            "name": "Tamma Groupe",
+            "phones": "'+213550293249', '+213552191852'"
+        },
+        {
+            "name": "MTB Immobilier",
+            "phones": "'+21321603559', '+213776757262', '+213553416199'"
+        },
+        {
+            "name": "SAMI MACHINE",
+            "phones": "'+213666991035'"
+        },
+        {
+            "name": "Agence ARMAF",
+            "phones": "'+213551093612'"
+        },
+        {
+            "name": "RM Immobilier",
+            "phones": "'+213560240006'"
+        },
+        {
+            "name": "Labgaa plomberie chauffage",
+            "phones": "'+213552008030'"
+        },
+        {
+            "name": "D'lala Des Montres",
+            "phones": "'+213554722918'"
+        },
+        {
+            "name": "Ame de f\u00e9e",
+            "phones": ""
+        },
+        {
+            "name": "PRO CHAUFFAGE",
+            "phones": "'+213551302034'"
+        },
+        {
+            "name": "FARID SERVICE",
+            "phones": "'+213659322472'"
+        },
+        {
+            "name": "ABS TECHNOLOGY",
+            "phones": ""
+        },
+        {
+            "name": "Lysandra Voyage",
+            "phones": "'+213776994438'"
+        },
+        {
+            "name": "Horlogerie Le Quartz",
+            "phones": "'+213557803892', '+21321633847'"
+        },
+        {
+            "name": "Agence Le Fast Immo",
+            "phones": "'+21330215413', '+213550293244', '+213771654203', '+21321541345'"
+        },
+        {
+            "name": "Chaker Auto",
+            "phones": "'+213550941714', '+213549242347'"
+        },
+        {
+            "name": "Rahimimmobilier",
+            "phones": "'+213675351956'"
+        },
+        {
+            "name": "ITEC",
+            "phones": "'+213559852620', '+213559852680', '+213559852690'"
+        },
+        {
+            "name": "BK WATER ",
+            "phones": "'0775341992', '0792462500', '0793686389'"
+        },
+        {
+            "name": "slimani Events",
+            "phones": "'+213559488509', '+213553578658', '+213551285626'"
+        },
+        {
+            "name": "ONZO Kids",
+            "phones": "'+213668639934', '+213667338866'"
+        },
+        {
+            "name": "\u0671\u062b\u0627\u062a \u063a\u0631\u0641 \u0646\u0648\u0645 Abdou meuble ",
+            "phones": "'+213770142818', '+213559882568'"
+        },
+        {
+            "name": "Confort PC",
+            "phones": "'+213553857524'"
+        },
+        {
+            "name": "Dadine R\u00e9paration Phone",
+            "phones": "'+213777291361'"
+        },
+        {
+            "name": "IDIRENE Immobilier",
+            "phones": "'+213771135329'"
+        },
+        {
+            "name": "Agence 2ss",
+            "phones": "'+213556104612'"
+        },
+        {
+            "name": "marousoumi",
+            "phones": "'+213556948061'"
+        },
+        {
+            "name": "SARL REDUMEC",
+            "phones": "'+213560134869', '+213782207575', '+213560048285'"
+        },
+        {
+            "name": "Smart Link It Solutions ",
+            "phones": "'+213781239892'"
+        },
+        {
+            "name": "TOP GRAVEUR",
+            "phones": ""
+        },
+        {
+            "name": "Zakia Agent Immobilier",
+            "phones": "'+213559433909'"
+        },
+        {
+            "name": "Sarl Bellat \"1\" ",
+            "phones": "'+213555247709', '+213771301211'"
+        },
+        {
+            "name": "Agence Immobili\u00e8re EL-SALAM",
+            "phones": ""
+        },
+        {
+            "name": "Al Kaba Store",
+            "phones": "'0555489251'"
+        },
+        {
+            "name": "LG HAMIZ",
+            "phones": "'+213550969478', '+213780631962', '+21323857068'"
+        },
+        {
+            "name": "HK Quincaillerie PRO",
+            "phones": "'+213661521572'"
+        },
+        {
+            "name": "SARL CORNER HYDRO",
+            "phones": "'+213554534888'"
+        },
+        {
+            "name": "Immo Express cheraga",
+            "phones": "'+213668604070', '+213550019669'"
+        },
+        {
+            "name": "A To Z PUB ",
+            "phones": "'+213552892228'"
+        },
+        {
+            "name": "Immo Meftah",
+            "phones": "'+213661233204', '+213662043223'"
+        },
+        {
+            "name": "Geosol Expert",
+            "phones": "'+213560315675'"
+        },
+        {
+            "name": "EL DJAOUDA REFRIGERATEUR",
+            "phones": "'+213661521572'"
+        },
+        {
+            "name": "TRIVAZO PRO ET SERVICES",
+            "phones": "'+213541545543'"
+        },
+        {
+            "name": "EURL MANUBERR",
+            "phones": "'+213782912644'"
+        },
+        {
+            "name": "Agence Fayez",
+            "phones": "'+213551781927'"
+        },
+        {
+            "name": "nasria kouba ",
+            "phones": "'+213557093929'"
+        },
+        {
+            "name": "Rich Rent Car ",
+            "phones": "'+213794222136'"
+        },
+        {
+            "name": "FROID CLIMATISATION ",
+            "phones": "'+213555984135'"
+        },
+        {
+            "name": "investy  Victor Hugo Alger",
+            "phones": "'+213663608753', '+213557379653'"
+        },
+        {
+            "name": "Agence immobiliere LE PAVILLON",
+            "phones": "'+213661539910'"
+        },
+        {
+            "name": "Ahras Industry",
+            "phones": "'0698103894', '0670298890', '0698846146', '0670291958'"
+        },
+        {
+            "name": "KARIO informatique",
+            "phones": "'+213555004293', '+213554900426'"
+        },
+        {
+            "name": "CAPITALIMMO (depuis1998,Agr\u00e9\u00e9 par le minist\u00e9re de l'habitat ",
+            "phones": "'+213550587118'"
+        },
+        {
+            "name": "Bellaz B\u00e2timent ",
+            "phones": "'+213550501081'"
+        },
+        {
+            "name": "Gateau Algerie ",
+            "phones": "'0562108695'"
+        },
+        {
+            "name": "Euro Campus",
+            "phones": "'+213561642020'"
+        },
+        {
+            "name": " Ets Faride servise D\u00e9bouchage vidange ",
+            "phones": "'+213550048312'"
+        },
+        {
+            "name": "Construx Engineering",
+            "phones": "'+213661292987'"
+        },
+        {
+            "name": "\u0627\u0644\u0646\u062c\u0627\u062d \u0644\u0644\u0627\u062c\u0647\u0632\u0629 \u0627\u0644\u0643\u0647\u0631 \u0645\u0646\u0632\u0644\u064a\u0629",
+            "phones": ""
+        },
+        {
+            "name": "chaudi\u00e8re dericc ",
+            "phones": "'+213783078076'"
+        },
+        {
+            "name": "Pointcom",
+            "phones": "'+213770169529', '+213550845511'"
+        },
+        {
+            "name": "New Sante Medical ",
+            "phones": "'+213550077747', '+213550581777', '+213550077766', '+213554866102'"
+        },
+        {
+            "name": "Ciblimmo31",
+            "phones": "'+213667434545'"
+        },
+        {
+            "name": "Mps Computer",
+            "phones": ""
+        },
+        {
+            "name": "R\u00e9paration chaudi\u00e8re saunier",
+            "phones": "'+213780203945'"
+        },
+        {
+            "name": "Etbhpcm Ramdani",
+            "phones": "'+213555280441'"
+        },
+        {
+            "name": "Campus informatique",
+            "phones": "'+213560037575', '+21321235754'"
+        },
+        {
+            "name": "Saidi Outillage et Quincaillerie",
+            "phones": ""
+        },
+        {
+            "name": "Azar Machines",
+            "phones": "'+213556463665'"
+        },
+        {
+            "name": "Doublou Am\u00e9nagement ",
+            "phones": "'+213669652104'"
+        },
+        {
+            "name": "ESPACE VERT RAOUF",
+            "phones": "'+213698916391'"
+        },
+        {
+            "name": "SARL Axxam Promo",
+            "phones": "'+213770222327'"
+        },
+        {
+            "name": "Agence Immo d'or",
+            "phones": "'+213552049611'"
+        },
+        {
+            "name": "Elwifak Phone",
+            "phones": "'0777650000'"
+        },
+        {
+            "name": "Agence Immobili\u00e8re L'esp\u00e9rance (agr\u00e9ee par l'\u00e9tat)",
+            "phones": "'+21323813259', '+213552008808', '+213557342696'"
+        },
+        {
+            "name": "Chrea Etanche ",
+            "phones": "'+213561344899'"
+        },
+        {
+            "name": "la cl\u00e9 d'or immobilier",
+            "phones": "'0550567919'"
+        },
+        {
+            "name": "BENZ NETWORK SOLUTIONS ",
+            "phones": "'+213557562334'"
+        },
+        {
+            "name": "Bicold maghreb ",
+            "phones": "'+213560033226'"
+        },
+        {
+            "name": "AGE ALGERIE",
+            "phones": "'+21323116750'"
+        },
+        {
+            "name": "Vivre Mobile DZ",
+            "phones": "'+213541839301'"
+        },
+        {
+            "name": "INTEX ALGER ",
+            "phones": "'+213658619734'"
+        },
+        {
+            "name": "Etbhpcm Ramdani",
+            "phones": "'+213555280441'"
+        },
+        {
+            "name": "CLICK INFORMATIQUE ORAN",
+            "phones": "'+213699699694', '+21341210744'"
+        },
+        {
+            "name": "Eurl INFOSTORE",
+            "phones": "'+21323592597', '+213560196972', '+213560202658', '+213561702706'"
+        },
+        {
+            "name": "D\u00e9pannage Auto",
+            "phones": "'+213553956144', '+213673713849'"
+        },
+        {
+            "name": "ZED ONE TECHNOLOGY",
+            "phones": "'+213555676387'"
+        },
+        {
+            "name": "smart electric solutions",
+            "phones": "'+213658442363'"
+        },
+        {
+            "name": "MT AFFAIRES",
+            "phones": "'+213551665042'"
+        },
+        {
+            "name": "Agence El Meftah",
+            "phones": "'+213550592429'"
+        },
+        {
+            "name": "Elite r\u00e9sidence",
+            "phones": "'+213550488921', '+213550989467'"
+        },
+        {
+            "name": "Etbhpcm Ramdani",
+            "phones": "'+213555280441'"
+        },
+        {
+            "name": "Sarl Sissou Construction",
+            "phones": "'+213559631274'"
+        },
+        {
+            "name": "La Perle Des Sources",
+            "phones": "'+21323541502', '+213550396739'"
+        },
+        {
+            "name": "Ab store",
+            "phones": "'+213780469929'"
+        },
+        {
+            "name": "GLR travaux d\u2019aluminium et pvc",
+            "phones": "'+213554961443'"
+        },
+        {
+            "name": "Nes Product",
+            "phones": "'0554269107'"
+        },
+        {
+            "name": "Anouar PC",
+            "phones": "'+213661712652'"
+        },
+        {
+            "name": "LOCATION NACELLE VIDIV",
+            "phones": "'+213560000650'"
+        },
+        {
+            "name": "VMS KOUBA DZ SCOOT",
+            "phones": "'0550944837'"
+        },
+        {
+            "name": "CPAP DZ",
+            "phones": "'+213561543858', '+213797381785'"
+        },
+        {
+            "name": "Octet Plus ",
+            "phones": "'+213661593842', '+213661593840'"
+        },
+        {
+            "name": "Cuisinox Biskra",
+            "phones": "'+213560071167'"
+        },
+        {
+            "name": "Pro Technologiques",
+            "phones": ""
+        },
+        {
+            "name": "Capital Medical",
+            "phones": "'+213553955244'"
+        },
+        {
+            "name": "EOS EURL",
+            "phones": "'+213696317188'"
+        },
+        {
+            "name": "Mounir Boudina",
+            "phones": "'+213553220739'"
+        },
+        {
+            "name": "\u062f\u064a\u0643\u0648\u0641\u0648\u0631 ",
+            "phones": "'0560406900'"
+        },
+        {
+            "name": "MS Nettoyage & D\u00e9ratisation ",
+            "phones": ""
+        },
+        {
+            "name": "SARL SATUMEX CONTROLE",
+            "phones": "'0561445995'"
+        },
+        {
+            "name": "watairflow",
+            "phones": "'+213540483208'"
+        },
+        {
+            "name": "City store technologie bouira",
+            "phones": "'+213561154574'"
+        },
+        {
+            "name": "The Gamers",
+            "phones": "'+213770308178'"
+        },
+        {
+            "name": "GTI PLUS",
+            "phones": "'+213770505067', '+213770505501'"
+        },
+        {
+            "name": "Monde glasse",
+            "phones": "'+213550466284'"
+        },
+        {
+            "name": "Midohmed",
+            "phones": ""
+        },
+        {
+            "name": "Bm Soft Development",
+            "phones": "'+213662541486', '+213556739846', '+21336712038'"
+        },
+        {
+            "name": "El Qalam Technologie ",
+            "phones": "'+21323786493', '+213696913814', '+213541923804'"
+        },
+        {
+            "name": "SARL AGROTECH",
+            "phones": "'0550118145', '0560311929', '0540331890'"
+        },
+        {
+            "name": "AG r\u00e9novation et Am\u00e9nagement",
+            "phones": ""
+        },
+        {
+            "name": "EURL HEP",
+            "phones": "'+213557334870'"
+        },
+        {
+            "name": "MASTER DATASHOW",
+            "phones": "'+213554009543'"
+        },
+        {
+            "name": "DZdigitalkeys",
+            "phones": "'+213781522780'"
+        },
+        {
+            "name": "Agence Immobili\u00e8re EL DJAZAIRIA",
+            "phones": "'+213550112217'"
+        },
+        {
+            "name": "Bio Dallas ",
+            "phones": "'+213670442263'"
+        },
+        {
+            "name": "Agence Immobili\u00e8re ",
+            "phones": ""
+        },
+        {
+            "name": "PROTECTION ET SECURITE",
+            "phones": "'+213555002630'"
+        },
+        {
+            "name": "Agence El SOL",
+            "phones": "'+213553298322', '+213553395336', '+21323294781'"
+        },
+        {
+            "name": "Smart en Ligne",
+            "phones": "'+213550397460'"
+        },
+        {
+            "name": "EURL NAF FACTORY",
+            "phones": "'0779389055'"
+        },
+        {
+            "name": "AGROAL EURL",
+            "phones": "'+213560979500', '+213560979600'"
+        },
+        {
+            "name": "Sarl Nour El Afak Promotion",
+            "phones": "'+213661128386'"
+        },
+        {
+            "name": "AC Solutions",
+            "phones": "'+213780048341'"
+        },
+        {
+            "name": "Agence immo conseils ",
+            "phones": ""
+        },
+        {
+            "name": "Inoubliable Voyage  ",
+            "phones": "'00213540468937'"
+        },
+        {
+            "name": "agenceexpress",
+            "phones": "'+21340669658', '+213554248295', '+213771773804', '+213669658760', '+21326123181'"
+        },
+        {
+            "name": "Packadvis",
+            "phones": "'+213659880010'"
+        },
+        {
+            "name": "PROMOTION IMMOBILI\u00c8RE SMH",
+            "phones": ""
+        },
+        {
+            "name": "GALAXIE PAP",
+            "phones": "'+21323418020'"
+        },
+        {
+            "name": "SARL SADIMET",
+            "phones": "'+21323855080', '+21323855526'"
+        },
+        {
+            "name": "AINMLILAPLAST ACCESSOIRES AUTO",
+            "phones": "'0542944937'"
+        },
+        {
+            "name": "immozayad",
+            "phones": "'+213553989249'"
+        },
+        {
+            "name": "Dlala \u23d0\u062f\u0644\u0627\u0644\u0629",
+            "phones": "'+213560706165'"
+        },
+        {
+            "name": "Nadir",
+            "phones": ""
+        },
+        {
+            "name": "Transport de marchandises et  D\u00e9m\u00e9nagement",
+            "phones": "'+213540681121'"
+        },
+        {
+            "name": "SARL CUISINOX INOX",
+            "phones": "'+213560851603'"
+        },
+        {
+            "name": "Aymen promotion / CHAIBI Mohamed",
+            "phones": ""
+        },
+        {
+            "name": "Agence immobiliere SABIL ",
+            "phones": "'+21341825128'"
+        },
+        {
+            "name": "L'ATELIER BENARIBA",
+            "phones": "'+213561642244', '+213561642243'"
+        },
+        {
+            "name": "FRIGOCAR ",
+            "phones": "'+213782303132'"
+        },
+        {
+            "name": "Youcef Nettoyage, d\u00e9bouchage, curage, canalisation, Vidange",
+            "phones": "'+213657721595'"
+        },
+        {
+            "name": "Security & Systems Company ",
+            "phones": "'+213553252857'"
+        },
+        {
+            "name": "BMTech",
+            "phones": "'+213670414448'"
+        },
+        {
+            "name": "GENERAL IT ",
+            "phones": "'+213550037000', '+213550054100', '+213550554088', '+213550051309'"
+        },
+        {
+            "name": "Sadoun Telecom",
+            "phones": "'0550955800', '0770955900', '0550955888'"
+        },
+        {
+            "name": "Bureau d'affiares Rahim",
+            "phones": ""
+        },
+        {
+            "name": "LORANGE ",
+            "phones": "'+213550076106', '+213550236335'"
+        },
+        {
+            "name": "DECASPORT ",
+            "phones": "'+213557843420'"
+        },
+        {
+            "name": "PC&Phone",
+            "phones": ""
+        },
+        {
+            "name": "AK affaire",
+            "phones": "'+213554005052'"
+        },
+        {
+            "name": "SARL O D E F",
+            "phones": "'+213553272571'"
+        },
+        {
+            "name": "imp3dz",
+            "phones": "'+213661467450', '+213671630044'"
+        },
+        {
+            "name": "AllinOneTechnology",
+            "phones": "'+213778344378'"
+        },
+        {
+            "name": "Louail phone",
+            "phones": "'0540796665'"
+        },
+        {
+            "name": "R H - EMBALLAGE",
+            "phones": "'+213556313883'"
+        },
+        {
+            "name": "Fateh Dey",
+            "phones": "'+213556726883', '+213775585786'"
+        },
+        {
+            "name": "agence l'amiti\u00e9",
+            "phones": ""
+        },
+        {
+            "name": "NOVA H TOURS SERVICES",
+            "phones": "'+213559708074'"
+        },
+        {
+            "name": "ALGEBRE COM INFORMATIQUE",
+            "phones": "'+213795910071'"
+        },
+        {
+            "name": "BUILDING IMMO",
+            "phones": "'+213552314216', '+21321314309'"
+        },
+        {
+            "name": "Agence Hossam",
+            "phones": "'+213550743588'"
+        },
+        {
+            "name": "Vms Reghaia",
+            "phones": "'0552128591'"
+        },
+        {
+            "name": "DLCONSULTING",
+            "phones": "'+213770519512'"
+        },
+        {
+            "name": "AGROMEC",
+            "phones": "'+21321854623'"
+        },
+        {
+            "name": " immo Elfeth",
+            "phones": "'+213551206074', '+213795220404'"
+        },
+        {
+            "name": "sidmaster",
+            "phones": "'+213550056539'"
+        },
+        {
+            "name": "GOLDEN LIFT Ascenseur",
+            "phones": "'+213770267328', '+213552161050'"
+        },
+        {
+            "name": "Art Design",
+            "phones": "'+213542137408'"
+        },
+        {
+            "name": "ATV VOYAGES",
+            "phones": ""
+        },
+        {
+            "name": "INNOPASS",
+            "phones": "'+213671688851'"
+        },
+        {
+            "name": "PC PRO DZ ",
+            "phones": "'+213542344905'"
+        },
+        {
+            "name": "FOTONIX ",
+            "phones": "'+213556262626'"
+        },
+        {
+            "name": "TOUMI HPRO",
+            "phones": ""
+        },
+        {
+            "name": "EVERGREEN_DZ",
+            "phones": "'+213697251845'"
+        },
+        {
+            "name": "Sarl Mathyd",
+            "phones": "'+213770903450'"
+        },
+        {
+            "name": "BBC MACHINE ",
+            "phones": "'+213551202495', '+213770892051', '+213555157031'"
+        },
+        {
+            "name": "Zerrouati Promotion Immobili\u00e8re",
+            "phones": "'+213560331728'"
+        },
+        {
+            "name": "Ami Informatique",
+            "phones": "'+21335723751', '+213550948719', '+213550948720', '+213558297902'"
+        },
+        {
+            "name": "GENERAL TOP STORE",
+            "phones": "'+213551095975', '0665290350'"
+        },
+        {
+            "name": "AFRICA  GEST IMMOBILIER",
+            "phones": "'+21334120079'"
+        },
+        {
+            "name": "OUEDKNISS",
+            "phones": ""
+        },
+        {
+            "name": "SARL Assilmatec",
+            "phones": "'+213541137664'"
+        },
+        {
+            "name": "REGINA Travel",
+            "phones": "'+21321448853', '+213555000533'"
+        },
+        {
+            "name": "KABA STORE",
+            "phones": "'+213780343697'"
+        },
+        {
+            "name": "DEYSTORE",
+            "phones": "'+213777626558', '+21323927587'"
+        },
+        {
+            "name": "LED PRO ",
+            "phones": "'+213557675938'"
+        },
+        {
+            "name": "Farid Bouhadja",
+            "phones": "'+213554088606'"
+        },
+        {
+            "name": "Agence immobili\u00e8re porte cl\u00e9s ",
+            "phones": "'+213541088019', '0551292105', '0779123672'"
+        },
+        {
+            "name": "PC Station",
+            "phones": "'+213550453662'"
+        },
+        {
+            "name": "slimane.immobilier",
+            "phones": "'+213560255877'"
+        },
+        {
+            "name": "Global Partners solution ",
+            "phones": "'+213559756290', '+213560924027'"
+        },
+        {
+            "name": "EURL DYNAMIC INNOV",
+            "phones": "'+213541559283'"
+        },
+        {
+            "name": "samrialc",
+            "phones": "'+213549988890'"
+        },
+        {
+            "name": "SARL RESPAD",
+            "phones": "'+213561725934'"
+        },
+        {
+            "name": "Africapap",
+            "phones": "'+213699514769', '+213675578800'"
+        },
+        {
+            "name": "AGENCE IMMOBILIERE \"DRAGA EP/SMAILI\"",
+            "phones": "'+213661520161', '+213557832192'"
+        },
+        {
+            "name": "Holidar",
+            "phones": "'+213556274479'"
+        },
+        {
+            "name": "Agence immobili\u00e8re  LALOFA ",
+            "phones": "'+213550461363'"
+        },
+        {
+            "name": "Bureau d'affaire Immoluxe",
+            "phones": "'+213541519619'"
+        },
+        {
+            "name": "AgenceImmobili\u00e8reWassim16",
+            "phones": "'+213560333610', '+213557272647'"
+        },
+        {
+            "name": "K2M Showroom ",
+            "phones": "'+213559231271'"
+        },
+        {
+            "name": "Market_phones_",
+            "phones": "'+213554618009'"
+        },
+        {
+            "name": "Kids Heaven",
+            "phones": "'0561945367'"
+        },
+        {
+            "name": "Chafai",
+            "phones": "'+213770215009'"
+        },
+        {
+            "name": "service d\u00e9m\u00e9nagement dz \u062e\u062f\u0645\u0627\u062a \u0646\u0642\u0644 \u0648 \u062a\u0631\u062d\u064a\u0644 \u0627\u0644\u0645\u0646\u0627\u0632\u0644 ",
+            "phones": "'+213663101278'"
+        },
+        {
+            "name": "conceptek",
+            "phones": "'+213541818958', '+213770912286'"
+        },
+        {
+            "name": "HOSNI HILTI",
+            "phones": "'+213661894983'"
+        },
+        {
+            "name": "PLANETE MESURE",
+            "phones": "'+213550863187'"
+        },
+        {
+            "name": "Somatec ( Chapiteaux   Tentes    B\u00e2ches ) ",
+            "phones": "'+213770294476', '+21321682046'"
+        },
+        {
+            "name": "Genhyal  ",
+            "phones": "'+213770519388'"
+        },
+        {
+            "name": "AREEJ SHOP",
+            "phones": "'+213660370107'"
+        },
+        {
+            "name": "Pipe Poly Eurl",
+            "phones": "'0560938160', '0560911833', '0667660370'"
+        },
+        {
+            "name": "Alpha Digital",
+            "phones": "'+213554093600', '+213560102030', '+213797402747'"
+        },
+        {
+            "name": "SARLTALI IMMOBILLIERE",
+            "phones": "'0662581524'"
+        },
+        {
+            "name": "oselec",
+            "phones": ""
+        },
+        {
+            "name": "R\u00e9sidence Aghiles",
+            "phones": "'0770994104'"
+        },
+        {
+            "name": "TALHA VELO ET SCOOTERS",
+            "phones": "'+213561698374'"
+        },
+        {
+            "name": "Wonder phone",
+            "phones": "'0549291144'"
+        },
+        {
+            "name": "Agence BEST IMMO  ",
+            "phones": "'+213793999619'"
+        },
+        {
+            "name": "MARI FER informatique",
+            "phones": "'+21321924420'"
+        },
+        {
+            "name": "Boufarik satellite ",
+            "phones": "'+213550551010', '+213776782577'"
+        },
+        {
+            "name": "Code Barre Center",
+            "phones": "'+213554161470', '+213560105244'"
+        },
+        {
+            "name": "MOTOTEAM",
+            "phones": "'+213555521747', '+213555521703'"
+        },
+        {
+            "name": "Spontex",
+            "phones": "'0561945367'"
+        },
+        {
+            "name": "Agence immobili\u00e8re kouba agr\u00e9\u00e9 par l'\u00e9tat ",
+            "phones": "'+213540890087'"
+        },
+        {
+            "name": "Bureau d'affaire",
+            "phones": "'+213559523733'"
+        },
+        {
+            "name": "Grim automatisme",
+            "phones": "'0550327679'"
+        },
+        {
+            "name": "Camion d\u00e9bouchage nettoyage",
+            "phones": "'+213779570589'"
+        },
+        {
+            "name": "EQUIPEMENTS ET OUTILLAGES POUR GARAGE,INDUSTRIE&BATIMENT",
+            "phones": "'+21321648334', '+213673466366'"
+        },
+        {
+            "name": "remeili31",
+            "phones": "'+213540884345'"
+        },
+        {
+            "name": "AM MOBILIER",
+            "phones": "'+213554072726', '+213661640673'"
+        },
+        {
+            "name": "Agence Mercure ",
+            "phones": "'+213560113459'"
+        },
+        {
+            "name": "SARL EL BORDI ",
+            "phones": "'+21324709381'"
+        },
+        {
+            "name": "SARL Alg\u00e9rie Ressorts ",
+            "phones": "'+213549676763'"
+        },
+        {
+            "name": "SARL BULLPARTS",
+            "phones": "'+21320662320', '+213770238387', '+213771399902', '+213662320328'"
+        },
+        {
+            "name": "Sarl htz equipements",
+            "phones": "'+213770883138', '+213770883159', '+213770883161'"
+        },
+        {
+            "name": "SARL CMMC ",
+            "phones": "'+213778091901'"
+        },
+        {
+            "name": "Al Gharbi promotion ",
+            "phones": "'+213560959697'"
+        },
+        {
+            "name": "Abdnyc 1979",
+            "phones": "'+213560410538'"
+        },
+        {
+            "name": "AMIROUCHE AUTO",
+            "phones": "'+213661343408', '+213559593953', '+213777333524'"
+        },
+        {
+            "name": "Manzili",
+            "phones": "'+213793063060'"
+        },
+        {
+            "name": "Bureau d'affaires Ikbal",
+            "phones": ""
+        },
+        {
+            "name": "amine home",
+            "phones": "'+213559434550'"
+        },
+        {
+            "name": "Lux Ottico ",
+            "phones": "'+213552382335'"
+        },
+        {
+            "name": "Extra Meubles",
+            "phones": "'+213662027248', '+213542216200', '+213664456776'"
+        },
+        {
+            "name": "Fun Deco graphic",
+            "phones": "'0661628528'"
+        },
+        {
+            "name": "Immo El Bahia",
+            "phones": "'+213555629365'"
+        },
+        {
+            "name": "PC GEAR",
+            "phones": "'+213697195800'"
+        },
+        {
+            "name": "Kechen Auto",
+            "phones": "'+213550479851', '+213555507601'"
+        },
+        {
+            "name": "Plateforme Hydraulique",
+            "phones": "'+213560042777'"
+        },
+        {
+            "name": "ETB TCE SAMI",
+            "phones": "'+213664287217'"
+        },
+        {
+            "name": "INDEXIMMO",
+            "phones": "'+213550453688', '+21323264265'"
+        },
+        {
+            "name": "Agence Immobili\u00e8re El BAHDJA",
+            "phones": "'0550572365'"
+        },
+        {
+            "name": "B & B MEUBLES DE CUISINE EN HETRE ARTISAN MENUISIER",
+            "phones": "'+213540757340'"
+        },
+        {
+            "name": "AMLAK IMMO",
+            "phones": "'+213550755007'"
+        },
+        {
+            "name": "Agence immobiliere  RANIA agr\u00e9e par l'\u00e9tat",
+            "phones": "'+213550239600', '+213771469600'"
+        },
+        {
+            "name": "MILLESIME VOYAGES ",
+            "phones": "'+21323280554', '+213556199017', '+213552172711'"
+        },
+        {
+            "name": " GRAFIL",
+            "phones": "'+21335873897'"
+        },
+        {
+            "name": "AM TECH",
+            "phones": "'+213792294989'"
+        },
+        {
+            "name": "Iris Husseindey",
+            "phones": ""
+        },
+        {
+            "name": "Beit el istikrar ",
+            "phones": ""
+        },
+        {
+            "name": "Echo Water",
+            "phones": "'+213552694776'"
+        },
+        {
+            "name": "WISSAM HYDRO",
+            "phones": "'+21323867338'"
+        },
+        {
+            "name": "Eurl SFT",
+            "phones": "'+213557100925'"
+        },
+        {
+            "name": "Broderie d'or Alg\u00e9rie",
+            "phones": "'+213656283637'"
+        },
+        {
+            "name": "BestDigital",
+            "phones": "'+213776201204'"
+        },
+        {
+            "name": "BROAD TECHNOLOGY",
+            "phones": "'+213550822346'"
+        },
+        {
+            "name": "IMMO ALLIANCE",
+            "phones": "'+213770117880'"
+        },
+        {
+            "name": "ChimColor",
+            "phones": "'+213550206647'"
+        },
+        {
+            "name": "agence immobiliere du nord",
+            "phones": ""
+        },
+        {
+            "name": "MCM office",
+            "phones": "'+213550752577'"
+        },
+        {
+            "name": "SamDiag",
+            "phones": "'00213558081899'"
+        },
+        {
+            "name": "bureau d'affaires Raouf",
+            "phones": "'+213550638806'"
+        },
+        {
+            "name": "Shift Tech",
+            "phones": "'0773589615'"
+        },
+        {
+            "name": " GMI Groupe Electrog\u00e9ne ",
+            "phones": ""
+        },
+        {
+            "name": "ZR AUTO ",
+            "phones": "'+213661600083'"
+        },
+        {
+            "name": "Etbhpcm Ramdani",
+            "phones": "'+213555280441'"
+        },
+        {
+            "name": "Asek Fly Travel ",
+            "phones": "'+213772828262'"
+        },
+        {
+            "name": "Adel Rideaux",
+            "phones": "'+213558388427'"
+        },
+        {
+            "name": "Tidjanisami42",
+            "phones": "'0558230145'"
+        },
+        {
+            "name": "Mnn auto",
+            "phones": ""
+        },
+        {
+            "name": "Le Coin Immobilier ",
+            "phones": "'0794895257'"
+        },
+        {
+            "name": "netcomputer",
+            "phones": "'+213550592598', '+21323543657'"
+        },
+        {
+            "name": "Ninja shop",
+            "phones": "'0542636713', '0798919136'"
+        },
+        {
+            "name": "KMY Ascenseurs",
+            "phones": "'0557415597'"
+        },
+        {
+            "name": "EURL CNIE",
+            "phones": "'+213661403175', '+213798124895'"
+        },
+        {
+            "name": "BS INFORMATIQUE \u0645\u0640\u062d\u0644 \u0644\u0628\u064a\u0639 \u0627\u062c\u0647\u0632\u0629 \u0627\u0644\u0643\u0645\u0628\u064a\u0648\u062a\u0631  ",
+            "phones": "'+213557599785'"
+        },
+        {
+            "name": "AGENCE LES CHEMINOTS",
+            "phones": "'+213555866580'"
+        },
+        {
+            "name": "Islam Electrom\u00e9nager",
+            "phones": "'+213675158394'"
+        },
+        {
+            "name": "Store Said",
+            "phones": "'+213552920300'"
+        },
+        {
+            "name": "7 Immo",
+            "phones": "'+21321749921'"
+        },
+        {
+            "name": "Perkins Algerie",
+            "phones": "'+213660374496', '+21323320950', '+213661512132'"
+        },
+        {
+            "name": "Agence Immobili\u00e8re les palmiers ",
+            "phones": "'+213555977880', '+213552858586', '+21323384733'"
+        },
+        {
+            "name": "ABDOU AUTO KIA HYUNDAI",
+            "phones": "'+213550173277'"
+        },
+        {
+            "name": "Saft Protect",
+            "phones": ""
+        },
+        {
+            "name": "Agence Laforet",
+            "phones": "'+213550198833'"
+        },
+        {
+            "name": "Joint de Dilatation Et Couvre Joint ",
+            "phones": "'+213561652230'"
+        },
+        {
+            "name": "IMMO DADI",
+            "phones": "'+213557333700'"
+        },
+        {
+            "name": "Charikatec",
+            "phones": "'+213555044436'"
+        },
+        {
+            "name": "Capitale Pompe D'afrique",
+            "phones": "'+213552070006'"
+        },
+        {
+            "name": "EURL Guendouzi Chemical",
+            "phones": "'+213555421443'"
+        },
+        {
+            "name": "KMA STORE",
+            "phones": "'+213698822783'"
+        },
+        {
+            "name": "Ets Farine service D\u00e9bouchage Vidange L  O  N  U  I S",
+            "phones": "'+213793452270'"
+        },
+        {
+            "name": "Architecte ",
+            "phones": "'0551210313'"
+        },
+        {
+            "name": "DZ GAMER",
+            "phones": "'0774032044'"
+        },
+        {
+            "name": "Charpente M\u00e9tallique  AL AMOUR CH ",
+            "phones": "'+213661844640', '+213659179878', '+213550772735'"
+        },
+        {
+            "name": "Kwin ",
+            "phones": "'+213560636042', '+213560636008', '+213550585091'"
+        },
+        {
+            "name": "VOIR+",
+            "phones": ""
+        },
+        {
+            "name": "MODELCO Machinery ",
+            "phones": "'+213661774966'"
+        },
+        {
+            "name": "fasthands",
+            "phones": "'+213551805188'"
+        },
+        {
+            "name": "SARL OSPSRS TRAFIC",
+            "phones": "'+213550126748'"
+        },
+        {
+            "name": "Point Alarme Kouba",
+            "phones": ""
+        },
+        {
+            "name": "Dar diaf cheraga",
+            "phones": "'+213794437516'"
+        },
+        {
+            "name": "Promotion Immobili\u00e8re MZ Immo",
+            "phones": "'0781907451', '0557093000'"
+        },
+        {
+            "name": "Mega Phone",
+            "phones": "'+213555887520'"
+        },
+        {
+            "name": "Sarl ALTER ENERGY",
+            "phones": "'+213560637380', '+213560595108'"
+        },
+        {
+            "name": "RSA ETIQUETTES ",
+            "phones": "'+213554161470', '+213560105244'"
+        },
+        {
+            "name": "FR Metal",
+            "phones": "'+213554518722', '+213551053777'"
+        },
+        {
+            "name": "Ecole PRO INFO",
+            "phones": "'+21321735028', '+21321735027', '+213560422112'"
+        },
+        {
+            "name": "G immob",
+            "phones": "'+213560933313'"
+        },
+        {
+            "name": "Appart Affaire",
+            "phones": "'+213549267090'"
+        },
+        {
+            "name": "Nadji Immobilier",
+            "phones": "'+213553257971'"
+        },
+        {
+            "name": "ETET Technologie",
+            "phones": "'+213672188342'"
+        },
+        {
+            "name": "Eurl reyene door",
+            "phones": ""
+        },
+        {
+            "name": "ACCESOIRES DE SPORT",
+            "phones": "'0770220099'"
+        },
+        {
+            "name": "Progelato",
+            "phones": "'+21323775033'"
+        },
+        {
+            "name": "Roulotte Express",
+            "phones": "'+213550972002'"
+        },
+        {
+            "name": "EURL INNOVAPOS ORAN ",
+            "phones": "'0550230368'"
+        },
+        {
+            "name": "SFCA ",
+            "phones": "'0550993982'"
+        },
+        {
+            "name": "Security & Systems Company ",
+            "phones": "'+213667618037'"
+        },
+        {
+            "name": "Smart Academy Net",
+            "phones": "'+213657729542', '+213557737216'"
+        },
+        {
+            "name": "Alin Travel ",
+            "phones": "'+213555456006', '+213555580412'"
+        },
+        {
+            "name": "Islem  Sant\u00e9 ",
+            "phones": "'+213549488525'"
+        },
+        {
+            "name": "CASA IMMO 1",
+            "phones": "'+213553590572', '+213550457072', '+213664200456'"
+        },
+        {
+            "name": " UnionOf_Education",
+            "phones": "'+213771091212'"
+        },
+        {
+            "name": "Syst\u00e8me Code \u00e0 Barre",
+            "phones": "'+213556236219'"
+        },
+        {
+            "name": "Esos",
+            "phones": "'+213782344769', '+213550157338', '+21323566565'"
+        },
+        {
+            "name": "Kartel Cuisines",
+            "phones": "'0550451875'"
+        },
+        {
+            "name": "SARL SOPS ",
+            "phones": ""
+        },
+        {
+            "name": "Maatkas Voyage & Tourisme",
+            "phones": "'0674168210'"
+        },
+        {
+            "name": "H S Immobiliers",
+            "phones": "'+21340002137'"
+        },
+        {
+            "name": "ZADRI SPORT",
+            "phones": "'+213667331920', '+213661612659', '+213550481012'"
+        },
+        {
+            "name": "EL ASSIL LAPTOP ",
+            "phones": "'+213561664518', '0770374536'"
+        },
+        {
+            "name": "ALCOMTECH",
+            "phones": "'+213560549341', '+213666349111'"
+        },
+        {
+            "name": "agence immobili\u00e8re El karam ",
+            "phones": "'+213555243958'"
+        },
+        {
+            "name": "PURE MAX MOTO",
+            "phones": "'+213556892230', '+213797749320'"
+        },
+        {
+            "name": "Bureau d'affaire Zakaria",
+            "phones": "'+213560977057'"
+        },
+        {
+            "name": "Hi tech Store",
+            "phones": "'+213552192899', '+213555593363'"
+        },
+        {
+            "name": "Nac pro",
+            "phones": "'+213559124798', '+213669010177'"
+        },
+        {
+            "name": "AZUR AUTOMOBILES 24",
+            "phones": "'+213661489167', '+213663903162', '+213797171581'"
+        },
+        {
+            "name": "\u0627\u0644\u0648\u0643\u0627\u0644\u0629 \u0627\u0644\u0639\u0642\u0627\u0631\u064a\u0629 \u0627\u0644\u0623\u0648\u0631\u0627\u0633\u064a",
+            "phones": "'+213778326032'"
+        },
+        {
+            "name": "Agence IMMOAVENIR",
+            "phones": "'+21321836556', '+21321836651'"
+        },
+        {
+            "name": "AG ELWAAD",
+            "phones": "'+213552397891'"
+        },
+        {
+            "name": "IXORA COFFRE FORTE",
+            "phones": "'+213551948985'"
+        },
+        {
+            "name": "SOS RECUP",
+            "phones": "'+213555822417'"
+        },
+        {
+            "name": "ETS CHOULi",
+            "phones": "'+213550419562'"
+        },
+        {
+            "name": "Iplus Phone",
+            "phones": "'0542326238'"
+        },
+        {
+            "name": "Imkan techology",
+            "phones": "'0557895690'"
+        },
+        {
+            "name": "MATINFO",
+            "phones": ""
+        },
+        {
+            "name": "Etbhpcm Ramdani",
+            "phones": "'+213555280441'"
+        },
+        {
+            "name": "Synchauffe Chauffage",
+            "phones": "'+213556596694', '+213540012147'"
+        },
+        {
+            "name": "Rawassy Immobilier cheraga ",
+            "phones": "'+213552478144'"
+        },
+        {
+            "name": "EQUIPEMENT PRO",
+            "phones": "'+213561340094'"
+        },
+        {
+            "name": "s a r l Sama Bina ",
+            "phones": "'+213796742511'"
+        },
+        {
+            "name": "Electro Maison",
+            "phones": "'+213549905953'"
+        },
+        {
+            "name": "Etoile Asiatique ",
+            "phones": "'+213541605756', '+213770549700'"
+        },
+        {
+            "name": "MIDL Immobilier ",
+            "phones": "'+213561342973'"
+        },
+        {
+            "name": "Richel Handmade",
+            "phones": "'0791353646'"
+        },
+        {
+            "name": "BRIO PORTES",
+            "phones": "'+213551683159', '+213699335633'"
+        },
+        {
+            "name": "Djamel logistique",
+            "phones": ""
+        },
+        {
+            "name": "EURL DIVATECH ULTIMATE GAMING EXPERIENCE",
+            "phones": "'+213561813217', '+213561816175', '+213541808622', '+213561782185'"
+        },
+        {
+            "name": "Agence immobili\u00e8re SARI (agr\u00e9\u00e9e par l'\u00e9tat)",
+            "phones": "'+213550305955'"
+        },
+        {
+            "name": "SeekEyes",
+            "phones": "'+213771224131'"
+        },
+        {
+            "name": "travaux de plomberie et chauffage ",
+            "phones": "'+213781592817'"
+        },
+        {
+            "name": "Consoplus",
+            "phones": "'+213661802568'"
+        },
+        {
+            "name": "Transport & D\u00e9m\u00e9nagement ",
+            "phones": "'+213554686591'"
+        },
+        {
+            "name": "ElectroLuxe DZ",
+            "phones": "'+213776152906'"
+        },
+        {
+            "name": "CELESTE TRAVEL",
+            "phones": "'+213541616930', '+213560828048', '+213541639760', '+213554721145'"
+        },
+        {
+            "name": "Awtan Travel",
+            "phones": "'+213793038694', '+213673508644', '+213696661313', '+213552169647'"
+        },
+        {
+            "name": "Agence el wihda Sellam",
+            "phones": "'+213550542771'"
+        },
+        {
+            "name": "Eurl Big Lux Inox",
+            "phones": "'0542673542', '0798932182'"
+        },
+        {
+            "name": "R\u00e9paration Chaudi\u00e8re ",
+            "phones": ""
+        },
+        {
+            "name": "2M num\u00e9rik Alg\u00e9rie",
+            "phones": "'+213550417334'"
+        },
+        {
+            "name": "Audin immobilier ",
+            "phones": "'+21321636253'"
+        },
+        {
+            "name": "Soleilpub",
+            "phones": "'+213560330451', '+213551011356'"
+        },
+        {
+            "name": "Processing Polymeres Algerie",
+            "phones": "'+213560418199', '+213560417485', '+213550590390', '+21323903606'"
+        },
+        {
+            "name": "Asma Lbd",
+            "phones": ""
+        },
+        {
+            "name": "ORANGE HASSIBA",
+            "phones": "'+213551674636'"
+        },
+        {
+            "name": "MOBiBENZ",
+            "phones": "'+213555574654'"
+        },
+        {
+            "name": "EL KINANA VOYAGE",
+            "phones": "'0560036410', '0560036411', '0560036412'"
+        },
+        {
+            "name": "Techno Informatics",
+            "phones": ""
+        },
+        {
+            "name": "SP Piscine",
+            "phones": "'+21323534498', '+21323534080'"
+        },
+        {
+            "name": "Agence Gemeaux",
+            "phones": "'+21323709453', '+213550579061', '+213552161697', '+213550813852'"
+        },
+        {
+            "name": "H Brothers M\u00e9dical ",
+            "phones": "'0770 98 81 76'"
+        },
+        {
+            "name": " meftah el alem",
+            "phones": ""
+        },
+        {
+            "name": "Star car",
+            "phones": "'+213770397319', '+213549237988'"
+        },
+        {
+            "name": "one way communication & Events",
+            "phones": "'+213561516108'"
+        },
+        {
+            "name": "Chahrazed sweets",
+            "phones": "'0555260812'"
+        },
+        {
+            "name": "agence immobili\u00e8re ijiljili",
+            "phones": ""
+        },
+        {
+            "name": "Agence Renaissance",
+            "phones": "'+213560922755'"
+        },
+        {
+            "name": "SARL CODAL ALGERIE ",
+            "phones": "'+213661609270'"
+        },
+        {
+            "name": "BTC Services",
+            "phones": ""
+        },
+        {
+            "name": "Micro PC Alg\u00e9rie KOUBA",
+            "phones": "'+213550588650'"
+        },
+        {
+            "name": "Nettoyage Amine Dahman",
+            "phones": "'+213771013080'"
+        },
+        {
+            "name": "Natexxo Construction ",
+            "phones": "'+213770180585'"
+        },
+        {
+            "name": "MMC TECHNOLOGIE",
+            "phones": "'+213550495496'"
+        },
+        {
+            "name": "Med Hilti ",
+            "phones": "'+213540799659'"
+        },
+        {
+            "name": "ARCHITECTE AGREE, AZAZGA DJENNAD ",
+            "phones": "'+213560024397'"
+        },
+        {
+            "name": "Mondial Industrie",
+            "phones": "'0554148120', '0561921431'"
+        },
+        {
+            "name": "AGENCE ALKHALIDJ agr\u00e9\u00e9 par l'\u00c9tat",
+            "phones": "'+213550309030', '+213770490647'"
+        },
+        {
+            "name": "Galactik voyages",
+            "phones": "'0770003567', '0770003572', '0770348570', '0770348556', '0550347342', '0550691245', '0661616626', '0541285929', '023117787'"
+        },
+        {
+            "name": "Cabinet EMAREA",
+            "phones": "'+213555192648'"
+        },
+        {
+            "name": "Sarl Bit Bait Alg\u00e9rie ",
+            "phones": "'0779284710'"
+        },
+        {
+            "name": "ElectroShop",
+            "phones": "'+213557016113'"
+        },
+        {
+            "name": "Tadawi Service",
+            "phones": "'0796525149'"
+        },
+        {
+            "name": "BOOTIKA.DZ",
+            "phones": "'0771360099'"
+        },
+        {
+            "name": "Bejaia Immobilier ",
+            "phones": "'+213982459001'"
+        },
+        {
+            "name": "AIFA Immobilier",
+            "phones": "'+213550293350'"
+        },
+        {
+            "name": "Solareny senia",
+            "phones": "'+213661630422'"
+        },
+        {
+            "name": "Douib Pi\u00e8ces D\u00e9tach\u00e9es ",
+            "phones": "'0550217101'"
+        },
+        {
+            "name": "ELbaraka",
+            "phones": "'+213550434145'"
+        },
+        {
+            "name": "Agence Immobili\u00e8re METIDJA",
+            "phones": "'+213555703302'"
+        },
+        {
+            "name": "lmgc2014",
+            "phones": ""
+        },
+        {
+            "name": "AGENCE IMMOBILIERE HFY ",
+            "phones": "'+213550530463', '+21323308760'"
+        },
+        {
+            "name": "Agence Fplus",
+            "phones": "'+21321233305', '+213771521460'"
+        },
+        {
+            "name": "Agence immobili\u00e8re lyes immo",
+            "phones": "'+213551139968'"
+        },
+        {
+            "name": "DZSTUDY ",
+            "phones": ""
+        },
+        {
+            "name": "EURL BMB",
+            "phones": "'+213550707982'"
+        },
+        {
+            "name": "CDLCI Consulting",
+            "phones": "'0795349204', '0772605844'"
+        },
+        {
+            "name": "Youcef Sport ",
+            "phones": "'+213662669665'"
+        },
+        {
+            "name": "Agence ROYAL",
+            "phones": "'+213550836412'"
+        },
+        {
+            "name": "Offre domotique Somfy maison intelligente smarthome",
+            "phones": "'+213770742135'"
+        },
+        {
+            "name": "MOSA\u00cfQUE DE LUXE ",
+            "phones": "'+21323800618', '+213560217383'"
+        },
+        {
+            "name": "Sifou Voyages",
+            "phones": "'+213542839106'"
+        },
+        {
+            "name": "Fm Motors ",
+            "phones": ""
+        },
+        {
+            "name": "Etbhpcm Ramdani",
+            "phones": "'+213555280441'"
+        },
+        {
+            "name": "Agence El Ahrar",
+            "phones": "'+213550940660'"
+        },
+        {
+            "name": "Batterie Varta 24/24",
+            "phones": ""
+        },
+        {
+            "name": "Eurl Baytimod",
+            "phones": "'+213550681235', '+213661312295'"
+        },
+        {
+            "name": "Domo DZ",
+            "phones": "'+213550508897'"
+        },
+        {
+            "name": "MAC TRAVEL",
+            "phones": "'+213556089532'"
+        },
+        {
+            "name": "AFKAR SOFT",
+            "phones": "'+213770591751'"
+        },
+        {
+            "name": "Adel Pneumatique & Jante ",
+            "phones": "'+213550276432'"
+        },
+        {
+            "name": "SARL BPGI PROMOTIONNEL ",
+            "phones": "'+213541673263', '+213671795542', '+21325238107'"
+        },
+        {
+            "name": "Traiteur GH",
+            "phones": "'+213560277237'"
+        },
+        {
+            "name": "ETproo",
+            "phones": "'+213777457148', '+213794912988'"
+        },
+        {
+            "name": "Imv Industrielle",
+            "phones": "'+213770422841'"
+        },
+        {
+            "name": "SIGMA Ascenseur Monte-charge",
+            "phones": "'+21323952242'"
+        },
+        {
+            "name": "Ecole Ecoin ",
+            "phones": "'+213662022418', '+213556630533'"
+        },
+        {
+            "name": "Inpak emballage",
+            "phones": "'+213560886823', '+213560890634'"
+        },
+        {
+            "name": "W AUTO MOTOS",
+            "phones": "'0558561348'"
+        },
+        {
+            "name": "oasis Cars",
+            "phones": "'0558532735'"
+        },
+        {
+            "name": "Alia Equipement",
+            "phones": "'+213550530493', '+213560740543'"
+        },
+        {
+            "name": "LOUNIS Luxury Real Estate ",
+            "phones": "'+213552983953'"
+        },
+        {
+            "name": "EURL BOTEXOR PROMOTION IMMOBILIERE",
+            "phones": ""
+        },
+        {
+            "name": "Hydro El Ghadir",
+            "phones": "'+213796000047'"
+        },
+        {
+            "name": "Computer Center",
+            "phones": ""
+        },
+        {
+            "name": "Agence BESMA",
+            "phones": "'+21325477121', '+213772445789', '+213550486883'"
+        },
+        {
+            "name": "Joker Phone",
+            "phones": "'+213792532145'"
+        },
+        {
+            "name": "Amel Cadre Artistique",
+            "phones": "'0555652428'"
+        },
+        {
+            "name": "Lyes Casse ",
+            "phones": "'+213550413039'"
+        },
+        {
+            "name": "walido shop",
+            "phones": "'+213554583279'"
+        },
+        {
+            "name": "SARL Cod DEV",
+            "phones": "'+213770337887'"
+        },
+        {
+            "name": "Kenaoui Outillage",
+            "phones": "'+213781363123', '+213557300152'"
+        },
+        {
+            "name": "Atlantic's Sollution",
+            "phones": "'+213550700970'"
+        },
+        {
+            "name": "Ets Belkacemi Mohamed",
+            "phones": "'+213559152882', '+213557868929'"
+        },
+        {
+            "name": "Meryama Boutique",
+            "phones": ""
+        },
+        {
+            "name": "LOCATION DE VOITURE LA ROCHELLE",
+            "phones": "'+213550968712', '+213552876043', '+21323544085'"
+        }
+    ]
+}

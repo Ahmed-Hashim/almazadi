@@ -1,0 +1,13 @@
+<select
+  class="form-control form-control-sm ml-1"
+  id="{% block id %}{% endblock id %}"
+  hx-trigger="change"
+  hx-post="{% block url %}{% endblock url %}"
+  hx-target=".crm-table"
+  hx-headers='{"X-CSRFToken": "{{ csrf_token}}"}'
+  name="{% block name %}{% endblock name %}"
+  hx-indicator=".htmx-indicator"
+>
+  {% block droplist %}{% endblock droplist %}
+</select>
+<small class="form-text text-muted">{% block namem %}{% endblock namem %}</small>
