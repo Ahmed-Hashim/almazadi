@@ -1,8 +1,7 @@
 .fadeout{
     opacity: 0;
     transition: opacity 2s linear;
-  }
-  .visible{
-		display: none;
-  }
-  
+}
+.visible{
+  display: none;
+}
