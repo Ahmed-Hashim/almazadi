@@ -16,6 +16,7 @@ urlpatterns = [
     path('add_client', views.AddClient,name='add_client'),
     path('delete_client/p=<int:id>', views.deleteClient,name='delete_client'),
     path('view_edit_customer/p=<int:id>', views.view_edit_customer,name='view_edit_customer'),
+    path('veiw_client/p=<int:id>', views.veiw_client,name='veiw_client'),
     path('add_customer/', views.add_customer,name='add_customer'),    
     path('view_add_contact/p=<int:id>', views.view_add_contact,name='view_add_contact'),    
     path('delete_contact/p=<int:id>', views.delete_contact,name='delete_contact'),    

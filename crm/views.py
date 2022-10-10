@@ -150,8 +150,6 @@ def view_edit_customer(request,id):
     contacts=customer.contact_set.all()
     contactform=Addcontanct
     context={"customer":customer,"edit_form":form,"customers":customers,"contacts":contacts,"contactform":contactform,}
-    if request.htmx:
-        return render(request,'crm/customer_modal_info.html',context)
     if request.method == 'GET':
         return render(request,'crm/show_modal.html',context)
     elif request.method == "PUT":
@@ -235,7 +233,10 @@ def emails(request,id):
                                 "type":"bg-success"
         })
     })
-
+def veiw_client(request,id):
+    customer=get_object_or_404(Customer,pk=id)
+    context={"customer":customer}
+    return render(request,'crm/customer_modal_info.html',context)
 @login_required
 @cache_control(no_cache=True,must_revalidate=True,no_store=True)
 def customerlist_json(request):
