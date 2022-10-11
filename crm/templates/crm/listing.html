@@ -9,6 +9,8 @@
         <th>Company</th>
         <th>Industry</th>
         <th>Lead Source</th>
+        <th>Phone Number</th>
+        <th>Email</th>
         <th>Status</th>
         <th>Last Edit</th>
         <th>Actions</th>
@@ -23,6 +25,8 @@
                 <td  width="30%"><a href="{% url 'client_profile' customer.id %}">{{ customer.company }}</a></td>
                 <td width="20%">{{ customer.industry }}</td>
                 <td width="15%">{{ customer.lead_referral_source }}</td>
+                <td width="15%">{{ customer.land_phone_number }}</td>
+                <td width="15%">{{ customer.email }}</td>
                 <td width="10%">{{ customer.status }}</td>
                 <td width="20%">{{ customer.last_edit_date }}</td>
                 <td class="btn-group ">
@@ -67,7 +71,7 @@
           className:'btn btn-secondary',
           titleAttr:'Copy',
           exportOptions:{
-            columns:[0,1,2,3,4]
+            columns:[0,1,2,3,4,5,6]
           }
         },
         {
@@ -76,7 +80,7 @@
           className:'btn btn-secondary',
           titleAttr:'PDF',
           exportOptions:{
-            columns:[0,1,2,3,4]
+            columns:[0,1,2,3,4,5,6]
           },
           tableHeader:{
             alignment:'center'
@@ -97,7 +101,7 @@
           className:'btn btn-secondary',
           titleAttr:'Print',
           exportOptions:{
-            columns:[0,1,2,3,4]
+            columns:[0,1,2,3,4,5,6]
           },
           customize:function ( win ){
             $(win.document.body).css('font-size','10pt')
@@ -112,7 +116,7 @@
           className:'btn btn-secondary',
           titleAttr:'Excel',
           exportOptions:{
-            columns:[0,1,2,3,4]
+            columns:[0,1,2,3,4,5,6]
           }
         },
       ]
