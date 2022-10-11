@@ -191,6 +191,7 @@ def publish_now(request,id):
       access_token=request.user.profile.access_token
       data=uptofb(link,message,access_token)
       postupdate.update(published=True)
+      print(data)
       post_id=data['post_id']
       fb=f'https://facebook.com/{post_id}'
       PublishedPost.objects.create(imagelink=post.design_link,

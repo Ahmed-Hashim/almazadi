@@ -30,7 +30,7 @@ if 'SECRET_KEY' in os.environ:
     SECRET_KEY = os.environ['SECRET_KEY']
     DEBUG = False
 
-ALLOWED_HOSTS = ["*","almazadi.up.railway.app","164.92.192.150"]
+ALLOWED_HOSTS = ["*","almazadi.up.railway.app"]
 CORS_ALLOWED_ORIGINS = [
     "https://almazadi.up.railway.app"
 ]
@@ -111,7 +111,7 @@ CRONJOBS = [
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -130,7 +130,7 @@ DATABASES = {
     }
 }
 
-"""
+
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
@@ -169,7 +169,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 #STATIC_ROOT=BASE_DIR / 'staticfiles'
-MEDIA_URL='media/'
+MEDIA_URL='/media/'
 
 MEDIA_ROOT = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')

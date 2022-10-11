@@ -12,6 +12,7 @@ class PasswordsChangeView(SuccessMessageMixin,PasswordChangeView):
     form_class=PasswordChangingForm
     success_url= reverse_lazy('settings')
     success_message= "Your password has been changed."
+    title="Change Password"
 
 def login_user(request):
     if request.method== 'POST':
@@ -45,7 +46,7 @@ def profile(request):
             form.save()
         
         return redirect("profile")
-    context={'update_profile':profile,'form':form,'profile':profile,
+    context={'update_profile':profile,'form':form,'profile':profile,"title":"Profile"
                 
     }
     return render(request,'registration/profile.html',context)
@@ -62,7 +63,7 @@ def settings(request):
             form.save()
         
         return redirect("settings")
-    context={'settings':settings,'form':form,
+    context={'settings':settings,'form':form,'title':"Settings",
                 
     }
     return render(request,'registration/settings.html',context)

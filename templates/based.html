@@ -17,7 +17,7 @@
         {% block css %}
         {% endblock css %}
     </head>
-    <body class="header-light">
+    <body class="header-dark">
         <div class="pre-loader">
             <div class="pre-loader-box">
                 <div class="loader-logo"><img src="{% static 'images/almazadi/logo2.png'%}" alt=""></div>
@@ -103,7 +103,7 @@
                             <span class="user-icon">
                                 <img src="{{user.profile.profile_pic.url}}" alt="">
                             </span>
-                            <span class="user-name">{{user}}</span>
+                            <span class="user-name">{{user.profile.fullname}}</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
                             <a class="dropdown-item" href="{% url 'profile'%}"><i class="dw dw-user1"></i> Profile</a>
