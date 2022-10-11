@@ -115,9 +115,9 @@ CRONJOBS = [
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'almazadi',
-        'USER': 'admin',
-        'PASSWORD': 'Hamid265431',
+        'NAME': 'almazadidatabase',
+        'USER': 'mada',
+        'PASSWORD': 'almazadi265431',
         'HOST': 'localhost',
         'PORT': '',
     }
