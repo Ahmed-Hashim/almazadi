@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-6t33=)=ilc9@j6t+@+vxl9l5$1c*tubga=o)0_k5tq2l(_i$qg'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 if 'SECRET_KEY' in os.environ:
     SECRET_KEY = os.environ['SECRET_KEY']
@@ -111,24 +111,26 @@ CRONJOBS = [
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-"""
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'almazadidatabase',
-        'USER': 'mada',
-        'PASSWORD': 'almazadi265431',
-        'HOST': 'localhost',
-        'PORT': '',
-    }
-}
-"""
-DATABASES = {
+if DEBUG:
+    DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'almazadidatabase',
+            'USER': 'mada',
+            'PASSWORD': 'almazadi265431',
+            'HOST': 'localhost',
+            'PORT': '',
+        }
+    }
+
+
 
 
 # Password validation

@@ -1,9 +1,6 @@
 import json
-from multiprocessing import context
-from urllib import request
-from django.http import HttpResponse
 from django.contrib.auth.models import User
-from django.http import JsonResponse
+from django.http import JsonResponse,HttpResponse
 from django.shortcuts import render,redirect,get_object_or_404
 from django.contrib import messages
 from django.views.decorators.cache import cache_control

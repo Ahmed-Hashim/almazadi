@@ -3,16 +3,15 @@ from django.shortcuts import render,redirect
 from .models import Post,PublishedPost,Schedule
 from .uploadtofacebook import *
 from .forms import PostForm,ScheduleForm
-from django.http import HttpResponseRedirect
 from django.core.paginator import Paginator
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-from django.http import JsonResponse
+from django.http import JsonResponse,HttpResponse
 from django.urls import reverse_lazy
 from .image_des import *
 from .uploadimg import *
 from django.contrib import messages
-
+import json
 from pytz import timezone as tz
 
 def get_json(request,*args, **kwargs):
@@ -191,19 +190,22 @@ def publish_now(request,id):
       access_token=request.user.profile.access_token
       data=uptofb(link,message,access_token)
       postupdate.update(published=True)
-      print(data)
-      post_id=data['post_id']
-      fb=f'https://facebook.com/{post_id}'
-      PublishedPost.objects.create(imagelink=post.design_link,
-         link=post.imagelink,
-         message=message,
-         category_id=post.category_id,
-         published_date=datetime.now(tz(request.user.profile.timezone)).strftime('%Y-%m-%d %H:%M:%S'),
-         scheduled_by=request.user,
-         fb_post_id=post_id,
-         fblink=fb+post_id)
-      messages.success(request,"Your post has been published")
-      return redirect(request.META.get('HTTP_REFERER'))
+      try:
+         post_id=data['post_id']
+         fb=f'https://facebook.com/{post_id}'
+         PublishedPost.objects.create(imagelink=post.design_link,
+            link=post.imagelink,
+            message=message,
+            category_id=post.category_id,
+            published_date=datetime.now(tz(request.user.profile.timezone)).strftime('%Y-%m-%d %H:%M:%S'),
+            scheduled_by=request.user,
+            fb_post_id=post_id,
+            fblink=fb+post_id)
+         messages.success(request,"Your post has been published")
+         return redirect(request.META.get('HTTP_REFERER'))
+      except:
+         messages.error(request,"Access Token Expired")
+         return redirect(request.META.get('HTTP_REFERER'))
    else:
       messages.error(request,"You dont have permissions to publish post")
       return redirect(request.META.get('HTTP_REFERER'))
