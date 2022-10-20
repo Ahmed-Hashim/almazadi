@@ -1,19 +1,22 @@
 import json
+
 from django.contrib.auth.models import User
 from django.http import JsonResponse,HttpResponse
 from django.shortcuts import render,redirect,get_object_or_404
 from django.contrib import messages
 from django.views.decorators.cache import cache_control
-
 from django.core.paginator import Paginator ,EmptyPage
 
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_http_methods
 from django.http import QueryDict
+
+from products.views import invoice
 # Create your views here.
 
 from .forms import *
 from .models import *
+from products.models import *
 
 #email imports
 
@@ -21,6 +24,8 @@ from django.core.mail import EmailMultiAlternatives
 from django.template.loader import get_template
 from django.template import Context
 from django.core.mail import send_mail
+
+
 
 
 
@@ -81,6 +86,7 @@ def deleteClient(request,id):
                                 headers={
                                     'HX-Trigger': json.dumps({
                                     "crmChange": None,
+                                    "close":"close",
                                     "showMessage": f"{data.company} Has been deleted ."
             })
         })
@@ -230,6 +236,8 @@ def emails(request,id):
                                 "type":"bg-success"
         })
     })
+@login_required
+@cache_control(no_cache=True,must_revalidate=True,no_store=True)
 def veiw_client(request,id):
     customer=get_object_or_404(Customer,pk=id)
     context={"customer":customer}
@@ -246,7 +254,8 @@ def customerlist_json(request):
      #return render(request,"crm/email_templates.html") 
 
 
-   
+@login_required
+@cache_control(no_cache=True,must_revalidate=True,no_store=True)   
 def toast(request):
     return render(request,"crm/toast.html")
     
@@ -254,7 +263,8 @@ def toast(request):
 
     
 
-
+@login_required
+@cache_control(no_cache=True,must_revalidate=True,no_store=True)
 def add_customer(request):
     if request.method == "POST":
         form = CustomerForm(request.POST)
@@ -274,6 +284,8 @@ def add_customer(request):
     return render(request, 'crm/add.html', {
         'form': form,
     })
+@login_required
+@cache_control(no_cache=True,must_revalidate=True,no_store=True)    
 def view_add_contact(request,id):
     if request.method == "GET":
         customer=get_object_or_404(Customer,pk=id)
@@ -291,6 +303,8 @@ def view_add_contact(request,id):
                                 "type":"bg-success"
                             })
                         })
+@login_required
+@cache_control(no_cache=True,must_revalidate=True,no_store=True)                        
 def delete_contact(request,id):
     contact=get_object_or_404(Contact,pk=id)
     contact.delete()
@@ -302,7 +316,8 @@ def delete_contact(request,id):
                                 "type":"bg-success"
                             })
                         })
-
+@login_required
+@cache_control(no_cache=True,must_revalidate=True,no_store=True)
 def client_profile(request,id):
     customer=get_object_or_404(Customer,pk=id)
     contact=customer.contact_set.all()
@@ -318,7 +333,8 @@ def client_profile(request,id):
         "edit_form":customerform,
     }
     return render(request,"crm/client_profile.html",context)
-
+@login_required
+@cache_control(no_cache=True,must_revalidate=True,no_store=True)
 def client_emails(request,id):
     customer=get_object_or_404(Customer,pk=id)
     email=customer.customer_email_set.all()
@@ -328,7 +344,8 @@ def client_emails(request,id):
 
     }
     return render(request,"crm/client_emails.html",context)
-
+@login_required
+@cache_control(no_cache=True,must_revalidate=True,no_store=True)
 def client_notes(request,id):
     customer=get_object_or_404(Customer,pk=id)
     note=customer.note_set.all()
@@ -337,18 +354,44 @@ def client_notes(request,id):
         "notes":note,
     }
     return render(request,"crm/client_notes.html",context)
+@login_required
+@cache_control(no_cache=True,must_revalidate=True,no_store=True)
+def client_products(request,id):
+    customer=get_object_or_404(Customer,pk=id)
+    product=customer.customer_product_set.all()
+    context={
+        "customer":customer,
+        "products":product,
+    }
+    return render(request,"crm/client_products.html",context)
+@login_required
+@cache_control(no_cache=True,must_revalidate=True,no_store=True)
+def client_invoice(request,id):
+    customer=get_object_or_404(Customer,pk=id)
+    invoices=customer.invoice_set.all()
+    context={
+        "customer":customer,
+        "invoices":invoices,
+    }
+    return render(request,"crm/client_invoices.html",context)
+@login_required
+@cache_control(no_cache=True,must_revalidate=True,no_store=True)
 def profile_data(request,id):
     customer=get_object_or_404(Customer,pk=id)
     context={
         "customer":customer,
     }
     return render(request,"crm/profile_data.html",context)
+@login_required
+@cache_control(no_cache=True,must_revalidate=True,no_store=True)
 def show_note(request,id):
     note=get_object_or_404(Note,pk=id)
     context={
         "note":note,
     }
     return render(request,"crm/show_note.html",context)
+@login_required
+@cache_control(no_cache=True,must_revalidate=True,no_store=True)
 def add_note(request,id):
     if request.method=="POST":
         form=Addnote(request.POST)
@@ -372,3 +415,5 @@ def add_note(request,id):
         }
         
         return render(request,"crm/add_note.html",context)
+
+

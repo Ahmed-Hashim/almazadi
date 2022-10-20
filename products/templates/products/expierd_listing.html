@@ -1,0 +1,125 @@
+<table class="table table-bordered text-center" id="expired-table" role="grid">
+    <thead class="table-dark">
+    <tr role="row">
+      
+        <th  width="5%">ID</th>
+        <th  width="20%"><i class="fa-solid fa-address-card"></i>&nbsp;Customer</th>
+        <th  width="20%"><i class="fa-brands fa-product-hunt"></i>&nbsp;Product</th>
+        <th  width="20%"><i class="fa-solid fa-calendar-minus"></i></i>&nbsp;Expire Date</th>
+        <th  width="20%"><i class="fa-solid fa-phone"></i></i>&nbsp;Phone</th>
+        <th  width="10%" class="text-center"><i class="fa-solid fa-gear"></i>&nbsp;</th>
+      </tr>
+    </thead>
+    <tbody>
+         
+        {{product}} 
+      
+      {% for product in products %}
+      <tr style="cursor:pointer" role="row">
+        <td>{{product.invoiceid.id}}</td>
+        <td><a href="{% url 'client_profile' product.customerid.id %}">{{product.customerid}}</a></td>
+        <td>{{product.product.name}}</td>
+        <td>{{product.end_date|timeuntil}}</td>
+        <td>{{product.customerid.land_phone_number}}</td>
+        <td>
+          <div class="btn-group">
+            <button
+              class="btn btn-success btn-sm"
+              hx-get="#"
+              hx-target="#dialog"
+            >
+            <i class="fa-solid fa-receipt"></i>
+            </button>
+            <button
+              class="btn btn-danger btn-sm"
+              hx-get="#"
+              hx-target="#dialog"
+            >
+              <i class="fa-solid fa-trash-can"></i>
+            </button>
+          </div>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <script>
+    $(document).ready( function () {
+      var table=$('#expired-table').DataTable({
+        paging:true,
+        pageLength:10,
+        lengthChange:true,
+        autoWidth:true,
+        searching:true,
+        bInfo:true,
+        bSort:true,
+        dom:'lBfrtip',
+        buttons:[
+          {
+            extend:'copy',
+            text:'<i class="fas fa-clone"></i>',
+            className:'btn btn-secondary',
+            titleAttr:'Copy',
+            exportOptions:{
+              columns:[0,1,2,3,4]
+            }
+          },
+          {
+            extend:'pdf',
+            text:'<i class="fas fa-file-pdf"></i>',
+            className:'btn btn-secondary',
+            titleAttr:'PDF',
+            exportOptions:{
+              columns:[0,1,2,3,4]
+            },
+            tableHeader:{
+              alignment:'center'
+            },
+            customize: function (doc){
+              doc.styles.tableHeader.alignment='center';
+              doc.styles.tableBodyOdd.alignment='center';
+              doc.styles.tableBodyEven.alignment='center';
+              doc.styles.tableHeader.fontSize=7;
+              doc.defaultStyle.fontSize=6;
+              doc.content[1].table.widths=Array(doc.content[1].table.body[1].length+1).join('*').split('');
+  
+            }
+          },
+          {
+            extend:'print',
+            text:'<i class="fas fa-print"></i>',
+            className:'btn btn-secondary',
+            titleAttr:'Print',
+            exportOptions:{
+              columns:[0,1,2,3,4]
+            },
+            customize:function ( win ){
+              $(win.document.body).css('font-size','10pt')
+              $(win.document.body).find('table')
+                .addClass('compact')
+                .css('font-size','inherit');
+            }
+          },
+          {
+            extend:'excel',
+            text:'<i class="fas fa-file-excel"></i>',
+            className:'btn btn-secondary',
+            titleAttr:'Excel',
+            exportOptions:{
+              columns:[0,1,2,3,4]
+            }
+          },
+        ]
+      });
+      var newSearch=$('#expired-table').DataTable();
+  $('#searchlive').keyup(function(){
+      newSearch.search($(this).val()).draw();
+  })
+  });
+  
+  document.body.addEventListener('htmx:configRequest', (event) => {
+    event.detail.headers['X-CSRFToken'] = '{{ csrf_token }}';
+  })
+  
+  </script>
+  

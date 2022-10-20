@@ -1,0 +1,155 @@
+
+{% load static %}
+
+
+<!-- Theme Custom CSS -->
+<link rel="stylesheet" href="{% static 'invoice/assets/css/style.css'%}">
+
+<body dir="rtl">
+    <!--[if lte IE 9]>
+    	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+
+    <!--********************************
+   		Code Start From Here 
+	******************************** -->
+
+                <!--==============================
+Invoice Area
+==============================-->
+                <div class="as-invoice invoice_style20">
+                    <div class="download-inner" id="download_section">
+                        <!--==============================
+	Header Area
+==============================-->
+                        <header class="as-header header-layout12">
+                            <div class="row align-items-center justify-content-between">
+                                <div class="col-auto">
+                                    <div class="header-logo">
+                                        <img src="{% static 'images/almazadi/newlogo2.png'%}" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-auto text-align">
+                                    <h1 class="big-title">فاتورة</h1>
+                                    <span> <b>رقم الفاتورة</b></span>
+                                 <span>{{invoice.uniqueId}}</span>
+                                </div>
+                            </div>
+                        </header>
+                        <hr class="style1">
+                        <div class="row justify-content-between my-4">
+                            <div class="col-auto">
+                                <div class="invoice-left">
+                                    <b>Dsc Devolpp</b>
+                                    <address>
+                                        أليكس جيندر <br>
+                                        4510 لاماديس ، إنديانابوليس ، <br>
+                                        بابنا ، راجشاهي<br>
+                                        +153 6523 8453
+                                    </address>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <div class="invoice-right">
+                                    <b>{{invoice.customerid.company}}</b>
+                                    <address>
+                                        {{invoice.customerid.address}}<br>
+                                        {{invoice.customerid.street}}<br>
+                                        {{invoice.customerid.email}} <br>
+                                        {{invoice.customerid.land_phone_number}}
+                                    </address>
+                                </div>
+                            </div>
+                        </div>
+
+                        <table class="invoice-table table-style9 text-right">
+                            <thead>
+                                <tr>
+                                    <th class="text-right" width="20%">السعر</th>
+                                    <th class="text-right" width="80%">الخدمة</th>
+                                   
+
+
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for product in products %}
+                                <tr>
+                                    <td class="text-right">{{product.price}} DZD</td>
+                                    <td class="text-right">{{product.name}}</td>
+
+                                    
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+
+                                <tr class="table-secondary">
+                                    <td style="margin-right:500px;">{{total}} DZD</td>
+                                    <td class="text-right"><b>المبلغ الإجمالي</b></td>
+                                    
+                                </tr>
+                                
+
+                        </table>
+                        <div class="row justify-content-between">
+                            <div class="col-auto">
+                                <table class="total-table2">
+                                    <tr>
+                                        <td>15%</td>
+                                        <th>الضرائب</th>
+                                        
+                                    </tr> 
+                                    <tr>
+                                        <td>-{{discount}} DZD | {{invoice.discount_presentage}} %</td>
+                                        <th>الخصم</th>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td>{{after_discount}} DZD</td>
+                                        <th>المبلغ المستحق</th>
+                                        
+                                    </tr>
+                                </table>
+                                
+                            </div>
+                            <div class="col-auto text-right">
+                                <b>البنود و الظروف</b>
+                                <p class="mb-0">تخيل الأعمال بشكل رسمي 
+                                    <br> .عناصر العمل من خلال مصادر موازية
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="company-address style2">
+                            <b>تطبيق المزادي</b> 
+                            <br>
+                            الطابق الثاني عشر ، القطعة الخامسة ، بنك الإسلام ، جوسين رود ، جناح فرانسيسكو الإمارات العربية المتحدة.
+                        </p>
+                        <p class="invoice-note mt-3">
+                            <svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.22969 12.6H9.77031V11.4H3.22969V12.6ZM3.22969 9.2H9.77031V8H3.22969V9.2ZM1.21875 16C0.89375 16 0.609375 15.88 0.365625 15.64C0.121875 15.4 0 15.12 0 14.8V1.2C0 0.88 0.121875 0.6 0.365625 0.36C0.609375 0.12 0.89375 0 1.21875 0H8.55156L13 4.38V14.8C13 15.12 12.8781 15.4 12.6344 15.64C12.3906 15.88 12.1063 16 11.7812 16H1.21875ZM7.94219 4.92V1.2H1.21875V14.8H11.7812V4.92H7.94219ZM1.21875 1.2V4.92V1.2V14.8V1.2Z" fill="#1CB9C8" />
+                            </svg>
+                            <b>ملاحظة: </b>هذا إيصال تم إنشاؤه بواسطة الكمبيوتر ولا يتطلب توقيعًا فعليًا.
+                        </p>
+                    </div>
+                    
+                </div>
+
+    <!-- Invoice Conainter End -->
+
+    <!--==============================
+    All Js File
+============================== -->
+    <!-- Jquery -->
+    <script src="{% static 'invoice/assets/js/vendor/jquery-3.6.0.min.js'%}"></script>
+    <!-- Bootstrap -->
+    <script src="{% static 'invoice/assets/js/bootstrap.min.js'%}"></script>
+    <!-- PDF Generator -->
+    <script src="{% static 'invoice/assets/js/jspdf.min.js'%}"></script>
+    <script src="{% static 'invoice/assets/js/html2canvas.min.js'%}"></script>
+    <!-- Main Js File -->
+    <script src="{% static 'invoice/assets/js/main.js'%}"></script>
+
+</body>

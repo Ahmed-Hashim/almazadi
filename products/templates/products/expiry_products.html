@@ -1,0 +1,77 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block css %}
+  <!--DataTable css-->
+<link
+href="{% static 'scripts/datatables/dataTables.bootstrap5.min.css' %}"
+rel="stylesheet"
+/>
+<script src="{% static 'scripts/datatables/jquery.min.js' %}"></script>
+
+{% endblock css %}
+{% block body %}
+
+<div class="pd-20 bg-white border-radius-4 box-shadow mb-30">
+    <div
+    class="toast-container position-fixed bottom-0 end-0 p-3"
+    style="z-index: 11"
+  >
+    <div
+      id="toast"
+      class="toast align-items-center text-white border-0"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+    >
+      <div class="d-flex">
+        <div id="toast-body" class="toast-body"></div>
+      </div>
+    </div>
+  </div>
+  <!--Table-->
+  <div class="row">
+    <div class="col-9">
+    </div>
+    <div class="col-3">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" style="background-color:black;"
+            ><i style="color: #fff;" class="dw dw-search2 search-icon"></i
+          ></span>
+        </div>
+
+        <input
+          type="text"
+          placeholder="Live Search ..."
+          id="searchlive"
+          class="form-control search-input input-sm"
+          aria-label="Search"
+        />
+      </div>
+    </div>
+  </div>
+{% include 'products/expierd_listing.html' %}
+
+<!--Modals-->
+<div id="modal" class="modal fade">
+    <div id="dialog" class="modal-dialog modal-lg" hx-target="this"></div>
+  </div>
+  
+  </div>
+</div>
+
+{% endblock body %}
+{% block js %}
+<script
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+crossorigin="anonymous"></script>
+
+<!--DataTables js -->
+
+<script  src="{% static 'scripts/datatables/jquery.dataTables.min.js' %} " defer></script>
+<script  src="{% static 'scripts/datatables/dataTables.bootstrap5.min.js' %}" defer></script>
+<script src="{% static 'scripts/datatables/pdfmake.min.js' %}" defer></script>
+<script src="{% static 'scripts/datatables/vfs_fonts.js' %}" defer></script>
+<script src="{% static 'scripts/datatables/datatables.min.js' %}" defer></script>
+{% endblock js %}

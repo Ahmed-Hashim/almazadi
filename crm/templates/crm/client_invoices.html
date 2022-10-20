@@ -1,0 +1,49 @@
+<div class="pd-20 profile-task-wrap">
+  <div class="container pd-0">
+    <!-- Open Task start -->
+    <div class="task-title row align-items-center">
+      <div class="col-md-8 col-sm-12">
+        <h5>Invoices ({{invoices.count}})</h5>
+      </div>
+      <div class="col-md-4 col-sm-12 text-right">
+          <button
+          class="btn btn-dark btn-sm"
+          hx-get="{% url 'add_note' customer.id %}" 
+          hx-target="#dialog">
+          <i class="fa-solid fa-notes-medical"></i>
+          </button>
+      </div>
+    </div>
+    <div class="row clearfix">
+      {% for invoice in invoices %}
+      <div class="col-lg-6 col-md-6 col-sm-12 mb-30">
+        <div class="card">
+          <div class="card-header bg-light p-1 text-center">
+            <h5 class="card-title mt-2"><i class="fa-solid fa-receipt"></i>&nbsp;&nbsp;Invoice ID:{{invoice.uniqueId}}</h5>
+          </div>
+          
+          <div class="card-body text-center" >
+              <h6>Status</h6>
+              {% if invoice.status in "PAID" %}
+              <span style="color:green;">{{invoice.status}}</span>
+              {% else %}
+              <span style="color:red;">{{invoice.status}}</span>
+              {% endif %}
+              <h6>Date Created</h6>
+              {{invoice.date_created}}
+              <h6>Created By</h6>
+              <strong>{{invoice.employeeid|title }}</strong>
+              <br>
+              <button class="btn btn-sm btn-info" hx-get="{% url 'show_invoice' invoice.id %}" hx-target="#dialog">Show</button>
+          </div>
+
+          <div class="card-footer bg-info p-1"></div>
+        </div>
+      </div>    
+      {% endfor %}
+    </div>
+
+  </div>
+</div>
+
+

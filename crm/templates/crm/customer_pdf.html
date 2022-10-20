@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+{% load static %}
+{% block body %}
+  
+
+<div class="modal-content">
+<div class="card mb-0">
+    <div class="card-header mt-0">
+      <h5 >Profile @{{ customer.slug }}</h5>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-3">
+          <h6>First Name</h6>
+          <span>{{customer.first_name}}  </span> 
+        </div>
+        <div class="col-3">
+          <h6>Middle Name</h6>
+          <span>{{customer.middle_name}}</span> 
+        </div>
+        <div class="col-3">
+          <h6>Last Name</h6>
+          <span>{{customer.last_name}} </span>
+        </div>
+        <div class="col-3">
+          <h6>Gender</h6>
+          <span>{{customer.gender}}  </span> 
+        </div>
+      </div>
+      <hr class="profile-social">
+      <h5>Source-Info</h5>
+      <hr class="profile-social">  
+      <div class="row mt-13">
+        <div class="col-12">
+          <h6>Lead Source</h6>
+          <span>{{customer.lead_referral_source}}</span> 
+        </div>
+        </div>
+      <div class="row mt-1">
+        <div class="col-3">
+        <h6>Background Info</h6>
+        <p>{{customer.background_info}}</p> 
+        </div>
+      </div>
+      <hr class="profile-social">
+      <h5>General-Info</h5>
+      <hr class="profile-social">
+      <div class="row mt-1">
+        <div class="col">
+          <h6>Company</h6>
+          <span>{{customer.company}}  </span> 
+        </div>
+        <div class="col">
+          <h6>Industry</h6>
+          <span>{{customer.industry}}</span>
+        </div>
+        <div class="col">
+          <h6>Address</h6>
+          <span>{{customer.address}}</span> 
+        </div>
+        <div class="col">
+          <h6>Street</h6>
+          <span>{{customer.street}}</span>
+        </div>
+      </div>
+      <hr class="profile-social">
+      <h5>Contact Data</h5>
+      <hr class="profile-social">
+      <div class="row mt-1">
+        <div class="col-4">
+          <h6>Email</h6>
+          <span>{{customer.email}}</span> 
+        </div>
+        <div class="col-4">
+          <h6>Website</h6>
+          <span>{{customer.website}}</span> 
+        </div>              
+        <div class="col-4">
+          <h6>Phone Number</h6>
+          <span>{{customer.land_phone_number}}</span> 
+        </div>
+      </div>
+      <hr class="profile-social">
+      <h5>Social Media</h5>
+      <hr class="profile-social">
+      {% if customer.facebook_url or customer.instagram_url or customer.twitter_url or customer.linkedin_url or customer.skype_url%}
+      <div class="clearfix">
+        {% if customer.facebook_url %}
+        <a href="#" class="btn" data-bgcolor="#3b5998" data-color="#ffffff"><i class="fa fa-facebook"></i></a>
+        {% endif %}
+        {% if customer.instagram_url %}
+        <a class="btn"  href="{{customer.instagram_url}}" data-bgcolor="#f46f30" data-color="#ffffff"><i class="fa fa-instagram"></i></a> 
+        {% endif %}
+        {% if customer.twitter_url %}
+        <a class="btn" data-bgcolor="#1da1f2" data-color="#ffffff"  href="{{customer.twitter_url}}"><i class="fa fa-twitter"></i></a>
+        {% endif %}
+        {% if customer.linkedin_url %}
+        <a class="btn" href="{{customer.linkedin_url}}" data-bgcolor="#007bb5" data-color="#ffffff"><i class="fa fa-linkedin"></i></a>
+        {% endif %}
+        {% if customer.skype_url %}
+        <a class="btn" href="{{customer.skype_url}}"  data-bgcolor="#00aff0" data-color="#ffffff"><i class="fa fa-skype"></i></a>
+        {% endif %}
+      </div>
+      {% else %}
+    <div>
+      <strong> NO SOCIAL MEDIA DATA!</strong>
+    </div>
+      {% endif %}
+    </div>
+    </div></div>
+
+    {% endblock body %}

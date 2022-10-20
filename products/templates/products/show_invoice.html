@@ -1,0 +1,41 @@
+
+	{% load static %}
+<div class="modal-content">
+		
+<div id="invoice-body" class="modal-body">
+	{% include "products/invoice_template.html" %}		
+</div>
+        <div class="modal-footer">
+
+            <button id="pdf" class="btn btn-danger btn-sm" >Download PDF</button>
+            {% if invoice.status in "PAID" %}
+            <button hx-post="{% url 'set_to_paid' invoice.id %}" class="btn btn-info btn-sm" disabled> Set As Paid</button>
+            {% else %}
+            <button hx-post="{% url 'set_to_paid' invoice.id %}" class="btn btn-info btn-sm" > Set As Paid</button>
+            {% endif %}
+            <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button>
+            <script>
+                var button = document.getElementById('pdf');
+                button.addEventListener('click', (event) => {
+                
+					var element = document.getElementById('invoice-body');
+					
+					var opt = {
+						margin:0,
+						filename:'Invoice-{{invoice.uniqueId}}.pdf',
+						image:{type:'jpeg',quality:1.00},
+						html2canvas:{scale:1,width: 794},
+						jsPDF:{unit:'in',format:'a4',orientation:'portrait'}
+								};
+					html2pdf().set(opt).from(element).save();
+
+                })
+				document.body.addEventListener('htmx:configRequest', (event) => {
+				event.detail.headers['X-CSRFToken'] = '{{ csrf_token }}';
+					})
+							
+                
+                
+                </script>
+        </div>
+    </div>

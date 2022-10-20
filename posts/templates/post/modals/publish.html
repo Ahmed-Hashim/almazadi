@@ -1,0 +1,21 @@
+<div class="modal-content">
+  <div class="modal-header bg-success">
+    <h5 class="modal-title"><i class="fa-solid fa-upload"></i>&nbsp;&nbsp;Publish Post</h5>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>Are you sure you want to publish the post?</p>
+  </div>
+  <div class="modal-footer p-1">
+    <a
+      class="btn btn-success btn-sm"
+      hx-post="{% url 'publish_now' post.id %}"
+      >Publish</a
+    >
+    <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">
+      Close
+    </button>
+  </div>
+</div>

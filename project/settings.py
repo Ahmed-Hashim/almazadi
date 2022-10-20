@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-6t33=)=ilc9@j6t+@+vxl9l5$1c*tubga=o)0_k5tq2l(_i$qg'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 if 'SECRET_KEY' in os.environ:
     SECRET_KEY = os.environ['SECRET_KEY']
@@ -192,11 +192,3 @@ EMAIL_HOST_USER = 'ah.abolaban@gmail.com'
 EMAIL_HOST_PASSWORD ='iomsaybasdlhatnr'
 
 
-
-MESSAGE_TAGS = {
-    messages.DEBUG: 'bg-info',
-    messages.INFO: 'bg-info',
-    messages.SUCCESS: 'bg-success',
-    messages.WARNING: 'bg-warning',
-    messages.ERROR: 'bg-danger',
-}

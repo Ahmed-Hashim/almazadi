@@ -1,0 +1,17 @@
+<div class="modal-content">
+    <div class="modal-header bg-danger">
+      <h5 class="modal-tilte  text-light"><i class="fa-solid fa-user-xmark"></i>&nbsp;&nbsp;Delete Client</h5>
+    </div>
+    <div class="modal-body text-center">
+        <h1 class="text-danger"><i class="fa-solid fa-user-xmark"></i></h1>
+        <h6 class="danger">Are you sure you want to delete {{product.name}}?</h6>
+    </div>
+    
+    <div class="modal-footer">
+
+        <a hx-delete="{% url 'delete_product' product.id %}" class="btn btn-danger btn-sm" >Delete</a>
+        <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button>
+    </div>
+</div>
+
+

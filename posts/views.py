@@ -174,11 +174,20 @@ def published_list(request):
    }
    
    return render (request,'post/posts_published.html',context)
-
+def unpublished_posts(request):
+   post_lists=Post.objects.filter(published=False)
+   paginator = Paginator(post_lists,8) # Show 25 contacts per page.
+   page_number = request.GET.get('page')
+   page_obj = paginator.get_page(page_number)
+   context={'posts':page_obj,           
+   }
+   return render (request,'post/unpublished_posts_listing.html',context)
 @login_required
 def publish_now(request,id):
    postupdate=Post.objects.filter(pk=int(id))
    post=Post.objects.get(pk=int(id))
+   if request.method =="GET":
+      return render (request,'post/modals/publish.html',{"post":post})
    if request.user.profile.access_token:
       if post.design_link: 
       
@@ -189,7 +198,7 @@ def publish_now(request,id):
       message=post.message
       access_token=request.user.profile.access_token
       data=uptofb(link,message,access_token)
-      postupdate.update(published=True)
+      
       try:
          post_id=data['post_id']
          fb=f'https://facebook.com/{post_id}'
@@ -201,14 +210,34 @@ def publish_now(request,id):
             scheduled_by=request.user,
             fb_post_id=post_id,
             fblink=fb+post_id)
-         messages.success(request,"Your post has been published")
-         return redirect(request.META.get('HTTP_REFERER'))
+         postupdate.update(published=True)
+         return HttpResponse(status=204,
+                    headers={
+                            'HX-Trigger': json.dumps({
+                                "postsChange": None,
+                                "close":"close",
+                                "showMessage": f"Your post has been published.",
+                                "type":"bg-success"
+                            })
+                        })
       except:
-         messages.error(request,"Access Token Expired")
-         return redirect(request.META.get('HTTP_REFERER'))
+         return HttpResponse(status=204,
+            headers={
+                     'HX-Trigger': json.dumps({
+                        "close":"close",
+                        "showMessage": f"Access Token Expired.",
+                        "type":"bg-danger"
+                     })
+               })
    else:
-      messages.error(request,"You dont have permissions to publish post")
-      return redirect(request.META.get('HTTP_REFERER'))
+      return HttpResponse(status=204,
+            headers={
+                     'HX-Trigger': json.dumps({
+                        "close":"close",
+                        "showMessage": f"You dont have permissions to publish post",
+                        "type":"bg-danger"
+                     })
+               })
 
 
 @login_required
@@ -260,31 +289,58 @@ def edit_details(request,id):
               
    }
    return render (request,'post/edit_post.html',context)
-
+@login_required   
+def delete_modal(request,id):
+   post=Post.objects.get(pk=id)
+   if request.method=="GET":
+      return render (request,'post/modals/delete.html',{"post":post})
 @login_required   
 def delete_post(request,id):
    post=Post.objects.get(pk=id)
-   post.delete()
-   messages.info(request,"your post/s has been deleted..")
-   return redirect(request.META.get('HTTP_REFERER'))
+   if request.method=="DELETE":
+      post.delete()
+      return HttpResponse(status=204,
+               headers={
+                        'HX-Trigger': json.dumps({
+                           "postsChange": None,
+                           "close":"close",
+                           "showMessage": f"Your post has been Deleted.",
+                           "type":"bg-success"
+                        })
+                  })
+                
 @login_required   
 def delete_schedule(request,id):
    post=Schedule.objects.get(pk=id)
-   post.delete()
-   #return redirect(request.META.get('HTTP_REFERER'))
-   return redirect('schedule_posts')
+   if request.method=="GET":
+      return render(request,"post/modals/delete_schedule.html",{"post":post})
+   elif request.method=="DELETE":
+      post.delete()
+      return HttpResponse(status=204,
+         headers={
+                  'HX-Trigger': json.dumps({
+                     "scheduleChange": None,
+                     "close":"close",
+                     "showMessage": f"Your post has been Deleted.",
+                     "type":"bg-success"
+                  })
+            })
 @login_required
 def schedule_posts(request):
-
-   scheduled_list=Schedule.objects.all()
-   #paginator = Paginator(published_list,20) # Show 25 contacts per page.
-   #page_number = request.GET.get('page')
-   #page_obj = paginator.get_page(page_number)
-   context={'posts':scheduled_list,
-            'title':'Scheduled Post'        
+   context={'title':'Scheduled Post'        
    }
    return render (request,'post/schedule_posts.html',context)
-
+@login_required
+def schedule_table(request):
+   scheduled_list=Schedule.objects.all()
+   context={'posts':scheduled_list,     
+   }
+   return render (request,'post/schedule_table.html',context)
+@login_required
+def schedule_modal(request,id):
+   post=Post.objects.get(pk=id)
+   if request.htmx:
+      return render(request,"post/modals/schudule.html",{"post":post})
 @login_required
 def add_to_schedule(request,id):
    post=Post.objects.get(pk=id)
@@ -292,10 +348,17 @@ def add_to_schedule(request,id):
       myobject = Schedule(imagelink=post.imagelink,design_link=post.design_link,message=post.message,category_id=post.category_id,timezone="")
    else:
       myobject = Schedule(imagelink=post.imagelink,message=post.message,category_id=post.category_id,timezone="")
-
    myobject.save()
    post.delete()
-   return redirect('schedule_posts')
+   return HttpResponse(status=204,
+            headers={
+                     'HX-Trigger': json.dumps({
+                        "postsChange": None,
+                        "close":"close",
+                        "showMessage": f"Your post has been Schuduled.",
+                        "type":"bg-success"
+                     })
+               })
 @login_required
 def edit_schedule_post(request,id):
    post_details=Schedule.objects.get(pk=id)
@@ -318,13 +381,27 @@ def make_design(request,id):
    location="images/designs/"+link.split('/')[-1]
    design(link)
    Post.objects.filter(pk=int(id)).update(design_link=location,design=True)
-   return redirect(request.META.get('HTTP_REFERER'))
+   return HttpResponse(status=204,
+            headers={
+                     'HX-Trigger': json.dumps({
+                        "postsChange": None,
+                        "close":"close",
+                        "showMessage": f"Your Design Are Ready.",
+                        "type":"bg-success"
+                     })
+               })
 def new_design(request,id):
    post_details=Post.objects.get(pk=id)
    link=post_details.imagelink
    location="images/designs/"+link.split('/')[-1]
    Post.objects.filter(pk=int(id)).update(design_link=location,design=True)
-   return redirect(request.META.get('HTTP_REFERER'))
+   return HttpResponse(status=204,
+         headers={
+                  'HX-Trigger': json.dumps({
+                     "showMessage": f"Your Design Are Ready.",
+                     "type":"bg-success"
+                  })
+            })
 def schedule_design(request,id):
    post_details=Schedule.objects.get(pk=id)
    link=post_details.imagelink

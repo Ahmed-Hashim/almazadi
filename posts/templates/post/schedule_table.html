@@ -1,0 +1,42 @@
+{% load tz %}
+<table class="table table-striped fixed-table">
+    <thead>
+        <tr >
+            <th style="font-size: 11px;" style="font-size: 15px;" scope="col">Post ID</th>
+            <th style="font-size: 11px;" scope="col">Image</th>
+            <th style="font-size: 11px;" scope="col">Message</th>
+            <th style="font-size: 11px;" scope="col">Category</th>
+            <th style="font-size: 11px;" scope="col">Publish Date</th>
+            <th style="font-size: 11px;" scope="col"> Settings</th>
+        </tr>
+    </thead>
+    <tbody >                          
+        {% for post in posts%}
+        {% if not post.published %}
+        <tr class="" id ="rows" name ="{{post.id}}">
+            <th scope="row">{{post.id}}</th>
+            <td><img style=" border-radius:3px; display: block;" width="70" height="70" name="{{post.imagelink}}" src="{% if post.design_link %} {{post.design_link.url}}{% else %}{{post.imagelink}}{% endif %}" alt=""></td>
+            <td class="limited-text-table" style="font-size: 11px;" maxlength="15" >{{post.message}}</td>
+            <td style="font-size: 11px;" >{{post.category}}</td>
+            
+            <td style="font-size: 11px;" >
+                {% if post.schedule %}
+                Publish At&nbsp;&nbsp; <i class="fa-solid fa-upload"></i> :
+                <br/>				
+                {% timezone None %}
+                    {{post.date_to_publish}}
+                {% endtimezone %}
+                {% endif %}
+                </td>
+            <td>
+                <div class="btn-group ">
+                <a class="btn btn-outline-info  btn-sm " href="edit_schedule_post/p={{post.id}}"><i class="fa-solid fa-pen-to-square"></i></a>
+                <button class="btn btn-danger btn-sm " hx-get="{% url 'delete_schedule' post.id %}" hx-target="#dialog"><i class="fa-solid fa-trash-arrow-up"></i></button>
+                </div>
+            </td>
+
+        </tr>
+        {% endif %}
+        {%endfor%}
+    </tbody>
+</table>

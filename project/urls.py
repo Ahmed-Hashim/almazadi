@@ -24,6 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('posts/', include('posts.urls')),
     path('crm/', include('crm.urls')),
+    path('products/', include('products.urls')),
     path('members/', include('members.urls')),
     path('members/', include('django.contrib.auth.urls')),
     path('', views.dashboard,name='dashboard'),

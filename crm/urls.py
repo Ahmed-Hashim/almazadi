@@ -36,9 +36,12 @@ urlpatterns = [
     path('client_emails/p=<int:id>', views.client_emails,name='client_emails'),
     path('client_notes/p=<int:id>', views.client_notes,name='client_notes'),
     path('profile_data/p=<int:id>', views.profile_data,name='profile_data'),
+    path('client_products/p=<int:id>', views.client_products,name='client_products'),
+    path('client_invoice/p=<int:id>', views.client_invoice,name='client_invoice'),
     path('show_note/p=<int:id>', views.show_note,name='show_note'),
     path('add_note/p=<int:id>', views.add_note,name='add_note'),
-    
+
+   
     
     #path('list', views.Customerlist,name='crm_list'),
     #path('list', views.CustomerList.as_view(),name='crm_list'),

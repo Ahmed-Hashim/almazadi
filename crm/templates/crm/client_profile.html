@@ -29,47 +29,65 @@
         <div class="tab height-100-p">
           <ul class="nav nav-tabs customtab" role="tablist">
             <li class="nav-item">
-              <a class="nav-link active" data-toggle="tab" href="#notes" role="tab"
-                >Notes</a
+              <a class="nav-link active font-14" data-toggle="tab" href="#notes" role="tab"
+              ><i class="fa-regular fa-clipboard"></i>&nbsp;&nbsp;Notes</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" data-toggle="tab" href="#emails" role="tab"
-                >Emails</a
+              <a class="nav-link font-14" data-toggle="tab" href="#emails" role="tab"
+                ><i class="fa-solid fa-inbox"></i>&nbsp;&nbsp;Emails</a
               >
             </li>
             <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#contacts" role="tab"
-                  >Contacts</a
+                <a class="nav-link font-14" data-toggle="tab" href="#contacts" role="tab"
+                  ><i class="fa-solid fa-address-book"></i>&nbsp;&nbsp;Contacts</a
                 >
               </li>
             <li class="nav-item">
-              <a class="nav-link" data-toggle="tab" href="#setting" role="tab"
-                >Settings</a
+              <a class="nav-link font-14" data-toggle="tab" href="#invoice" role="tab"
+                ><i class="fa-solid fa-receipt"></i>&nbsp;&nbsp;Invoices</a
+              >
+            </li>            
+            <li class="nav-item">
+              <a class="nav-link font-14" data-toggle="tab" href="#products" role="tab"
+                ><i class="fa-brands fa-product-hunt"></i>&nbsp;&nbsp;Products</a
+              >
+            </li>            
+            <li class="nav-item">
+              <a class="nav-link font-14" data-toggle="tab" href="#setting" role="tab"
+                ><i class="fa-solid fa-gear"></i>&nbsp;&nbsp;Settings</a
               >
             </li>
           </ul>
-          <div class="tab-content">
+          <div class="tab-content" >
             <!-- Notes Tab start -->
-            <div class="tab-pane fade show active" id="notes" hx-get="{% url 'client_notes' customer.id %}" role="tabpanel" hx-trigger="load,noteChange from:body" hx-target="this">
+            <div class="tab-pane fade show active height-100-p" id="notes" hx-get="{% url 'client_notes' customer.id %}" role="tabpanel" hx-trigger="load,noteChange from:body" hx-target="this">
               
             </div>
             <!-- Notes Tab End -->
             <!-- Emails Tab start -->
-            <div class="tab-pane fade" id="emails" hx-get="{% url 'client_emails' customer.id %}" role="tabpanel"  hx-trigger="load,emailChange from:body" hx-target="this">
+            <div class="tab-pane fade height-100-p" id="emails" hx-get="{% url 'client_emails' customer.id %}" role="tabpanel"  hx-trigger="load,emailChange from:body" hx-target="this">
 
             </div>      
-            <!-- Emails Tab End -->
+            <!-- Emails Tab End -->            
+            <!-- Products Tab start -->
+            <div class="tab-pane fade height-100-p" id="products" hx-get="{% url 'client_products' customer.id %}" role="tabpanel"  hx-trigger="load,productChange from:body" hx-target="this">
+
+            </div>      
+            <!-- Products Tab End -->            
+            <!-- Invoice Tab start -->
+            <div class="tab-pane fade height-100-p" id="invoice" hx-get="{% url 'client_invoice' customer.id %}" role="tabpanel"  hx-trigger="load,invoiceChange from:body" hx-target="this">
+              
+            </div>      
+            <!-- Invoice Tab End -->
             <!-- Contacts Tab start -->
-            <div class="tab-pane fade" id="contacts" role="tabpanel" >
+            <div class="tab-pane fade height-100-p" id="contacts" role="tabpanel" >
               <div class="row clearfix m-3" hx-get="{% url 'view_add_contact' customer.id %}" hx-trigger="load, contactChange from:body" hx-target="this">
 
               </div>
-
             </div>      
             <!-- Contacts Tab End -->
             <!-- Setting Tab start -->
-
             <div
               class="tab-pane fade height-100-p"
               id="setting"
@@ -79,7 +97,6 @@
                 <div class="card-header  bg-secondary">
                   <h5 class="modal-tilte text-light"><i class="fa-solid fa-user-pen"></i>&nbsp;&nbsp;Edit @{{ customer.slug }}</h5>
               </div>
-                
                       <form hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}' hx-put="{% url 'view_edit_customer' customer.id %}" autocomplete="off" novalidate>
                         <div class="card-body">
                           <div class="row">

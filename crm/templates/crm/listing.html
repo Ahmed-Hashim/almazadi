@@ -21,8 +21,8 @@
          {% if customers %}
         {% for customer in customers %}
               <tr style="cursor:pointer" role="row">
-                <td  width="5%">{{ customer.id }}</td>
-                <td  width="30%"><a href="{% url 'client_profile' customer.id %}">{{ customer.company }}</a></td>
+                <td width="5%">{{ customer.id }}</td>
+                <td width="30%"><a href="{% url 'client_profile' customer.id %}">{{ customer.company }}</a></td>
                 <td width="20%">{{ customer.industry }}</td>
                 <td width="15%">{{ customer.lead_referral_source }}</td>
                 <td width="15%">{{ customer.land_phone_number }}</td>

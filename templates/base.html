@@ -4,8 +4,8 @@
 <head>
 	{% load static %}
 	<!-- Basic Page Info -->
-	<meta charset="utf-8">
-	<title>Al-Mazadi - Marketing Admin Dashboard</title>
+	<meta charset="UTF-8">
+	<title>Al-Mazadi Marketing - {{title}}</title>
 	{% load static %}
 
 
@@ -38,6 +38,8 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'styles/style.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'styles/mycss.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'styles/ajax.css' %}">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 	<!-- HTMX.js -->
 	<script src="{% static 'scripts/htmx.min.js'%}" ></script>
 	<!-- Ajax.js -->

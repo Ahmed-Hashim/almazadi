@@ -1,0 +1,54 @@
+<div class="pd-20 profile-task-wrap">
+  <div class="container pd-0">
+    <!-- Open Task start -->
+    <div class="task-title row align-items-center">
+      <div class="col-md-8 col-sm-12">
+        <h5>Products ({{products.count}})</h5>
+      </div>
+      <div class="col-md-4 col-sm-12 text-right">
+          <button
+          class="btn btn-dark btn-sm"
+          hx-get="{% url 'add_note' customer.id %}" 
+          hx-target="#dialog">
+          <i class="fa-solid fa-notes-medical"></i>
+          </button>
+      </div>
+    </div>
+    <div class="row clearfix">
+      {% for product in products %}
+      <div class="col-lg-6 col-md-6 col-sm-12 mb-30">
+        <div class="card">
+          <div class="card-header bg-light p-1 text-center">
+            <h5 class="card-title mt-2"><i class="fa-brands fa-product-hunt"></i>&nbsp;&nbsp;{{product.product.name}}</h5>
+          </div>
+          {% if product.end_date %}
+          <div class="card-body text-center">
+            <p class="text-center"><i class="fa-solid fa-calendar-plus"></i>&nbsp;&nbsp;Start Date
+              <small>{{product.start_date|date:"d M Y"}}</small>
+            </p>
+            
+            <hr width="100%">
+ 
+            <p><i class="fa-solid fa-calendar-minus"></i>&nbsp;&nbsp;End Date</p>
+            <small >{{product.end_date|date:"d M Y"}}</small>
+            <br><i class="fa-solid fa-clock"></i>&nbsp;&nbsp;<small >{{product.end_date|timeuntil}}</small>
+
+          {% else %}
+          <div class="card-body text-center">
+            <p><i class="fa-solid fa-calendar-plus"></i>&nbsp;&nbsp;Date</p>
+            <small>{{product.start_date|date:"d M Y"}}</small>
+          
+          {% endif %}
+          <p><i class="fa-solid fa-receipt"></i>&nbsp;&nbsp;Invoice</p>
+          <button class="btn btn-sm btn-primary" hx-get="{% url 'show_invoice' product.invoiceid.id %}" hx-target="#dialog">Show Invoice</button>
+</div>
+          <div class="card-footer bg-primary p-1"></div>
+        </div>
+      </div>    
+      {% endfor %}
+    </div>
+
+  </div>
+</div>
+
+

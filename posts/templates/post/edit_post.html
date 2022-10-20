@@ -1,11 +1,12 @@
-{% extends 'base.html' %}
-
-            <div class="pd-20 bg-white border-radius-4 box-shadow mb-30">
-                <form action="" method="POST">
-                {% csrf_token %}    
-                {{ form.as_p }}
-                <input type="submit" value="Update" class="btn btn-secondary">
-            </form>    
-            </div>
+{% extends 'base.html' %} 
+{% load crispy_forms_tags %}
+{% block body %}
+<div class="pd-20 bg-white border-radius-4 box-shadow mb-30">
+  <form action="" method="POST" novalidate>
+    {% csrf_token %} 
+    {{ form |crispy }}
+    <input type="submit" value="Update" class="btn btn-secondary" />
+  </form>
+</div>
 
 {% endblock body %}

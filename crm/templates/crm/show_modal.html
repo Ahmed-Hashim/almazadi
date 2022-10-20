@@ -119,6 +119,7 @@
             </div>
           <div class="card-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> 
+            <a class="btn btn-warning" id="btn">Customer PDF</a> 
           </div>         
         </div>
       <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="profile-tab">
@@ -301,3 +302,22 @@
       </div>
     </div>
         </div>
+        <script>
+          const button = document.getElementById('btn');
+          button.addEventListener('click', (event) => {
+          
+            var element = document.getElementById('show-modal');
+                var opt = {
+                            margin:       1,
+                            filename:     'myfilse.pdf',
+                            image:        { type: 'jpeg', quality: 0.98 },
+                            html2canvas:  { scale: 2 },
+                            jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+                          };
+                html2pdf(element)
+          })
+             
+          
+          
+          
+          </script>

@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load tz %}
 {% block css %}
 
 {% endblock css %}
@@ -18,73 +19,32 @@
 {% endif %}
 
 
-	<div class="table-responsive">
-
-
-		<table class="table table-striped fixed-table">
-			<thead>
-				<tr >
-					<th style="font-size: 11px;" style="font-size: 15px;" scope="col">Post ID</th>
-					<th style="font-size: 11px;" scope="col">Image</th>
-					<th style="font-size: 11px;" scope="col">Message</th>
-					<th style="font-size: 11px;" scope="col">Category</th>
-					<th style="font-size: 11px;" scope="col">Publish Date</th>
-					<th style="font-size: 11px;" scope="col"> Settings</th>
-				</tr>
-			</thead>
-			<tbody >
-				{% for post in posts%}
-				{% if not post.published %}
-				<tr class="" id ="rows" name ="{{post.id}}">
-					<th scope="row">{{post.id}}</th>
-					<td><img style=" border-radius:3px; display: block;" width="70" height="70" name="{{post.imagelink}}" src="{% if post.design_link %} {{post.design_link.url}}{% else %}{{post.imagelink}}{% endif %}" alt=""></td>
-					<td class="limited-text-table" style="font-size: 11px;" maxlength="15" >{{post.message}}</td>
-					<td style="font-size: 11px;" >{{post.category}}</td>
-					
-					<td style="font-size: 11px;" >
-						{% if post.schedule %}
-						Published in :
-						<br/>{{post.date_to_publish | timeuntil}}
-						{% endif %}
-						</td>
-					<td>
-						<div class="btn-group ">
-						<a class="btn btn-outline-primary btn-sm " href="{{post.imagelink}}"><i class="fa-solid fa-link"></i></a>
-						<a class="btn btn-outline-info  btn-sm " href="edit_schedule_post/p={{post.id}}"><i class="fa-solid fa-pen-to-square"></i></a>
-						<button class="btn btn-danger btn-sm " name="target" id ="target-{{post.id}}" data-toggle="modal" data-target="#delete{{post.id}}"><i class="fa-solid fa-trash-arrow-up"></i></button>
-						</div>
-					</td>
-
-				</tr>
-				<div class="modal" id="delete{{post.id}}" tabindex="-1" role="dialog">
-					<div class="modal-dialog" role="document">
-						<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title">Delete Post</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-							</button>
-						</div>
-						<div class="modal-body">
-							<p>Are you sure you want to delete the post?</p>
-						</div>
-						<div class="modal-footer">
-							<button class="btn btn-outline-danger  btn-sm " id="deleteAjax" name="{{post.id}}" data-dismiss="modal">Delete</button>
-							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						</div>
-						</div>
-					</div>
-					</div>
-				{% endif %}
-				{%endfor%}
-			</tbody>
-		</table>
+	<div class="table-responsive" hx-get="{% url 'schedule_table' %}" hx-trigger="load,every 5s,scheduleChange from:body" hx-indicator="#spinner" hx-swap="innerHTML">
 	</div>
-
+	<div id="spinner" class="htmx-indicator indicator-style">
+		<div class="spinner-grow text-secondary " role="status">
+		  <span class="visually-hidden">Loading...</span>
+		</div>
+	  </div>
 	</div>
 </div>
+<div id="modal" class="modal fade">
+	<div id="dialog" class="modal-dialog modal-lg" hx-target="this"></div>
+  </div>
+<script>
+	document.body.addEventListener('htmx:configRequest', (event) => {
+	event.detail.headers['X-CSRFToken'] = '{{ csrf_token }}';
+	})
+	document.body.addEventListener('htmx:beforeRequest',function(evt){
+	  const table= document.getElementsByClassName('table-responsive')
+	  table.style.opacity = 0.25
+	});
+	document.body.addEventListener('htmx:afterRequest',function(evt){
+	  const table= document.getElementsByClassName('table-responsive')
+	  table.style.opacity = 1.00
+	});
 
-
+  </script> 
 		
 
 {% endblock body %}
