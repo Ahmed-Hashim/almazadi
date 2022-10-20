@@ -415,5 +415,12 @@ def add_note(request,id):
         }
         
         return render(request,"crm/add_note.html",context)
+def show_email(request):
 
 
+    context={
+    "customer":customer,
+    "form":form,
+        }
+
+    return render(request,"crm/add_note.html",context)
