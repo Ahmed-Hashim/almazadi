@@ -1,0 +1,34 @@
+<div class="modal-content">
+    <div class="modal-header bg-light">
+            <h5 class="modal-title"><i class='bx bxl-whatsapp bx-sm'></i> &nbsp;&nbsp;Send WhatsApp Message</h5>
+    </div>
+    
+        <div class="modal-body">
+            <form  hx-post="{% url 'send_whatsapp' customer.id %}" >
+            <div class="mb-3">
+                <label for="number" class="form-label">Company Number</label>
+                <input type="text" class="form-control" id="number" name="number" required>
+
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+
+              </div>
+              <button class="btn btn-success" type="submit">Send &nbsp;&nbsp;<i class='bx bxl-whatsapp '></i></button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">
+              Close
+            </button>
+            </form>
+        </div>
+        <script>
+            var customerid="{{customer.land_phone_number}}"
+            document.getElementById("number").value=customerid
+
+            
+        </script>
+        <div class="modal-footer p-1 bg-success">
+
+        </div>
+    
+</div>

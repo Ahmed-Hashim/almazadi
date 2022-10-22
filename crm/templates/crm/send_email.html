@@ -46,6 +46,7 @@
             autocomplete="off"
             method="POST"
             hx-post="{% url 'emails' customer.id %}"
+            enctype="multipart/form-data"
           >
             {% csrf_token %}
             <div class="form-group m-2">
@@ -58,12 +59,12 @@
               
               {{email_form.message |as_crispy_field}}
             </div>
+
             <div class="form-group m-2">
-              
+
               {{email_form.file_upload |as_crispy_field}}
-              <span class="color-secondary"
-                >you can attach 2M files (pdf,doc)</span
-              >
+              <small class="text-secondary ml-1"
+                >you can attach 2M files (pdf,doc)</small>
             </div>
 
             {{email_form.company |as_crispy_field}} {{email_form.sender |as_crispy_field}}
@@ -88,13 +89,7 @@
             Close
           </button>
         </div>
-        {% if form.errors %}
-        <script src="{% static 'plugins/sweetalert2/sweetalert2.all.js' %}"></script>
-	    <script src="{% static 'plugins/sweetalert2/sweet-alert.init.js' %}"></script>
-        <script>
-            swal("Denied !","Fill the form corectly","")
-        </script>
-        {% endif %}
+       
         <script>
           var sender = "{{ user.id }}";
           document.getElementById("sender").value = sender;

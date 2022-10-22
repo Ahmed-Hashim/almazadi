@@ -63,6 +63,7 @@ class Customer_Email_Form(forms.ModelForm):
         sender=forms.CharField(label="Sender")
         company=forms.CharField(label="Company")
         widgets={
+            'file_upload':forms.FileInput(attrs={'class':'filefield'}),
 
    
                 'sender':forms.TextInput(attrs={'class':'form-control','id':'sender',"type":"hidden" }),

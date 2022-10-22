@@ -35,8 +35,11 @@
                             hx-target="#dialog">
                       <i class='bx bxs-user-detail bx-sm' ></i>
                     </button>
-                    <button class="btn btn-warning btn-sm"  data-toggle="modal" data-target="#note-modal-{{ customer.id }}"><i class='bx bxs-note bx-sm'></i></button>
                     <button class="btn btn-success btn-sm"
+                            hx-get="{% url "send_whatsapp" customer.id %}"
+                            hx-target="#dialog"
+                    ><i class='bx bxl-whatsapp bx-sm'></i></button>
+                    <button class="btn btn-warning btn-sm"
                             hx-get="{% url "emails" customer.id %}"
                             hx-target="#dialog"  
 >

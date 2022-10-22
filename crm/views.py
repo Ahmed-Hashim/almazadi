@@ -1,4 +1,6 @@
+from email import message
 import json
+from multiprocessing import context
 
 from django.contrib.auth.models import User
 from django.http import JsonResponse,HttpResponse
@@ -12,6 +14,7 @@ from django.views.decorators.http import require_http_methods
 from django.http import QueryDict
 
 from products.views import invoice
+from .whatsapp import send_whatsapp_message
 # Create your views here.
 
 from .forms import *
@@ -185,25 +188,51 @@ def emails(request,id):
             message=request.POST.get("message")
             company=request.POST.get("company")
             sender=request.POST.get("sender")
-            customer_email=get_object_or_404(Customer,pk=company).email
-            user_email=get_object_or_404(User,pk=sender).email
-            email = EmailMultiAlternatives(
-                subject,
-                message,
-                user_email,
-                [customer_email],
-                )
-            email.send()
-            print(subject,message,customer_email,user_email)
-            return HttpResponse(status=204,
-                                headers={
-                                    'HX-Trigger': json.dumps({
-                                    "emailChange": None,
-                                    "close": "close",
-                                    "showMessage": f"Email Sent To {customer.company} .",
-                                    "type":"bg-success"
+            try:
+                file=request.FILES["file_upload"]
+                customer_email=get_object_or_404(Customer,pk=company).email
+                user_email=get_object_or_404(User,pk=sender).email
+                email = EmailMultiAlternatives(
+                    subject,
+                    message,
+                    user_email,
+                    [customer_email],
+                    )
+                email.attach(file.name,file.read(),file.content_type)
+
+                    
+
+                email.send()
+                print(subject,message,customer_email,user_email)
+                return HttpResponse(status=204,
+                                    headers={
+                                        'HX-Trigger': json.dumps({
+                                        "emailChange": None,
+                                        "close": "close",
+                                        "showMessage": f"Email Sent To {customer.company} .",
+                                        "type":"bg-success"
+                })
             })
-        })
+            except:
+                customer_email=get_object_or_404(Customer,pk=company).email
+                user_email=get_object_or_404(User,pk=sender).email
+                email = EmailMultiAlternatives(
+                    subject,
+                    message,
+                    user_email,
+                    [customer_email],
+                    )
+                email.send()
+                print(subject,message,customer_email,user_email)
+                return HttpResponse(status=204,
+                                    headers={
+                                        'HX-Trigger': json.dumps({
+                                        "emailChange": None,
+                                        "close": "close",
+                                        "showMessage": f"Email Sent To {customer.company} .",
+                                        "type":"bg-success"
+                })
+            })
         else:
             return HttpResponse(status=204,
                                     headers={
@@ -438,3 +467,31 @@ def show_email(request,id):
         }
 
     return render(request,"crm/show_email.html",context)
+def send_whatsapp(request,id):
+    customer=get_object_or_404(Customer,id=id)
+    if request.method=="POST":
+        number=request.POST.get("number")
+        message=request.POST.get("message")
+        response=send_whatsapp_message(number,str(message))
+        if response["sent"]=="true":
+            return HttpResponse(status=204,
+                    headers={
+                            'HX-Trigger': json.dumps({
+                                "noteChange": None,
+                                "showMessage": f"Message sent to {customer.company}",
+                                "close": "close",
+                                "type":"bg-success"
+                            })
+                        })
+        else:
+            return HttpResponse(status=204,
+                    headers={
+                            'HX-Trigger': json.dumps({
+                                "noteChange": None,
+                                "showMessage": f"Message Error!",
+                                "close": "close",
+                                "type":"bg-danger"
+                            })
+                        })
+    context={"customer":customer}
+    return render(request,"crm/send_whatsapp.html",context)

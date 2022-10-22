@@ -20,11 +20,13 @@ urlpatterns = [
     path('add_customer/', views.add_customer,name='add_customer'),    
     path('view_add_contact/p=<int:id>', views.view_add_contact,name='view_add_contact'),    
     path('delete_contact/p=<int:id>', views.delete_contact,name='delete_contact'),    
+   
     ###################################################################
     ########################### Email URLS ############################
     ###################################################################
     path('emails/p=<int:id>', views.emails,name='emails'),
     path('show_email/p=<int:id>', views.show_email,name='show_email'),
+    path('send_whatsapp/p=<int:id>', views.send_whatsapp,name='send_whatsapp'),
     ###################################################################
     ########################### Random URLS ###########################
     ###################################################################
