@@ -88,3 +88,5 @@ class Customer_Email(models.Model):
     company=models.ForeignKey(Customer,on_delete=models.CASCADE)
     date=models.DateTimeField(auto_now=True)
 
+    def __str__(self) :
+        return '{} ({})'.format(self.company,self.subject)

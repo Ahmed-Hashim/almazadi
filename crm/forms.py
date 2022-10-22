@@ -50,7 +50,7 @@ class CustomerForm(ModelForm):
             'twitter_url':forms.TextInput(attrs={'class':'form-control'}),
             'linkedin_url':forms.TextInput(attrs={'class':'form-control'}),
             'skype_url':forms.TextInput(attrs={'class':'form-control'}),
-            'land_phone_number':forms.TextInput(attrs={'class':'form-control'}),
+            'land_phone_number':forms.TextInput(attrs={'class':'form-control','required':'required'}),
         }
         
 class Customer_Email_Form(forms.ModelForm):

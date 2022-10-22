@@ -12,7 +12,7 @@ class CustomerEmailAdmin(admin.ModelAdmin):
     list_per_page=25
 
 admin.site.register(Note)
-admin.site.register(Customer_Email,CustomerEmailAdmin)
+admin.site.register(Customer_Email)
 admin.site.register(Contact)
 admin.site.register(Customer)
 admin.site.register(Industry)

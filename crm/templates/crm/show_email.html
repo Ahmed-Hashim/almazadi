@@ -1,0 +1,27 @@
+{% load crispy_forms_tags %} {% load static %}
+<div class="modal-content">
+    <div class="modal-header">
+        <h4 class="modal-tilte"><i class="fa-solid fa-envelope-open-text"></i>&nbsp;&nbsp;Email@{{email.id}} Sent by:{{email.sender}}</h4>
+    </div>
+
+    <div class="modal-body">
+
+            <div class="row mb-2">
+                <div class="col mb-2"><i class="fa-solid fa-share"></i>&nbsp;&nbsp;
+                    Subject: {{email.subject}}</div>
+                
+
+            </div>
+            <div class="row mt-2">
+               <div class="col"><i class="fa-regular fa-envelope"></i> &nbsp;&nbsp; Message:</div>
+               <div class="card-body"><p>{{email.message}}</p></div> 
+            </div>
+            
+    </div>
+    <div class="modal-footer">
+        <span class="text-left mr-3"><i class="fa-regular fa-calendar-days"></i>&nbsp;&nbsp;<span>{{email.date|date:"d M Y H:i"}}</span>
+        <button type="button" class="btn btn-sm btn-secondary ml-2" data-dismiss="modal">
+          Close
+        </button>
+    </div>
+    </div> 

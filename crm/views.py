@@ -178,37 +178,50 @@ def emails(request,id):
     if request.method == 'GET':
         return render(request,'crm/send_email.html',context)
     if request.method=='POST' and "simple-mail" in request.POST:
-        if form.is_valid():
-            form.save()
-        subject=request.POST.get("subject")
-        message=request.POST.get("message")
-        company=request.POST.get("company")
-        sender=request.POST.get("sender")
-        customer_email=get_object_or_404(Customer,pk=company).email
-        user_email=get_object_or_404(User,pk=sender).email
-        email = EmailMultiAlternatives(
-            subject,
-            message,
-            user_email,
-            [customer_email],
-            )
-        email.send()
-        print(subject,message,customer_email,user_email)
-        return HttpResponse(status=204,
-                            headers={
-                                'HX-Trigger': json.dumps({
-                                "crmChange": None,
-                                "close": "close",
-                                "showMessage": f"Email Sent To {customer.company} .",
-                                "type":"bg-success"
+        if customer.email:
+            if form.is_valid():
+                form.save()
+            subject=request.POST.get("subject")
+            message=request.POST.get("message")
+            company=request.POST.get("company")
+            sender=request.POST.get("sender")
+            customer_email=get_object_or_404(Customer,pk=company).email
+            user_email=get_object_or_404(User,pk=sender).email
+            email = EmailMultiAlternatives(
+                subject,
+                message,
+                user_email,
+                [customer_email],
+                )
+            email.send()
+            print(subject,message,customer_email,user_email)
+            return HttpResponse(status=204,
+                                headers={
+                                    'HX-Trigger': json.dumps({
+                                    "emailChange": None,
+                                    "close": "close",
+                                    "showMessage": f"Email Sent To {customer.company} .",
+                                    "type":"bg-success"
+            })
         })
-    })
+        else:
+            return HttpResponse(status=204,
+                                    headers={
+                                        'HX-Trigger': json.dumps({
+                                        "emailChange": None,
+                                        "close": "close",
+                                        "showMessage": f"{customer.company} Dont have email address add email then try again .",
+                                        "type":"bg-danger",
+                })
+            })
 
     elif request.method=='POST' and "template" in request.POST:
+        
         company=request.POST.get('company')
         email=request.POST.get('email')
         content=request.POST.get('emailtype')
         content_sent=""
+        Customer_Email.objects.create(subject="template",message="Template Content",sender=request.user,company=Customer.objects.get(company__icontains=company))
         link="https://www.facebook.com/Almazadiii"
         insta="https://www.instagram.com/almazadi.official/"
         template= get_template('email.txt')
@@ -231,6 +244,7 @@ def emails(request,id):
         return HttpResponse(status=204,
                             headers={
                                 'HX-Trigger': json.dumps({
+                                "emailChange": None,
                                 "showMessage": f"Email Sent To {customer.company} .",
                                 "close": "close",
                                 "type":"bg-success"
@@ -339,7 +353,7 @@ def client_emails(request,id):
     customer=get_object_or_404(Customer,pk=id)
     email=customer.customer_email_set.all()
     context={
-
+        "customer":customer,
         "emails":email,
 
     }
@@ -415,12 +429,12 @@ def add_note(request,id):
         }
         
         return render(request,"crm/add_note.html",context)
-def show_email(request):
-
+def show_email(request,id):
+    email=get_object_or_404(Customer_Email,id=id)
 
     context={
-    "customer":customer,
-    "form":form,
+
+        'email':email
         }
 
-    return render(request,"crm/add_note.html",context)
+    return render(request,"crm/show_email.html",context)

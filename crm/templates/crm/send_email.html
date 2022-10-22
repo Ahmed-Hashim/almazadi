@@ -45,7 +45,7 @@
           <form
             autocomplete="off"
             method="POST"
-            hx-post="emails/p={{customer.id}}"
+            hx-post="{% url 'emails' customer.id %}"
           >
             {% csrf_token %}
             <div class="form-group m-2">
@@ -74,9 +74,9 @@
             >
               Send Email <i class="bx bx-mail-send bx-xl"></i>
             </button>
-            
+            {% endif %}
           </form>
-          {% endif %}
+          
         </div>
         <div class="modal-footer">
           <button
@@ -132,7 +132,7 @@
           </div>
           <div class="card-body">
             <form
-              hx-post="emails/p={{customer.id}}"
+              hx-post="{% url 'emails' customer.id %}"
               class="m-4"
               autocomplete="off"
 
