@@ -1,3 +1,5 @@
+from email.policy import default
+from random import choices
 from django.db import models
 from django.utils.text import slugify
 from django.contrib.auth.models import User
@@ -14,6 +16,12 @@ TITLE=(
 
 # Create your models here.
 class Customer(models.Model):
+    STATUS=(
+        ("Prospect","Prospect"),
+        ("Active","Active"),
+        ("Expired","Expired"),
+        ("Suspended","Suspended"),
+    )
     title=models.CharField(max_length=25,choices=TITLE,null=True,blank=True)
     first_name=models.CharField(max_length=120 ,blank=True,null=True)
     middle_name=models.CharField(max_length=120 ,blank=True,null=True)
@@ -27,7 +35,8 @@ class Customer(models.Model):
     land_phone_number=models.CharField(max_length=20)
     email=models.CharField(max_length=120,null=True,blank=True)
     website=models.CharField(max_length=190,null=True,blank=True)
-    status= models.ForeignKey('Status',on_delete=models.SET_NULL,null=True,blank=True,related_name='status_type')
+    Situation= models.CharField(null=True,blank=True ,choices=STATUS,default="Prospect",max_length=100)
+    #status= models.ForeignKey('Status',on_delete=models.SET_NULL,null=True,blank=True,related_name='status_type')
     background_info= models.TextField(max_length=500,null=True,blank=True)
     last_contact_date=models.DateTimeField(null=True,blank=True)
     facebook_url= models.CharField(max_length=150,null=True,blank=True)

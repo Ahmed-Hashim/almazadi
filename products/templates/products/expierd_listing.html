@@ -3,10 +3,10 @@
     <tr role="row">
       
         <th  width="5%">ID</th>
-        <th  width="20%"><i class="fa-solid fa-address-card"></i>&nbsp;Customer</th>
-        <th  width="20%"><i class="fa-brands fa-product-hunt"></i>&nbsp;Product</th>
-        <th  width="20%"><i class="fa-solid fa-calendar-minus"></i></i>&nbsp;Expire Date</th>
-        <th  width="20%"><i class="fa-solid fa-phone"></i></i>&nbsp;Phone</th>
+        <th  width="20%"><i class="fa-solid fa-address-card"></i>&nbsp;&nbsp;Customer</th>
+        <th  width="20%"><i class="fa-brands fa-product-hunt"></i>&nbsp;&nbsp;Product</th>
+        <th  width="20%"><i class="fa-solid fa-calendar-minus"></i></i>&nbsp;&nbsp;Expire Date</th>
+        <th  width="20%"><i class="fa-solid fa-phone"></i></i>&nbsp;&nbsp;Phone</th>
         <th  width="10%" class="text-center"><i class="fa-solid fa-gear"></i>&nbsp;</th>
       </tr>
     </thead>
@@ -19,23 +19,22 @@
         <td>{{product.invoiceid.id}}</td>
         <td><a href="{% url 'client_profile' product.customerid.id %}">{{product.customerid}}</a></td>
         <td>{{product.product.name}}</td>
+          {% if "minutes" in product.end_date|timeuntil %}
+          <td class="text-danger"><i class="fa-solid fa-triangle-exclamation"></i>&nbsp;&nbsp;{{product.end_date|timeuntil}}</td>
+          {% else %}
+        
         <td>{{product.end_date|timeuntil}}</td>
+        {% endif %}
+
         <td>{{product.customerid.land_phone_number}}</td>
         <td>
           <div class="btn-group">
             <button
-              class="btn btn-success btn-sm"
+              class="btn btn-info btn-sm"
               hx-get="#"
               hx-target="#dialog"
             >
-            <i class="fa-solid fa-receipt"></i>
-            </button>
-            <button
-              class="btn btn-danger btn-sm"
-              hx-get="#"
-              hx-target="#dialog"
-            >
-              <i class="fa-solid fa-trash-can"></i>
+            <i class="fa-solid fa-square-phone"></i>
             </button>
           </div>
         </td>

@@ -2,13 +2,13 @@
     <thead class="table-dark">
     <tr role="row">
       
-        <th  width="5%">ID</th>
-        <th  width="20%"><i class="fa-solid fa-address-card"></i>&nbsp;Customer</th>
-        <th  width="15%"><i class="fa-solid fa-user"></i>&nbsp;Employee</th>
-        <th  width="15%"><i class="fa-regular fa-clock"></i>&nbsp;Status</th>
-        <th  width="15%"><i class="fa-solid fa-phone"></i>&nbsp;Phone</th>
-        <th  width="35%"><i class="fa-regular fa-message"></i>&nbsp;Note</th>
-        <th  width="10%" class="text-center"><i class="fa-solid fa-gear"></i>&nbsp;</th>
+        <th  width="5%" style="color:white !important;">ID</th>
+        <th  width="20%" style="color:white !important;"><i class="fa-solid fa-address-card"></i>&nbsp;Customer</th>
+        <th  width="15%" style="color:white !important;"><i class="fa-solid fa-user"></i>&nbsp;Employee</th>
+        <th  width="15%" style="color:white !important;"><i class="fa-regular fa-clock"></i>&nbsp;Status</th>
+        <th  width="15%" style="color:white !important;"><i class="fa-solid fa-phone"></i>&nbsp;Phone</th>
+        <th  width="35%"style="color:white !important;" ><i class="fa-regular fa-message" ></i>&nbsp;Note</th>
+        <th  width="10%" class="text-center" style="color:white !important;"><i class="fa-solid fa-gear"></i>&nbsp;</th>
       </tr>
     </thead>
     <tbody>
@@ -24,7 +24,7 @@
         {% elif invoice.status in "EMAIL_SENT" %}
         <td class="text-info"><i class="fa-solid fa-envelope-circle-check"></i>&nbsp;{{invoice.status}}</td>
         {% elif invoice.status in "OVERDUE" %}
-        <td class="text-danger"><i class="fa-solid fa-circle-exclamation"></i>&nbsp;{{invoice.status}}</td>
+        <td class="text-danger"><i class="fa-solid fa-triangle-exclamation"></i>&nbsp;{{invoice.status}}</td>
         {% endif %}
         <td>{{invoice.customerid.land_phone_number}}</td>
         <td>{{invoice.note}}</td>
@@ -42,7 +42,7 @@
               hx-get="{% url 'delete_invoice' invoice.id %}"
               hx-target="#dialog"
             >
-              <i class="fa-solid fa-trash-can"></i>
+            <i class="fa-solid fa-trash-can"></i>
             </button>
           </div>
         </td>

@@ -3,17 +3,17 @@
        id="customers"
        role="grid">
 
-    <thead class="table-primary">
-      <tr role="row">
-        <th>ID</th>
-        <th>Company</th>
-        <th>Industry</th>
-        <th>Lead Source</th>
-        <th>Phone Number</th>
-        <th>Email</th>
-        <th>Status</th>
-        <th>Last Edit</th>
-        <th>Actions</th>
+    <thead class="table-dark">
+      <tr role="row" >
+        <th style="font-size:12px;">ID</th>
+        <th style="font-size:12px;" ><i class="fa-solid fa-building"></i>&nbsp;&nbsp;Company</th>
+        <th style="font-size:12px;" ><i class="fa-solid fa-industry"></i>&nbsp;&nbsp;Industry</th>
+        <th style="font-size:12px;" ><i class="fa-brands fa-sourcetree"></i>&nbsp;&nbsp;Source</th>
+        <th style="font-size:12px;" ><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;Phone</th>
+        <th style="font-size:12px;" ><i class="fa-solid fa-at"></i>&nbsp;&nbsp;Email</th>
+        <th style="font-size:12px;" ><i class="fa-solid fa-signal"></i>&nbsp;&nbsp;Status</th>
+        <th style="font-size:12px;" ><i class="fa-solid fa-phone-volume"></i>&nbsp;&nbsp;Last Contact</th>
+        <th style="font-size:12px;" ><i class="fa-solid fa-gear"></i>&nbsp;&nbsp;Actions</th>
       </tr>
     </thead>
     <tbody > 
@@ -21,35 +21,44 @@
          {% if customers %}
         {% for customer in customers %}
               <tr style="cursor:pointer" role="row">
-                <td width="5%">{{ customer.id }}</td>
-                <td width="30%"><a href="{% url 'client_profile' customer.id %}">{{ customer.company }}</a></td>
-                <td width="20%">{{ customer.industry }}</td>
-                <td width="15%">{{ customer.lead_referral_source }}</td>
-                <td width="15%">{{ customer.land_phone_number }}</td>
-                <td width="15%">{{ customer.email }}</td>
-                <td width="10%">{{ customer.status }}</td>
-                <td width="20%">{{ customer.last_edit_date }}</td>
-                <td class="btn-group ">
+                <td >{{ customer.id }}</td>
+                <td ><a href="{% url 'client_profile' customer.id %}">{{ customer.company }}</a></td>
+                <td >{{ customer.industry }}</td>
+                <td >{{ customer.lead_referral_source }}</td>
+                <td >{{ customer.land_phone_number }}</td>
+                <td >{{ customer.email }}</td>
+
+
+                  {% if "Prospect" in customer.Situation %}
+                  <td style="color:#fea95e"><i class="fa-solid fa-circle-exclamation"></i>&nbsp;{{ customer.Situation }}</td>
+                  {% elif "Active" in customer.Situation %}
+                  <td style="color:#28a745"><i class="fa-regular fa-circle-check"></i>&nbsp;{{ customer.Situation }}</td>
+                  {% else %}
+                  <td class="text-danger"><i class="fa-solid fa-triangle-exclamation"></i>&nbsp;{{ customer.Situation }}</td>
+                  {% endif %}
+
+                <td style="font-size:9px;">{{ customer.last_contact_date }}</td>
+                <td>
+                  <div  class="btn-group ">
                     <button class="btn btn-primary btn-sm"
                             hx-get="{% url 'view_edit_customer' customer.id %}"
                             hx-target="#dialog">
-                      <i class='bx bxs-user-detail bx-sm' ></i>
+                            <i class="fa-solid fa-address-card"></i>
                     </button>
                     <button class="btn btn-success btn-sm"
                             hx-get="{% url "send_whatsapp" customer.id %}"
                             hx-target="#dialog"
-                    ><i class='bx bxl-whatsapp bx-sm'></i></button>
+                    ><i class="fa-brands fa-whatsapp"></i></button>
                     <button class="btn btn-warning btn-sm"
                             hx-get="{% url "emails" customer.id %}"
-                            hx-target="#dialog"  
->
-                             <i class="bx bx-envelope bx-sm"></i>
+                            hx-target="#dialog">
+                    <i class="fa-solid fa-envelope"></i>
                     </button>
                     <button class="btn btn-danger btn-sm"  
-                      class="btn btn-danger" 
                       hx-get="{% url 'delete_client' customer.id %}" hx-target="#dialog">
-                      <i class='bx bx-trash bx-sm'></i>
+                      <i class="fa-solid fa-trash-can"></i>
                     </button>
+                  </div>
                 </td>
             </tr>
         {% endfor %}
@@ -129,9 +138,30 @@ $('#searchlive').keyup(function(){
     newSearch.search($(this).val()).draw();
 })
 });
-
+const button = document.getElementById('send image');
+          button.addEventListener('click', (event) => {
 document.body.addEventListener('htmx:configRequest', (event) => {
   event.detail.headers['X-CSRFToken'] = '{{ csrf_token }}';
 })
 
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://api.ultramsg.com/instance19177/messages/image",
+  "method": "POST",
+  "headers": {},
+  "data": {
+    "token": "9xvmtio6g3t16in4",
+    "to": "00201008286184",
+    "image": "https://cdn.pixabay.com/photo/2022/09/11/14/43/whale-7446905_960_720.jpg",
+    "caption": "image Caption",
+    "referenceId": "",
+    "nocache": ""
+  }
+}
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+})
+})
 </script>

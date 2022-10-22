@@ -4,10 +4,78 @@
     </div>
     
         <div class="modal-body">
-            <form  hx-post="{% url 'send_whatsapp' customer.id %}" >
+            <form  hx-post="{% url 'send_whatsapp' customer.id %}" autocomplete="off">
+              {% csrf_token %}
+              <div class="d-flex justify-content-between btn-group" role="group" >
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="emailtype"
+                  id="btnradio1"
+                  autocomplete="off"
+                  value="text"
+                  required
+                />
+                <label
+                  class="btn btn-primary text-light btn-lg email-template"
+                  id="email-type"
+                  for="btnradio1"
+                  style="width: 250px !important;"
+                  ><i class="fa-regular fa-message"></i>
+                </label>
+
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="emailtype"
+                  id="btnradio2"
+                  autocomplete="off"
+                  value="pdf"
+                  required
+                />
+                <label
+                  class="btn btn-info text-light btn-lg email-template"
+                  id="email-type"
+                  for="btnradio2"
+                  style="width: 250px !important;"
+                  ><i class="fa-solid fa-file-pdf"></i></label>
+
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="emailtype"
+                  id="btnradio3"
+                  autocomplete="off"
+                  value="image"
+                  required
+                />
+                <label
+                  class="btn btn-success text-light btn-lg email-template"
+                  id="email-type"
+                  for="btnradio3"
+                  style="width: 250px !important;"
+                  ><i class="fa-solid fa-image"></i></label>
+
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="emailtype"
+                  id="btnradio4"
+                  autocomplete="off"
+                  value="Auction"
+                  required
+                />
+                <label
+                  class="btn btn-warning text-light btn-lg email-template"
+                  id="email-type"
+                  for="btnradio4"
+                  style="width: 250px !important;"
+                  
+                  ><i class="fa-solid fa-video"></i></label>
+              </div>
             <div class="mb-3">
                 <label for="number" class="form-label">Company Number</label>
-                <input type="text" class="form-control" id="number" name="number" required>
+                <input type="text" class="form-control" id="number" name="number" required >
 
               </div>
               <div class="mb-3">
@@ -15,6 +83,12 @@
                 <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
 
               </div>
+              <div class="mb-3">
+                <label for="url" class="form-label">Image/Pdf/Video (URL) </label>
+                <input type="text" class="form-control" id="url" name="url" rows="3" ></input>
+
+              </div>
+
               <button class="btn btn-success" type="submit">Send &nbsp;&nbsp;<i class='bx bxl-whatsapp '></i></button>
               <button type="button" class="btn btn-secondary" data-dismiss="modal">
               Close

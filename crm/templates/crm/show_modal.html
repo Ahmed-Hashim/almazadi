@@ -40,9 +40,13 @@
               <h5>Source-Info</h5>
               <hr class="profile-social">  
               <div class="row mt-13">
-                <div class="col-12">
+                <div class="col-6">
                   <h6>Lead Source</h6>
                   <span>{{customer.lead_referral_source}}</span> 
+                </div>
+                <div class="col-6">
+                  <h6>Status</h6>
+                  <span>{{customer.Situation}}</span> 
                 </div>
                 </div>
               <div class="row mt-1">
@@ -205,9 +209,13 @@
                   </h5>
                 </div>
                 <div class="row mt-13">
-                  <div class="col-12  mb-2">
+                  <div class="col-6  mb-2">
                     <h6>Lead Source</h6>
                     {{edit_form.lead_referral_source}}
+                  </div>
+                  <div class="col-6  mb-2">
+                    <h6>Status</h6>
+                    {{edit_form.Situation}}
                   </div>
                 </div>
                 <div class="row mt-2">

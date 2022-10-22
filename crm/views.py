@@ -14,7 +14,7 @@ from django.views.decorators.http import require_http_methods
 from django.http import QueryDict
 
 from products.views import invoice
-from .whatsapp import send_whatsapp_message
+from .whatsapp import send_whatsapp_img, send_whatsapp_message, send_whatsapp_pdf, send_whatsapp_video
 # Create your views here.
 
 from .forms import *
@@ -472,26 +472,105 @@ def send_whatsapp(request,id):
     if request.method=="POST":
         number=request.POST.get("number")
         message=request.POST.get("message")
-        response=send_whatsapp_message(number,str(message))
-        if response["sent"]=="true":
-            return HttpResponse(status=204,
-                    headers={
-                            'HX-Trigger': json.dumps({
-                                "noteChange": None,
-                                "showMessage": f"Message sent to {customer.company}",
-                                "close": "close",
-                                "type":"bg-success"
+        type=request.POST.get("emailtype")
+        try:
+            url=request.POST.get("url")
+        except:
+            url=None
+        if type == "text":
+            response=send_whatsapp_message(number,str(message))
+            if response["sent"]=="true":
+                return HttpResponse(status=204,
+                        headers={
+                                'HX-Trigger': json.dumps({
+                                    "noteChange": None,
+                                    "showMessage": f"Message sent to {customer.company}",
+                                    "close": "close",
+                                    "type":"bg-success"
+                                })
                             })
-                        })
+            else:
+                return HttpResponse(status=204,
+                        headers={
+                                'HX-Trigger': json.dumps({
+                                    "noteChange": None,
+                                    "showMessage": f"Message Error!",
+                                    "type":"bg-danger"
+                                })
+                            })
+        elif type == "pdf":
+            response=send_whatsapp_pdf(number,str(message),url)
+            if response["sent"]=="true":
+                return HttpResponse(status=204,
+                        headers={
+                                'HX-Trigger': json.dumps({
+                                    "noteChange": None,
+                                    "showMessage": f"Message sent to {customer.company}",
+                                    "close": "close",
+                                    "type":"bg-success"
+                                })
+                            })
+            else:
+                return HttpResponse(status=204,
+                        headers={
+                                'HX-Trigger': json.dumps({
+                                    "noteChange": None,
+                                    "showMessage": f"Message Error!",
+                                    "type":"bg-danger"
+                                })
+                            })
+        elif type == "image":
+            response=send_whatsapp_img(number,str(message),url)
+            if response["sent"]=="true":
+                return HttpResponse(status=204,
+                        headers={
+                                'HX-Trigger': json.dumps({
+                                    "noteChange": None,
+                                    "showMessage": f"Message sent to {customer.company}",
+                                    "close": "close",
+                                    "type":"bg-success"
+                                })
+                            })
+            else:
+                return HttpResponse(status=204,
+                        headers={
+                                'HX-Trigger': json.dumps({
+                                    "noteChange": None,
+                                    "showMessage": f"Message Error!",
+                                    "type":"bg-danger"
+                                })
+                            })
+        elif type == "video":
+            response=send_whatsapp_video(number,str(message),url)
+            if response["sent"]=="true":
+                return HttpResponse(status=204,
+                        headers={
+                                'HX-Trigger': json.dumps({
+                                    "noteChange": None,
+                                    "showMessage": f"Message sent to {customer.company}",
+                                    "close": "close",
+                                    "type":"bg-success"
+                                })
+                            })
+            else:
+                return HttpResponse(status=204,
+                        headers={
+                                'HX-Trigger': json.dumps({
+                                    "noteChange": None,
+                                    "showMessage": f"Message Error!",
+                                    "type":"bg-danger"
+                                })
+                            })
         else:
             return HttpResponse(status=204,
-                    headers={
-                            'HX-Trigger': json.dumps({
-                                "noteChange": None,
-                                "showMessage": f"Message Error!",
-                                "close": "close",
-                                "type":"bg-danger"
+                        headers={
+                                'HX-Trigger': json.dumps({
+                                    "noteChange": None,
+                                    "showMessage": f"Message Error!",
+                                    "type":"bg-danger"
+                                })
                             })
-                        })
+
+
     context={"customer":customer}
     return render(request,"crm/send_whatsapp.html",context)
