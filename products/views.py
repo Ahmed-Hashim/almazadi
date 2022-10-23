@@ -190,6 +190,7 @@ def invoice(request,id):
         }
         
     return render(request,"crm/invoice.html",context)
+
 def set_to_paid(reqeust,id):
     invoice=get_object_or_404(Invoice,id=id)
     if reqeust.htmx:

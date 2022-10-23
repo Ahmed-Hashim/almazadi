@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <!-- Basic Page Info -->
+    <meta charset="UTF-8">
+    <title>Al-Mazadi Marketing - {{title}}</title>
+    {% load static %}
+
+
+
+    <!-- CSS Bootstrab 5 -->
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap5.min.css' %}">
+
+    <!-- Site favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/almazadi/logo2.png'%}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/almazadi/logo2.png'%}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/almazadi/logo2.png'%}">
+
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script src="{% static 'styles/fontawesome.js' %}"></script>
+    <!-- Google Font -->
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/googleapis.css' %}">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/core.css' %}">
+
+
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/icon-font.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/mycss.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/ajax.css' %}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- HTMX.js -->
+    <script src="{% static 'scripts/htmx.min.js'%}"></script>
+    <!-- Ajax.js -->
+
+
+    <script src="{% static 'scripts/ajax.js' %}" defer></script>
+    <!-- Jquery.js -->
+
+
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-119386393-1');
+    </script>
+</head>
+
+<body class="header-dark">
+
+
+    {% include 'header.html' %}
+
+    {% include 'leftnav.html' %}
+
+
+    <div class="main-container">
+        <div class="pd-ltr-20 xs-pd-20-10">
+            <div class="min-height-200px">
+                <div class="pd-20 bg-white border-radius-4 box-shadow mb-30">
+                    <div class="error-page d-flex align-items-center flex-wrap justify-content-center pd-20">
+                        <div class="pd-10">
+                            <div class="error-page-wrap text-center">
+                                <h1>500</h1>
+                                <h3>Error: 500 Unexpected Error</h3>
+                                <p>An error ocurred and your request couldn’t be completed..<br>Either check the URL</p>
+                                <div class="pt-20 mx-auto max-width-200">
+                                    <a href="index.html" class="btn btn-primary btn-block btn-lg">Back To Home</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="footer-wrap pd-20 mb-20 card-box">
+                        Al-Mazadi Marketing Tool <a href="https://almazadi.com" target="_blank">Al-Mazadi.com</a>
+                    </div>
+                </div>
+            </div>
+            <!-- js -->
+            <!-- Bootstrab 5 JavaScript Bundle with Popper -->
+            <script src="{% static 'scripts/bootstrab5.js' %}"></script>
+            <!-- JS layout -->
+
+            <script src="{% static 'scripts/core.js' %}"></script>
+            <script src="{% static 'scripts/toast.js' %}"></script>
+            <script src="{% static 'scripts/script.min.js' %}"></script>
+            <script src="{% static 'scripts/process.js' %}"></script>
+            <script src="{% static 'scripts/layout-settings.js' %}"></script>
+
+            <!-- SweetAlert -->
+            <script src="{% static 'plugins/sweetalert2/sweetalert2.all.js' %}"></script>
+            <script src="{% static 'plugins/sweetalert2/sweet-alert.init.js' %}"></script>
+
+</body>
+
+</html>

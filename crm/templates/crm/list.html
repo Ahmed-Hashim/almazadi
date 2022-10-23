@@ -68,6 +68,7 @@
     hx-get="{% url 'customerlist' %}"
     hx-trigger="load, crmChange from:body"
     hx-target="this"
+    hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'
   ></div>
 
   <!--EndTable-->
@@ -109,6 +110,9 @@
     // 👇️ clear input field
     search.value = "";
   });
+  document.body.addEventListener("htmx:configRequest", (event) => {
+            event.detail.headers["X-CSRFToken"] = "{{ csrf_token }}";
+          });
 </script>
 
 {% endblock js %}

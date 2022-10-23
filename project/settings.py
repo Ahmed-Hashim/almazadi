@@ -28,14 +28,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 """
 if 'SECRET_KEY' in os.environ:
     SECRET_KEY = os.environ['SECRET_KEY']
     DEBUG = False
 
 """
-ALLOWED_HOSTS = ["*","almazadi.up.railway.app"]
+ALLOWED_HOSTS = ["*"]
 CORS_ALLOWED_ORIGINS = [
     "https://almazadi.up.railway.app"
 ]
@@ -105,10 +105,12 @@ INSTALLED_APPS = [
 
 
     #myapps
+    "errorpages",
     'posts',
     'members',
     'crm',
     'products',
+
 
 ]
 
@@ -153,25 +155,14 @@ CRONJOBS = [
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-if DEBUG:
-    DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'almazadidatabase',
-            'USER': 'mada',
-            'PASSWORD': 'almazadi265431',
-            'HOST': 'localhost',
-            'PORT': '',
-        }
-    }
 
+DATABASES = {
+'default': {
+    'ENGINE': 'django.db.backends.sqlite3',
+    'NAME': BASE_DIR / 'db.sqlite3',
+}
+
+}
 
 
 
@@ -210,13 +201,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 #STATIC_ROOT=BASE_DIR / 'staticfiles'
 MEDIA_URL='/media/'
 
-MEDIA_ROOT = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

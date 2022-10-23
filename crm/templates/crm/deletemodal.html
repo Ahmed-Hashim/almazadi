@@ -13,5 +13,10 @@
         <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button>
     </div>
 </div>
+<script>
+    document.body.addEventListener("htmx:configRequest", (event) => {
+            event.detail.headers["X-CSRFToken"] = "{{ csrf_token }}";
+          });
+</script>
 
 

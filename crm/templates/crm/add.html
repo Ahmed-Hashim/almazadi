@@ -1,5 +1,5 @@
 {% load crispy_forms_tags %} {% load static %}
-<div class="modal-content">
+<div class="modal-content" hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
   <div class="modal-header bg-secondary">
     <h5 class="modal-tilte text-light">
       <i class="fa-solid fa-file-circle-plus"></i>&nbsp;&nbsp;Add New Customer

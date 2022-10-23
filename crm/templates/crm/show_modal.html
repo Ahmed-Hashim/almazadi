@@ -1,5 +1,5 @@
 {% load crispy_forms_tags %}
-<div class="modal-content">
+<div class="modal-content" hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
     <ul class="nav  nav-pills  btn-group" id="myTab" role="tablist">
         <li class="btn btn-sm btn-dark" role="presentation">
           <a class="nav-link active  bg-dark text-light" id="details-tab" data-toggle="tab" href="#show-modal" role="tab" aria-controls="show-modal" aria-selected="true">Details</a>
